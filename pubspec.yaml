@@ -1,0 +1,32 @@
+name: veeramangai_mobile
+description: VEERAMANGAI athlete pathway support mobile concept.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.10.0
+  record: ^6.1.2
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+          weight: 600
+    - family: Merriweather
+      fonts:
+        - asset: assets/fonts/Merriweather-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Merriweather-Regular.ttf
+          weight: 400
+

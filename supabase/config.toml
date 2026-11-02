@@ -1,0 +1,5 @@
+[functions.veera-agent]
+verify_jwt = true
+
+[functions.sarvam-transcribe]
+verify_jwt = true
