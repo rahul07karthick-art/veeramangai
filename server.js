@@ -450,6 +450,43 @@ app.post('/api/privacy/zkp-proof', (req, res) => {
   });
 });
 
+// ============================================================================
+// BACKGROUND ANIMATION SWITCHER API (CONCEPT A vs CONCEPT B)
+// ============================================================================
+let activeBackgroundTheme = 'concept-a';
+
+app.get('/api/background/status', (req, res) => {
+  res.json({
+    active: activeBackgroundTheme,
+    options: {
+      'concept-a': 'Stadium Floodlight & Upward Velocity (Classic Sovereign)',
+      'concept-b': '400m Track Splines & Biometric Pulse (Kinematic Video Theme)'
+    },
+    video_url: '/assets/alternative_background_preview.mp4',
+    studio_url: '/background_preview.html'
+  });
+});
+
+app.post('/api/background/apply-concept-b', (req, res) => {
+  activeBackgroundTheme = 'concept-b';
+  res.json({
+    success: true,
+    active: 'concept-b',
+    name: 'Concept B (400m Track Splines & Biometric Pulse)',
+    message: 'Concept B applied successfully across Veeramangai platform.'
+  });
+});
+
+app.post('/api/background/apply-concept-a', (req, res) => {
+  activeBackgroundTheme = 'concept-a';
+  res.json({
+    success: true,
+    active: 'concept-a',
+    name: 'Concept A (Stadium Floodlight & Upward Velocity)',
+    message: 'Concept A restored successfully.'
+  });
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`=======================================================`);
   console.log(`  🌟 VEERAMANGAI LIVE SERVER STARTED`);
