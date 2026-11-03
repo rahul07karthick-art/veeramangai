@@ -26,25 +26,59 @@ class VeeramangaiApp extends StatelessWidget {
           title: 'Veeramangai - Women in Sport',
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
-          theme: ThemeData(
+                    theme: ThemeData(
             brightness: Brightness.light,
-            scaffoldBackgroundColor: const Color(0xFFF8FAFC),
+            scaffoldBackgroundColor: const Color(0xFFFFFFFF),
             colorScheme: const ColorScheme.light(
-              primary: Color(0xFF0284C7),
-              secondary: Color(0xFF10B981),
+              primary: Color(0xFF0071E3), // Apple System Blue
+              secondary: Color(0xFF059669),
               surface: Color(0xFFFFFFFF),
+              onSurface: Color(0xFF000000),
             ),
-            fontFamily: 'Roboto',
+            fontFamily: '.SF Pro Text',
+            fontFamilyFallback: const [
+              '.SF Pro Display',
+              'SF Pro Text',
+              'SF Pro Display',
+              'Helvetica Neue',
+              'Arial',
+              'sans-serif'
+            ],
+            textTheme: const TextTheme(
+              displayLarge: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.8, color: Color(0xFF000000)),
+              displayMedium: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.6, color: Color(0xFF000000)),
+              titleLarge: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.4, color: Color(0xFF000000)),
+              titleMedium: TextStyle(fontWeight: FontWeight.w600, letterSpacing: -0.2, color: Color(0xFF1E293B)),
+              bodyLarge: TextStyle(fontWeight: FontWeight.w400, color: Color(0xFF1E293B)),
+              bodyMedium: TextStyle(fontWeight: FontWeight.w400, color: Color(0xFF334155)),
+            ),
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
-            scaffoldBackgroundColor: const Color(0xFF070C0E),
+            scaffoldBackgroundColor: const Color(0xFF06090E),
             colorScheme: const ColorScheme.dark(
-              primary: Color(0xFFF59E0B),
+              primary: Color(0xFF38BDF8),
               secondary: Color(0xFF10B981),
-              surface: Color(0xFF0F171B),
+              surface: Color(0xFF0F1726),
+              onSurface: Color(0xFFF8FAFC),
             ),
-            fontFamily: 'Roboto',
+            fontFamily: '.SF Pro Text',
+            fontFamilyFallback: const [
+              '.SF Pro Display',
+              'SF Pro Text',
+              'SF Pro Display',
+              'Helvetica Neue',
+              'Arial',
+              'sans-serif'
+            ],
+            textTheme: const TextTheme(
+              displayLarge: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.8, color: Color(0xFFFFFFFF)),
+              displayMedium: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.6, color: Color(0xFFFFFFFF)),
+              titleLarge: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.4, color: Color(0xFFFFFFFF)),
+              titleMedium: TextStyle(fontWeight: FontWeight.w600, letterSpacing: -0.2, color: Color(0xFFCBD5E1)),
+              bodyLarge: TextStyle(fontWeight: FontWeight.w400, color: Color(0xFFCBD5E1)),
+              bodyMedium: TextStyle(fontWeight: FontWeight.w400, color: Color(0xFF94A3B8)),
+            ),
           ),
           home: const MainHomeScreen(),
         );
