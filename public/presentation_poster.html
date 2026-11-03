@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VEERAMANGAI — Presentation Poster & Project Datasheet</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700;800&family=Noto+Sans+Tamil:wght@600;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root, [data-theme="dark"] {
+      --bg-base: #06090e;
+      --bg-surface: #0e1522;
+      --bg-card: rgba(15, 23, 38, 0.85);
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-accent: rgba(56, 189, 248, 0.4);
+      --blue-accent: #38bdf8;
+      --gold-accent: #f59e0b;
+      --emerald-accent: #10b981;
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.95);
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border-subtle: rgba(15, 23, 42, 0.12);
+      --border-accent: rgba(2, 132, 199, 0.4);
+      --blue-accent: #0284c7;
+      --gold-accent: #d97706;
+      --emerald-accent: #059669;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.45;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Presentation Action Bar */
+    .poster-controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      background: var(--bg-surface);
+      padding: 10px 20px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .poster-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .poster-btn:hover {
+      background: var(--blue-accent);
+      color: #ffffff;
+      border-color: var(--blue-accent);
+    }
+
+    /* Poster Sheet Frame */
+    .poster-sheet {
+      width: 100%;
+      max-width: 1200px;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-accent);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    /* Top Banner / Header */
+    .poster-header {
+      background: linear-gradient(135deg, #090e17 0%, #151e2e 60%, #1e293b 100%);
+      padding: 32px 36px 24px;
+      border-bottom: 2px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    [data-theme="light"] .poster-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+    }
+
+    .poster-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .poster-emblem {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      font-weight: 900;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45);
+    }
+    .poster-title-block h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+    .poster-title-tamil {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-top: 2px;
+    }
+    .poster-tagline {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #38bdf8;
+      margin-top: 4px;
+    }
+
+    .poster-badge-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .award-pill {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #fbbf24;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+    .dpdp-pill {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #10b981;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+
+    /* Hero Problem & Solution Split */
+    .poster-problem-solution {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+
+    .poster-hero-media {
+      position: relative;
+      background: #020617;
+      min-height: 340px;
+      overflow: hidden;
+    }
+    .poster-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .poster-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+    .hero-stat-badge {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 28px;
+      font-weight: 900;
+      color: #fbbf24;
+      line-height: 1.1;
+    }
+    .hero-stat-desc {
+      font-size: 12.5px;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .poster-hero-copy {
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      background: var(--bg-surface);
+    }
+    .problem-box {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 3px solid #ef4444;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+    }
+    .solution-box {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid #10b981;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* 4 Queens Grid */
+    .poster-queens-showcase {
+      padding: 28px 30px;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .section-eyebrow {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue-accent);
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .section-heading {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .queens-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .poster-queen-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .queen-thumb-wrap {
+      height: 140px;
+      position: relative;
+      background: #000;
+    }
+    .queen-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .queen-tag-pill {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 8.5px;
+      font-weight: 800;
+      padding: 3px 7px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+    .queen-body {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .queen-en {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+    .queen-ta {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 4px;
+    }
+    .queen-desc {
+      font-size: 10.5px;
+      color: var(--text-secondary);
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .queen-metric-strip {
+      margin-top: auto;
+      background: var(--bg-surface);
+      padding: 5px 8px;
+      border-radius: 6px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--blue-accent);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Privacy & Architecture Grid */
+    .poster-deep-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .pillar-pane {
+      padding: 26px 30px;
+    }
+    .pillar-pane:first-child {
+      border-right: 2px solid var(--border-subtle);
+    }
+
+    .feature-point {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+    .feature-point-icon {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    .feature-point-text strong {
+      font-size: 12.5px;
+      color: var(--text-main);
+      display: block;
+    }
+    .feature-point-text p {
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* Footer Meta & QR Row */
+    .poster-footer {
+      padding: 20px 30px;
+      background: var(--bg-surface);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-tech-stack {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tech-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    @media print {
+      body { padding: 0; background: #fff; }
+      .poster-controls { display: none; }
+      .poster-sheet { border: none; box-shadow: none; max-width: 100%; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Bar -->
+  <div class="poster-controls">
+    <button class="poster-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="poster-btn" onclick="toggleTheme()">🌙 / ☀️ Toggle Theme</button>
+    <button class="poster-btn" onclick="window.open('/', '_blank')">🌐 Open Live App</button>
+  </div>
+
+  <!-- Main Poster Canvas -->
+  <div class="poster-sheet">
+    
+    <!-- HEADER -->
+    <header class="poster-header">
+      <div class="poster-brand-row">
+        <div class="poster-emblem">வ</div>
+        <div class="poster-title-block">
+          <h1>VEERAMANGAI</h1>
+          <div class="poster-title-tamil">வீரமங்கை · Athlete Intelligence Platform</div>
+          <div class="poster-tagline">THE SOVEREIGN ATHLETE SYSTEM FOR INDIAN WOMEN IN SPORT</div>
+        </div>
+      </div>
+
+      <div class="poster-badge-stack">
+        <div class="award-pill">🏆 TAMIL NADU SPORTS INNOVATION 2026</div>
+        <div class="dpdp-pill">🛡️ DPDP ACT 2023 & ZERO-SURVEILLANCE ZKP</div>
+      </div>
+    </header>
+
+    <!-- PROBLEM & SOLUTION STATEMENT -->
+    <section class="poster-problem-solution">
+      <div class="poster-hero-media">
+        <img src="assets/hero_action.jpg" alt="Veeramangai Athletes" class="poster-hero-img" />
+        <div class="poster-hero-overlay">
+          <div class="hero-stat-badge">83% RURAL DROP-OUT RATE</div>
+          <div class="hero-stat-desc">Lack of trials visibility, unsafe travel, and bureaucratic delays end talent early.</div>
+        </div>
+      </div>
+
+      <div class="poster-hero-copy">
+        <div class="problem-box">
+          <strong style="color: #f87171; font-size: 13px; display: block; margin-bottom: 2px;">THE BOTTLENECK IN INDIAN WOMEN'S SPORTS:</strong>
+          <p style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+            District trials are announced in fragmented local gazettes. Unaccompanied transit is unsafe. Menstrual cycle nutrition is taboo or absent. Female athletes lose out on scholarships worth lakhs.
+          </p>
+        </div>
+
+        <div class="solution-box">
+          <strong style="color: #10b981; font-size: 13px; display: block; margin-bottom: 2px;">THE VEERAMANGAI INNOVATION:</strong>
+          <p style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+            A unified agentic pathway platform built with Gemini 2.5 Flash Live Grounded Search, 3D interactive Queen intelligence cards, chaperoned transit pods, and sovereign privacy vault with Zero-Knowledge Proofs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 QUEENS AGENT ARCHITECTURE -->
+    <section class="poster-queens-showcase">
+      <span class="section-eyebrow">FOUR SPECIALIST INTELLIGENCE AGENTS</span>
+      <h2 class="section-heading">Historical Tamil Queens Mapped to Athletic Sovereignty</h2>
+
+      <div class="queens-cards-grid">
+        <!-- Queen 1 -->
+        <div class="poster-queen-card">
+          <div class="queen-thumb-wrap">
+            <img src="assets/poster1.jpg" alt="Velu Nachiyar" />
+            <span class="queen-tag-pill">01 / SIVAGANGA</span>
+          </div>
+          <div class="queen-body">
+            <div class="queen-en">VELU NACHIYAR</div>
+            <div class="queen-ta">வீரமங்கை வேலு நாச்சியார்</div>
+            <div class="queen-desc">Scouts district selection meets, Kabaddi trials & athletics across Tamil Nadu with AI cutoff analysis.</div>
+            <div class="queen-metric-strip">⚡ 14 ACTIVE TRIALS · 38 DISTRICTS</div>
+          </div>
+        </div>
+
+        <!-- Queen 2 -->
+        <div class="poster-queen-card">
+          <div class="queen-thumb-wrap">
+            <img src="assets/poster2.jpg" alt="Sembiyan Mahadevi" />
+            <span class="queen-tag-pill">02 / CHOLA REALM</span>
+          </div>
+          <div class="queen-body">
+            <div class="queen-en">SEMBIYAN MAHADEVI</div>
+            <div class="queen-ta">செம்பியன் மாதேவி</div>
+            <div class="queen-desc">Direct DBT grants matching, SDAT Champions Scheme (₹2L/yr) & Khelo India Talent Scholarship.</div>
+            <div class="queen-metric-strip">💰 ₹2.0L SDAT · ₹6.28L KHELO INDIA</div>
+          </div>
+        </div>
+
+        <!-- Queen 3 -->
+        <div class="poster-queen-card">
+          <div class="queen-thumb-wrap">
+            <img src="assets/poster3.jpg" alt="Rani Mangammal" />
+            <span class="queen-tag-pill">03 / MADURAI</span>
+          </div>
+          <div class="queen-body">
+            <div class="queen-en">RANI MANGAMMAL</div>
+            <div class="queen-ta">ராணி மங்கம்மாள்</div>
+            <div class="queen-desc">Chaperoned athlete travel pods, Southern Railway 75% sports pass & 181 Women Safety SOS integration.</div>
+            <div class="queen-metric-strip">🛡️ 38 CORRIDORS · 99.4% SAFETY</div>
+          </div>
+        </div>
+
+        <!-- Queen 4 -->
+        <div class="poster-queen-card">
+          <div class="queen-thumb-wrap">
+            <img src="assets/poster4.jpg" alt="Kundavai" />
+            <span class="queen-tag-pill">04 / THANJAVUR</span>
+          </div>
+          <div class="queen-body">
+            <div class="queen-en">KUNDAVAI & AVVAI</div>
+            <div class="queen-ta">குந்தவை பிராட்டியார்</div>
+            <div class="queen-desc">Bilingual sports science coach. Periodized cycle training (Follicular/Luteal) & traditional Ragi/Sundal fuel.</div>
+            <div class="queen-metric-strip">🥣 4:1 MACROS · FOLLICULAR SURGE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE & PRIVACY SHIELD -->
+    <section class="poster-deep-pillars">
+      <div class="pillar-pane">
+        <span class="section-eyebrow" style="color: var(--emerald-accent);">PRIVACY & ANTI-SURVEILLANCE</span>
+        <h3 style="font-size: 16px; font-weight: 800; color: var(--text-main); margin-bottom: 14px;">
+          DPDP Act 2023 · Zero-Knowledge Government Shield
+        </h3>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">⚡</div>
+          <div class="feature-point-text">
+            <strong>Zero-Knowledge Proofs (ZKP) for Government Schemes:</strong>
+            <p>Athletes certify age, state nativity, and medals to SDAT/SAI without exposing real Aadhaar numbers or street addresses.</p>
+          </div>
+        </div>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">👥</div>
+          <div class="feature-point-text">
+            <strong>Differential Role-Based Privacy:</strong>
+            <p>Coaches only see anonymized squad readiness. Menstrual cycle phases and private health diaries are strictly locked to the athlete.</p>
+          </div>
+        </div>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">🎙️</div>
+          <div class="feature-point-text">
+            <strong>Ephemeral Voice Protocol (Zero Retention):</strong>
+            <p>Microphone audio is transcribed live in volatile memory. Zero audio files or biometric voiceprints are ever saved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar-pane">
+        <span class="section-eyebrow" style="color: var(--gold-accent);">AI & TECHNICAL DIFFERENTIATION</span>
+        <h3 style="font-size: 16px; font-weight: 800; color: var(--text-main); margin-bottom: 14px;">
+          Next-Gen AI & Multimodal Kinematics
+        </h3>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">🌐</div>
+          <div class="feature-point-text">
+            <strong>Live Google Search Grounding (Gemini 2.5 Flash):</strong>
+            <p>Real-time gazette and portal crawlers return active dates and verifiable application source URLs with zero hallucination.</p>
+          </div>
+        </div>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">🧠</div>
+          <div class="feature-point-text">
+            <strong>Kinematic Stride ML Slot:</strong>
+            <p>Drop-in REST and WebSocket inference endpoint ready for proprietary biomechanical vision models.</p>
+          </div>
+        </div>
+
+        <div class="feature-point">
+          <div class="feature-point-icon">📱</div>
+          <div class="feature-point-text">
+            <strong>Full Cross-Platform Ecosystem:</strong>
+            <p>Responsive Web (60 FPS Canvas) + Flutter Mobile/Desktop with 3D card tilt and haptic Web Audio acoustic chimes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER META -->
+    <footer class="poster-footer">
+      <div>
+        <strong style="font-size: 12px; color: var(--text-main); display: block;">ENGINEERED FOR THE 2026 SPORTS IDEATHON</strong>
+        <span style="font-size: 10.5px; color: var(--text-muted);">Veeramangai Platform · Public Health & Sports Technology Track</span>
+      </div>
+
+      <div class="footer-tech-stack">
+        <span class="tech-pill">Gemini 2.5 Flash</span>
+        <span class="tech-pill">Flutter Web/Mobile</span>
+        <span class="tech-pill">Node.js Express</span>
+        <span class="tech-pill">Web Speech API</span>
+        <span class="tech-pill">AES-256-GCM</span>
+        <span class="tech-pill">ZKP SHA-256</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>

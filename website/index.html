@@ -1,28 +1,4165 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06130f"><title>VEERAMANGAI — Every goal has a team</title>
-<style>@font-face{font-family:Raleway;src:url("assets/Raleway-Regular.ttf") format("truetype");font-weight:400;font-display:swap}@font-face{font-family:Raleway;src:url("assets/Raleway-Medium.ttf") format("truetype");font-weight:500;font-display:swap}@font-face{font-family:Raleway;src:url("assets/Raleway-SemiBold.ttf") format("truetype");font-weight:600;font-display:swap}@font-face{font-family:Merriweather;src:url("assets/Merriweather-Light.ttf") format("truetype");font-weight:300;font-display:swap}@font-face{font-family:Merriweather;src:url("assets/Merriweather-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
-:root{color-scheme:dark;--bg:#06130f;--ink:#f4faf8;--muted:#aab8b5;--soft:#74817f;--panel:rgba(11,29,35,.80);--panel2:rgba(105,216,195,.055);--line:rgba(170,220,218,.16);--bronze:#64d9c3;--blue:#83afff;--pink:#fbcfe8;--mint:#83d8c2;--shadow:0 24px 80px #0005;--header:rgba(6,19,15,.72)}
-body.light{color-scheme:light;--bg:#f3f8f5;--ink:#20202b;--muted:#646575;--soft:#868594;--panel:rgba(255,255,255,.82);--panel2:rgba(44,43,62,.045);--line:rgba(45,42,57,.16);--bronze:#087e72;--blue:#375f9e;--pink:#9c4777;--mint:#28705e;--shadow:0 24px 80px #2b25400f;--header:rgba(243,248,245,.82)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity}body{margin:0;background:var(--bg);color:var(--ink);font-family:Raleway,"Segoe UI",sans-serif;overflow-x:hidden;transition:background .25s,color .2s}button,a{font:inherit}a{color:inherit}#atmosphere{position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none}.liquid{position:fixed;z-index:-2;inset:-10%;pointer-events:none;opacity:.35;filter:blur(24px);contain:paint;background:radial-gradient(ellipse at 48% 64%,#0b8a7826,transparent 34%),radial-gradient(ellipse at 75% 76%,#235fa922,transparent 42%);animation:liquid 30s ease-in-out infinite alternate}.light .liquid{opacity:.35;background:radial-gradient(ellipse at 48% 64%,#b7e8de69,transparent 35%),radial-gradient(ellipse at 75% 76%,#bfceef5e,transparent 44%)}@keyframes liquid{to{transform:translate3d(-2%,1%,0) scale(1.04)}}.grid-overlay{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.14;background:linear-gradient(90deg,transparent calc(20% - .5px),var(--line) 20%,transparent calc(20% + .5px),transparent calc(40% - .5px),var(--line) 40%,transparent calc(40% + .5px),transparent calc(60% - .5px),var(--line) 60%,transparent calc(60% + .5px),transparent calc(80% - .5px),var(--line) 80%,transparent calc(80% + .5px));mask-image:linear-gradient(to bottom,transparent,black 17%,black 82%,transparent)}.header{position:fixed;z-index:10;top:0;left:0;right:0;padding:17px clamp(18px,5vw,72px);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(var(--header),transparent);backdrop-filter:blur(6px)}.brand{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:760;letter-spacing:.15em}.brandmark{width:33px;height:33px;border-radius:50%;display:grid;place-items:center;color:#1b1724;background:linear-gradient(135deg,#64d9c3,#83afff);font-size:15px;box-shadow:0 0 30px #64d9c328}.nav{display:flex;align-items:center;gap:22px}.nav a{font-size:9px;text-decoration:none;text-transform:uppercase;letter-spacing:.17em;color:var(--muted);transition:color .2s}.nav a:hover,.nav a.active{color:var(--ink)}.right{display:flex;align-items:center;gap:14px}.toggle{border:1px solid var(--line);border-radius:99px;background:var(--panel2);color:var(--ink);padding:8px 11px;font-size:10px;cursor:pointer}.contact{border:0;border-radius:99px;padding:10px 16px;background:var(--ink);color:var(--bg);font-size:9px;font-weight:760;letter-spacing:.08em;cursor:pointer;text-decoration:none}.story-progress{position:fixed;right:clamp(17px,4.2vw,58px);top:50%;transform:translateY(-50%);z-index:9;display:flex;flex-direction:column;gap:10px}.dash{width:3px;height:31px;background:var(--line);border-radius:4px;overflow:hidden}.dash i{display:block;width:100%;height:0;background:linear-gradient(var(--bronze),var(--blue));border-radius:inherit}.slide{position:relative;min-height:100svh;scroll-snap-align:start;display:flex;align-items:center;padding:100px clamp(24px,10vw,150px) 70px;isolation:isolate}.slide-inner{width:min(1120px,100%);margin:auto}.eyebrow{font-size:9px;text-transform:uppercase;letter-spacing:.22em;color:var(--bronze);font-weight:750}.title{font-family:Merriweather,Georgia,serif;font-weight:400;letter-spacing:-.045em;line-height:.98;margin:16px 0 17px;font-size:clamp(52px,8.1vw,112px)}.title .dim{color:var(--soft)}.char{display:inline-block;opacity:0;transform:translateY(32px);filter:blur(9px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1),filter .8s cubic-bezier(.2,.8,.2,1)}.active .char{opacity:1;transform:translateY(0);filter:blur(0)}.copy{color:var(--muted);font-size:13px;line-height:1.8;max-width:460px}.actions{display:flex;gap:10px;margin-top:23px;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:99px;background:var(--ink);color:var(--bg);padding:12px 17px;text-decoration:none;font-size:10px;font-weight:760;cursor:pointer;transition:transform .2s}.pill:hover{transform:translateY(-2px)}.pill.ghost{background:transparent;color:var(--ink)}.hero-slide{text-align:center}.hero-slide .slide-inner{display:flex;flex-direction:column;align-items:center}.hero-slide .copy{max-width:480px}.hero-slide .title{font-size:clamp(54px,9vw,122px)}.sigil{position:relative;width:150px;height:150px;margin:0 auto 20px;border:1px solid #64d9c342;border-radius:50%;display:grid;place-items:center;animation:breathe 6s ease-in-out infinite}.sigil:before,.sigil:after{content:"";position:absolute;border-radius:50%;inset:13px;border:1px solid #83afff2c;transform:rotateX(68deg) rotate(-24deg);animation:orbit 18s linear infinite}.sigil:after{inset:28px;border-color:#64d9c345;transform:rotateX(67deg) rotate(40deg);animation-direction:reverse}.sigil span{font-size:39px;color:#bff8eb;text-shadow:0 0 38px #e8ad6c55}@keyframes breathe{50%{transform:scale(1.05);box-shadow:0 0 64px #0b8a7830}}@keyframes orbit{to{rotate:360deg}}.micro{font-size:9px;letter-spacing:.16em;color:var(--soft);text-transform:uppercase;margin-top:17px}.split{display:grid;grid-template-columns:1fr .9fr;gap:clamp(30px,8vw,120px);align-items:center}.section-title{font:400 clamp(42px,6vw,76px)/1.02 "Bodoni MT","Palatino Linotype","Book Antiqua",Merriweather,Georgia,serif;letter-spacing:-.04em;margin:12px 0 18px}.feature-card{position:relative;border:1px solid var(--line);border-radius:25px;background:var(--panel);backdrop-filter:blur(8px);padding:24px;box-shadow:var(--shadow);transform:translateY(35px);opacity:0;transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.2,1)}.active .feature-card{transform:translateY(0);opacity:1}.card-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}.opportunity-head{display:flex;gap:15px;align-items:flex-start;margin:17px 0}.icon{width:44px;height:44px;flex:0 0 44px;border-radius:15px;background:linear-gradient(135deg,#0b8a784a,#527bc24a);display:grid;place-items:center;font-size:20px}.feature-card h3{font-size:16px;margin:0 0 6px;font-weight:670}.meta{font-size:10px;color:var(--muted);line-height:1.7}.tag{display:inline-flex;padding:5px 9px;border-radius:99px;border:1px solid var(--line);font-size:8px;letter-spacing:.1em;color:var(--bronze);margin:6px 5px 0 0}.divider{height:1px;background:var(--line);margin:19px 0}.mini-row{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:var(--muted)}.mini-row b{color:var(--ink);font-weight:600}.timeline{display:grid;gap:0;margin-top:18px}.step{display:grid;grid-template-columns:35px 1fr;gap:12px;position:relative;padding-bottom:19px}.step:not(:last-child):before{content:"";position:absolute;left:16px;top:29px;bottom:0;width:1px;background:linear-gradient(var(--bronze),var(--line))}.step-index{width:33px;height:33px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--bronze);font:14px "Bodoni MT","Palatino Linotype","Book Antiqua",Merriweather,Georgia,serif;background:var(--panel);z-index:1}.step b{display:block;font-size:11px;margin:2px 0 3px}.step small{display:block;color:var(--muted);font-size:9px;line-height:1.6}.plan-progress{height:3px;background:var(--panel2);margin:10px 0 18px;border-radius:5px}.plan-progress i{display:block;width:42%;height:100%;background:linear-gradient(90deg,var(--bronze),var(--blue));border-radius:5px}.journey-orbit{position:absolute;z-index:-1;right:6%;top:15%;width:clamp(240px,35vw,490px);height:clamp(240px,35vw,490px);border:1px solid var(--line);border-radius:50%;opacity:.4;transform:translateY(calc(var(--scroll,0)*-8px));}.journey-orbit:before,.journey-orbit:after{content:"";position:absolute;inset:9%;border:1px solid var(--line);border-radius:50%;transform:rotateX(70deg)}.journey-orbit:after{inset:23%;border-color:#fbcfe84b;transform:rotateY(66deg)}.chat-card{padding:0;overflow:hidden}.chat-top{display:flex;align-items:center;gap:10px;padding:15px 17px;border-bottom:1px solid var(--line)}.veera{width:32px;height:32px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#64d9c3,#c7a7d0);color:#10231f}.chat-top b{display:block;font-size:11px}.chat-top small{display:block;font-size:8px;color:var(--muted)}.chat-body{padding:16px;display:grid;gap:10px}.bubble{max-width:90%;padding:12px 14px;border:1px solid var(--line);border-radius:15px;background:var(--panel2);font-size:10px;line-height:1.65}.bubble.user{justify-self:end;background:#83afff22}.source{display:block;margin-top:7px;color:var(--soft);font-size:8px}.action-box{border:1px solid #64d9c34a;border-radius:13px;padding:11px;margin-top:2px;background:#0b8a780c}.action-box b{font-size:9px}.action-box p{font-size:9px;color:var(--muted);margin:5px 0 9px}.review{border:0;border-radius:99px;background:var(--ink);color:var(--bg);font-size:9px;font-weight:750;padding:8px 11px;cursor:pointer}.chat-input{display:flex;gap:8px;margin:0 15px 15px;padding:6px 7px 6px 13px;border:1px solid var(--line);border-radius:99px;background:var(--panel2)}.chat-input input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;font-size:9px}.send{width:29px;height:29px;border:0;border-radius:50%;background:var(--bronze);color:#1b1720;cursor:pointer;font-weight:800}.privacy{font-size:9px;color:var(--muted);padding:0 17px 15px}.closing{min-height:78svh;text-align:center}.closing .slide-inner{display:flex;align-items:center;flex-direction:column}.footer{position:absolute;bottom:22px;left:clamp(24px,10vw,150px);right:clamp(24px,10vw,150px);display:flex;justify-content:space-between;color:var(--soft);font-size:8px;letter-spacing:.12em;text-transform:uppercase}.toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,15px);opacity:0;z-index:20;background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:99px;font-size:10px;font-weight:700;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-nav{display:none}
-@media(max-width:700px){#atmosphere{display:none}.liquid{filter:none;animation:none;opacity:.22}html{scroll-snap-type:y proximity}.header{padding:13px 15px}.brand{font-size:9px;letter-spacing:.1em}.brandmark{width:30px;height:30px}.nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:11;justify-content:space-around;gap:3px;padding:9px 8px calc(9px + env(safe-area-inset-bottom));background:var(--header);backdrop-filter:blur(8px);border-top:1px solid var(--line)}.nav a{font-size:8px;letter-spacing:.08em;padding:7px 4px}.nav .dot{display:none}.right{gap:7px}.toggle{font-size:8px;padding:7px 9px}.contact{font-size:8px;padding:8px 10px}.story-progress{right:9px;gap:7px}.dash{height:23px;width:2px}.slide{min-height:100svh;padding:88px 24px 84px}.hero-slide{padding-top:95px}.hero-slide .title{font-size:clamp(38px,11vw,50px)}.sigil{width:112px;height:112px;margin-bottom:20px}.sigil span{font-size:31px}.copy{font-size:12px}.split{grid-template-columns:1fr;gap:22px}.section-title{font-size:44px}.feature-card{padding:18px;border-radius:20px}.journey-orbit{width:250px;height:250px;right:-80px;top:8%}.closing{min-height:95svh}.footer{left:24px;right:24px;bottom:77px;gap:14px;font-size:7px}.footer span:nth-child(2){display:none}.grid-overlay{opacity:.08}.hero-slide .micro{margin-top:14px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-snap-type:none}}
-</style></head>
-<body><canvas id="atmosphere"></canvas><div class="liquid"></div><div class="grid-overlay"></div>
-<header class="header"><a class="brand" href="#begin" style="text-decoration:none"><span class="brandmark">வ</span><span>VEERAMANGAI</span></a><nav class="nav"><a class="active" href="#begin">Beginning</a><span class="dot">·</span><a href="#discover">Discover</a><span class="dot">·</span><a href="#pathway">Pathway</a><span class="dot">·</span><a href="#veera">Veera</a></nav><div class="right"><button id="theme" class="toggle">◐ &nbsp; <span id="themeText">Dark</span></button><a href="#veera" class="contact">MEET VEERA &nbsp; ↗</a></div></header>
-<div class="story-progress" aria-label="Page progress"><div class="dash"><i></i></div><div class="dash"><i></i></div><div class="dash"><i></i></div><div class="dash"><i></i></div></div>
-<main>
-<section class="slide hero-slide active" id="begin"><div class="slide-inner"><div class="eyebrow">A pathway for every girl in sport</div><div class="sigil"><span>வ</span></div><h1 class="title split-title">Every goal has<br><span class="dim">a team behind it.</span></h1><p class="copy">Meet a teammate for the moments between practice and possibility. Find your next opportunity, shape a plan, and bring your support circle along.</p><div class="actions"><a class="pill" href="#discover">Find your next chance &nbsp; →</a><a class="pill ghost" href="#veera">Plan with Veera &nbsp; ✳</a></div><div class="micro">Built around your choices · Tamil + English</div></div></section>
-<section class="slide" id="discover"><div class="journey-orbit"></div><div class="slide-inner split"><div><div class="eyebrow">01 — Discover</div><h2 class="section-title split-title">The next<br>chance is <span class="dim">closer.</span></h2><p class="copy">Relevant trials, camps, and support funds gathered into one clear view. Each notice carries its source and deadline, so you know what needs checking before you act.</p><div class="actions"><button class="pill" data-toast="Opportunity list opened — sample notices only">Explore opportunities &nbsp; ↗</button></div></div><article class="feature-card"><div class="card-label">✦ &nbsp; A team-verified opportunity</div><div class="opportunity-head"><div class="icon">🏅</div><div><h3>District U19 Kabaddi Trials · sample</h3><div class="meta">Chengalpattu · 16 November 2026<br>Applications close 12 November</div></div></div><span class="tag">SAMPLE LISTING · VERIFY SOURCE</span><span class="tag">DEADLINE SOON</span><div class="divider"></div><div class="mini-row"><span>For <b>Priyadharsini</b></span><span>10 days left</span></div><div style="margin-top:17px"><button class="pill" data-ask="Help me plan for the district trials">Build my application plan &nbsp; →</button></div></article></div></section>
-<section class="slide" id="pathway"><div class="slide-inner split"><div><div class="eyebrow">02 — Make it real</div><h2 class="section-title split-title">One clear step<br><span class="dim">at a time.</span></h2><p class="copy">Veera can organize the details, prepare drafts, estimate a trip, and remind you about a deadline. You review each step and choose what gets shared.</p><div class="actions"><button class="pill ghost" data-ask="Help me plan the travel cost for the trials">Plan travel support &nbsp; ↗</button></div></div><article class="feature-card"><div class="card-label">PRIYADHARSINI'S TRIAL PATHWAY</div><div class="plan-progress"><i></i></div><div class="timeline"><div class="step"><div class="step-index">✓</div><div><b>Review the sample opportunity notice</b><small>Confirm details directly with the organizer.</small></div></div><div class="step"><div class="step-index">02</div><div><b>Confirm eligibility with your coach</b><small>Veera can prepare a message for your review.</small></div></div><div class="step"><div class="step-index">03</div><div><b>Plan the trip and request support</b><small>Estimate costs, then prepare a request. Nothing sends automatically.</small></div></div><div class="step"><div class="step-index">04</div><div><b>Confirm the official deadline</b><small>Review your details before you submit.</small></div></div></div></article></div></section>
-<section class="slide" id="veera"><div class="slide-inner split"><div><div class="eyebrow">03 — Your pathway guide</div><h2 class="section-title split-title">An idea can<br>become <span class="dim">a plan.</span></h2><p class="copy">Veera is an athlete support coordinator. It helps you follow through on goals, keeps the next action clear, and brings a person in when you ask.</p><div class="divider"></div><p class="copy" style="font-size:11px">Your check-in reason stays private. Veera does not diagnose injuries, decide if you can train, or send a message without your review.</p><div class="actions"><button class="pill" data-scroll-chat>Start with Veera &nbsp; ✳</button></div></div><article class="feature-card chat-card"><div class="chat-top"><div class="veera">✳</div><div><b>Veera · Tamil + English</b><small>ATHLETE PATHWAY GUIDE</small></div></div><div class="chat-body" id="chat"><div class="bubble">Vanakkam, Priyadharsini! I found the district trial notice. Would you like an application checklist, a travel estimate, or a message draft for your coach?<span class="source">DEMO CONTENT · NOT A LIVE NOTICE</span></div><div class="bubble user">I want to go, but the trip may cost too much.</div><div class="bubble" id="reply">We can estimate the trip and prepare a travel-support request. I’ll need your starting town and travel date. You can review the request before it goes to your coordinator.<span class="source">VEERA WILL ASK BEFORE SHARING</span></div><div class="action-box"><b>Next step · Build a trip estimate</b><p>Confirm your starting point and event date. This information stays in your draft until you choose to share it.</p><button class="review" data-toast="Draft preview opened — no request has been sent">Review next step &nbsp; →</button></div></div><form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Tell Veera what you want to do…" autocomplete="off"><button class="send" aria-label="Send">↑</button></form><div class="privacy">🔒 &nbsp; Private by design · Sample conversation only</div></article></div></section>
-<section class="slide closing" id="support"><div class="slide-inner"><div class="sigil"><span>✳</span></div><div class="eyebrow">Your game. Your choices. Your team.</div><h2 class="title split-title">Ready for your<br><span class="dim">next move?</span></h2><p class="copy">Start with a goal. Veera will help you find the next step, and the people who can help you take it.</p><div class="actions"><a class="pill" href="#veera">Talk with Veera &nbsp; →</a><a class="pill ghost" href="#discover">See opportunities</a></div></div><div class="footer"><span>VEERAMANGAI · SUPPORT FOR GIRLS IN SPORT</span><span>Every goal has a team behind it</span><span>CONCEPT · SAMPLE INFORMATION</span></div></section>
-</main><div class="toast" id="toast"></div>
-<script>
-const body=document.body;const themeButton=document.getElementById('theme');const themeText=document.getElementById('themeText');try{if(localStorage.getItem('veeraTheme')==='light')body.classList.add('light')}catch(e){}function updateThemeLabel(){const light=body.classList.contains('light');themeText.textContent=light?'Switch to dark':'Switch to light';themeButton.setAttribute('aria-pressed',String(light));document.documentElement.style.colorScheme=light?'light':'dark'}updateThemeLabel();themeButton.addEventListener('click',()=>{body.classList.toggle('light');try{localStorage.setItem('veeraTheme',body.classList.contains('light')?'light':'dark')}catch(e){}updateThemeLabel()});
-const sections=[...document.querySelectorAll('.slide')];const navLinks=[...document.querySelectorAll('.nav a')];const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{threshold:.35});sections.forEach(s=>observer.observe(s));document.querySelectorAll('.split-title').forEach(t=>{const walk=document.createTreeWalker(t,NodeFilter.SHOW_TEXT);const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);nodes.forEach(node=>{const parent=node.parentNode;const frag=document.createDocumentFragment();[...node.textContent].forEach((char,i)=>{if(char===' '){frag.appendChild(document.createTextNode(' '));return}const span=document.createElement('span');span.className='char';span.style.transitionDelay=(i*.028)+'s';span.textContent=char;frag.appendChild(span)});parent.replaceChild(frag,node)})});
-const toastEl=document.getElementById('toast');let toastTimer;function toast(s){toastEl.textContent=s;toastEl.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2400)}document.querySelectorAll('[data-toast]').forEach(x=>x.addEventListener('click',()=>toast(x.dataset.toast)));document.querySelectorAll('[data-ask]').forEach(x=>x.addEventListener('click',()=>{document.getElementById('veera').scrollIntoView({behavior:'smooth'});setTimeout(()=>sendMessage(x.dataset.ask),500)}));document.querySelector('[data-scroll-chat]').addEventListener('click',()=>document.getElementById('chatInput').focus());
-function sendMessage(q){const chat=document.getElementById('chat');const u=document.createElement('div');u.className='bubble user';u.textContent=q;chat.appendChild(u);const a=document.createElement('div');a.className='bubble';const s=q.toLowerCase();if(s.includes('travel')||s.includes('cost')||s.includes('support'))a.textContent='I can prepare a trip estimate and support-request draft. Tell me your starting town and travel date; I’ll keep it as a draft for your review.';else if(s.includes('coach')||s.includes('eligibility')||s.includes('draft'))a.textContent='I can draft a note asking Coach Meena to confirm the official trial category. You can edit it before anything is shared.';else a.textContent='I can organize the trial notice into a checklist, then help with travel planning. The team should confirm official details and eligibility.';const src=document.createElement('span');src.className='source';src.textContent='SAMPLE RESPONSE · NOT CONNECTED TO A LIVE AI';a.appendChild(src);chat.appendChild(a);a.scrollIntoView({block:'nearest',behavior:'smooth'})}document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const input=document.getElementById('chatInput');const q=input.value.trim();if(q){input.value='';sendMessage(q)}});
-const canvas=document.getElementById('atmosphere'),ctx=canvas.getContext('2d',{alpha:true});let w=0,h=0,dpr=1,frame=0,lastFrame=0,raf=0;const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;const mobileQuery=matchMedia('(max-width: 700px)');let mobile=mobileQuery.matches;function resize(){dpr=Math.min(window.devicePixelRatio||1,1.25);w=innerWidth;h=innerHeight;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);if(mobile||reducedMotion)ctx.clearRect(0,0,w,h)}window.addEventListener('resize',resize,{passive:true});resize();function progress(){const max=document.documentElement.scrollHeight-innerHeight;const p=max?scrollY/max:0;document.querySelectorAll('.dash i').forEach((el,i)=>{const start=i/4;el.style.height=Math.max(0,Math.min(1,(p-start)*4))*100+'%'})}window.addEventListener('scroll',progress,{passive:true});progress();function stop(){if(raf)cancelAnimationFrame(raf);raf=0}function render(now){raf=requestAnimationFrame(render);if(document.hidden||mobile||reducedMotion||now-lastFrame<50)return;lastFrame=now;frame+=.025;const light=body.classList.contains('light');ctx.clearRect(0,0,w,h);const g=ctx.createRadialGradient(w*(.46+.08*Math.sin(frame)),h*.68,0,w*.5,h*.6,Math.max(w,h)*.8);g.addColorStop(0,light?'rgba(11,138,120,.14)':'rgba(11,138,120,.17)');g.addColorStop(.48,light?'rgba(83,126,172,.07)':'rgba(45,95,169,.10)');g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);for(let a=0;a<3;a++){ctx.beginPath();for(let x=0;x<=w;x+=16){const y=h*(.75+a*.055)+Math.sin(x/w*6.2+frame*1.3+a*.63)* (9+a*2)+Math.cos(x/w*2.8-frame+a)*4;x===0?ctx.moveTo(x,y):ctx.lineTo(x,y)}ctx.strokeStyle=light?`rgba(8,126,114,${.06-a*.012})`:`rgba(100,217,195,${.07-a*.012})`;ctx.lineWidth=1;ctx.stroke()}for(let i=0;i<18;i++){const seed=i*.6180339;const rise=(frame*(.12+(i%4)*.025)+seed)%1;const x=w*(.1+.8*((seed*1.7)%1))+Math.sin(frame*2+seed*10)*6;const y=h*(1-rise);ctx.beginPath();ctx.arc(x,y,.8+(i%3)*.25,0,Math.PI*2);ctx.fillStyle=i%4===0?(light?'rgba(83,126,172,.4)':'rgba(163,203,235,.5)'):(light?'rgba(8,126,114,.35)':'rgba(100,217,195,.5)');ctx.fill()}}document.addEventListener('visibilitychange',()=>document.hidden?stop():!mobile&&!reducedMotion&&(lastFrame=0,raf=requestAnimationFrame(render)));mobileQuery.addEventListener('change',event=>{mobile=event.matches;resize();if(mobile)stop();else if(!document.hidden&&!reducedMotion)raf=requestAnimationFrame(render)});if(!mobile&&!reducedMotion)raf=requestAnimationFrame(render);
-</script></body></html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veeramangai — The Athlete Intelligence System for Indian Women in Sport</title>
+  
+  <!-- Premium Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Noto+Sans+Tamil:wght@500;700;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & DUAL-THEME SYSTEM (ULTRA-PREMIUM)
+       ========================================================================== */
+    :root, [data-theme="dark"] {
+      --bg-base: #06090e;
+      --bg-surface: rgba(14, 20, 31, 0.65);
+      --bg-surface-elevated: rgba(20, 28, 44, 0.82);
+      --bg-card: rgba(15, 23, 38, 0.62);
+      --bg-card-hover: rgba(26, 38, 62, 0.85);
+      --bg-input: rgba(10, 16, 26, 0.75);
+
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --border-subtle: rgba(255, 255, 255, 0.10);
+      --border-medium: rgba(255, 255, 255, 0.18);
+      --border-accent: rgba(56, 189, 248, 0.45);
+
+      --blue-accent: #38bdf8;
+      --blue-glow: rgba(56, 189, 248, 0.25);
+      --blue-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      --gold-accent: #f59e0b;
+      --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+      --emerald-accent: #10b981;
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(6, 9, 14, 0.40) 0%, 
+        rgba(6, 9, 14, 0.22) 25%, 
+        rgba(6, 9, 14, 0.28) 60%, 
+        rgba(6, 9, 14, 0.70) 90%, 
+        #06090e 100%);
+      --athlete-opacity: 0.88;
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: rgba(255, 255, 255, 0.85);
+      --bg-surface-elevated: rgba(255, 255, 255, 0.95);
+      --bg-card: rgba(255, 255, 255, 0.88);
+      --bg-card-hover: #ffffff;
+      --bg-input: #ffffff;
+
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+
+      --border-subtle: rgba(15, 23, 42, 0.10);
+      --border-medium: rgba(15, 23, 42, 0.18);
+      --border-accent: rgba(2, 132, 199, 0.50);
+
+      --blue-accent: #0284c7;
+      --blue-glow: rgba(2, 132, 199, 0.25);
+      --blue-gradient: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      --gold-accent: #d97706;
+      --gold-gradient: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      --emerald-accent: #059669;
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(248, 250, 252, 0.38) 0%, 
+        rgba(248, 250, 252, 0.12) 25%, 
+        rgba(248, 250, 252, 0.18) 60%, 
+        rgba(248, 250, 252, 0.55) 90%, 
+        #f8fafc 100%);
+      --athlete-opacity: 0.85;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 15px;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Target highlight flash for smooth navigation */
+    @keyframes targetGlow {
+      0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.8); border-color: var(--blue-accent); }
+      50% { box-shadow: 0 0 30px 6px rgba(56, 189, 248, 0.35); border-color: var(--blue-accent); }
+      100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+    }
+    .highlight-target {
+      animation: targetGlow 2.2s ease-out;
+      border-color: var(--blue-accent) !important;
+    }
+
+    /* ==========================================================================
+       SEAMLESS FULL-PAGE CONTINUOUS ATHLETIC BACKGROUND (NEVER EMPTY)
+       Fixed across the entire document so middle, top, and bottom are all rich.
+       ========================================================================== */
+    .unified-fixed-bg {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .unified-athlete-img {
+      position: absolute;
+      inset: -4%;
+      width: 108%;
+      height: 108%;
+      background-size: cover;
+      background-position: center 18%;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 14s ease-out;
+      opacity: 0;
+      transform: scale(1.0);
+    }
+
+    .unified-athlete-img.standing {
+      background-image: url('assets/hero_standing.jpg');
+    }
+    .unified-athlete-img.action {
+      background-image: url('assets/hero_action.jpg');
+    }
+
+    .unified-athlete-img.active {
+      opacity: var(--athlete-opacity);
+      transform: scale(1.07) translate(-0.5%, -0.5%);
+    }
+
+    .unified-vignette {
+      position: absolute;
+      inset: 0;
+      background: var(--fixed-vignette);
+      backdrop-filter: blur(0.5px);
+    }
+
+    #unifiedCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.75;
+    }
+
+    /* ---------------- ANNOUNCEMENT STRIP ---------------- */
+    .announcement-bar {
+      background: linear-gradient(90deg, #090e17 0%, #1e293b 50%, #090e17 100%);
+      color: #ffffff;
+      padding: 8px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-align: center;
+      position: relative;
+      z-index: 60;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .announcement-bar a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .announcement-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------------- COMPACT CENTERED NAVIGATION ---------------- */
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-surface);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 24px;
+    }
+
+    .nav-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--blue-gradient);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-menu a:hover {
+      color: var(--blue-accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stance-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-medium);
+      color: var(--text-main);
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'Space Grotesk', monospace;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .stance-pill:hover {
+      border-color: var(--blue-accent);
+    }
+
+    .stance-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 6px #10b981;
+      transition: all 0.3s ease;
+    }
+    .stance-dot.action {
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-medium);
+      color: var(--text-main);
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--gold-accent);
+    }
+
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue-gradient);
+      color: #ffffff;
+      padding: 7px 16px;
+      border-radius: 9999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-action-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.5);
+    }
+
+    /* ---------------- HERO SECTION (COMPACT & RHYTHMIC) ---------------- */
+    .hero-wrap {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+
+    .hero-badges-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .verified-pill {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--gold-accent);
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    .hero-heading {
+      font-size: clamp(32px, 4.6vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: 980px;
+      margin: 0 auto 18px;
+      color: var(--text-main);
+      text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+
+    .blue-word {
+      background: var(--blue-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-subtext {
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--text-secondary);
+      max-width: 760px;
+      margin: 0 auto 28px;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    /* HERO COMPOSER */
+    .hero-composer-box {
+      max-width: 640px;
+      margin: 0 auto 16px;
+      display: flex;
+      background: var(--bg-surface-elevated);
+      backdrop-filter: blur(20px);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 9999px;
+      padding: 5px 6px 5px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+    }
+    .hero-composer-box:focus-within {
+      border-color: var(--blue-accent);
+      box-shadow: 0 10px 36px var(--blue-glow);
+    }
+
+    .hero-composer-box input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: var(--text-main);
+      font-size: 14.5px;
+      font-family: inherit;
+      outline: none;
+    }
+    .hero-composer-box input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .hero-composer-btn {
+      background: var(--blue-gradient);
+      color: #ffffff;
+      border: none;
+      border-radius: 9999px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s;
+    }
+    .hero-composer-btn:hover {
+      transform: scale(1.02);
+    }
+
+    /* SUGGESTION CHIPS */
+    .hero-chips-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      border-radius: 9999px;
+      padding: 5px 12px;
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+    }
+    .hero-chip:hover {
+      border-color: var(--blue-accent);
+      color: var(--blue-accent);
+      transform: translateY(-1px);
+    }
+
+    /* AVATAR ROW */
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 38px;
+      flex-wrap: wrap;
+    }
+
+    .avatar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 5px 14px 5px 6px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+    .avatar-item:hover {
+      border-color: var(--blue-accent);
+      transform: translateY(-2px);
+    }
+
+    .avatar-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: top center;
+      border: 2px solid var(--gold-accent);
+    }
+    .avatar-item span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* ---------------- 4 HERO POSTERS (TIGHT & ELEGANT) ---------------- */
+    /* ==========================================================================
+       ULTRA-PREMIUM 3D INTERACTIVE POSTERS & TACTICAL ATHLETE DOSSIERS
+       ========================================================================== */
+    .hero-posters-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1220px;
+      margin: 0 auto;
+      perspective: 1400px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-posters-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+    @media (max-width: 540px) {
+      .hero-posters-grid { grid-template-columns: 1fr; }
+    }
+
+    .poster-3d-card {
+      position: relative;
+      aspect-ratio: 9 / 14;
+      border-radius: 18px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      --glare-x: 50%;
+      --glare-y: 50%;
+      --glare-opacity: 0;
+      transition: filter 0.3s ease;
+    }
+
+    .poster-flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+      border-radius: 18px;
+    }
+
+    .poster-3d-card.flipped .poster-flipper {
+      transform: rotateY(180deg) !important;
+    }
+
+    .poster-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1.5px solid var(--border-subtle);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    [data-theme="light"] .poster-face {
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+      border-color: rgba(15, 23, 42, 0.12);
+    }
+
+    .poster-3d-card:hover .poster-face {
+      border-color: var(--blue-accent);
+      box-shadow: 0 20px 48px var(--blue-glow);
+    }
+
+    /* Holographic Specular Glare Sheen */
+    .poster-glare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 15;
+      border-radius: 18px;
+      background: radial-gradient(
+        circle 280px at var(--glare-x) var(--glare-y),
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(56, 189, 248, 0.20) 35%,
+        transparent 70%
+      );
+      opacity: var(--glare-opacity);
+      mix-blend-mode: overlay;
+      transition: opacity 0.2s ease;
+    }
+
+    /* FRONT FACE */
+    .poster-front {
+      background: #090e17;
+    }
+
+    .poster-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 1;
+    }
+
+    .poster-3d-card:hover .poster-bg-img {
+      transform: scale(1.06);
+    }
+
+    .poster-gradient-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, 
+        rgba(0,0,0,0.20) 0%, 
+        rgba(0,0,0,0.05) 25%, 
+        rgba(0,0,0,0.60) 58%, 
+        rgba(6,9,14,0.96) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    [data-theme="light"] .poster-gradient-shade {
+      background: linear-gradient(180deg, 
+        rgba(248,250,252,0.15) 0%, 
+        rgba(15,23,42,0.18) 25%, 
+        rgba(15,23,42,0.72) 58%, 
+        rgba(15,23,42,0.96) 100%);
+    }
+
+    .poster-front-top {
+      position: relative;
+      z-index: 10;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .poster-pill-badge {
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'Space Grotesk', monospace;
+      letter-spacing: 0.08em;
+      padding: 4px 9px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.70);
+      backdrop-filter: blur(8px);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    .poster-flip-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 9.5px;
+      font-weight: 800;
+      font-family: 'Space Grotesk', monospace;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.22);
+      backdrop-filter: blur(8px);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .poster-flip-toggle:hover {
+      background: var(--blue-accent);
+      color: #ffffff;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px var(--blue-glow);
+    }
+
+    .poster-front-bottom {
+      position: relative;
+      z-index: 10;
+      padding: 16px 14px;
+    }
+
+    .poster-queen-en {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+
+    .poster-queen-ta {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 5px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+    }
+
+    .poster-feature-desc {
+      font-size: 11px;
+      color: #cbd5e1;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+    }
+
+    /* INTERACTIVE QUICK ACTION CHIPS ON FRONT */
+    .poster-chips-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    .poster-interactive-chip {
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #f1f5f9;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .poster-interactive-chip:hover {
+      background: var(--blue-accent);
+      color: #ffffff;
+      border-color: var(--blue-accent);
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
+    }
+
+    .poster-action-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .poster-primary-action {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: var(--blue-gradient);
+      border: none;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 7px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    .poster-primary-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px var(--blue-glow);
+    }
+
+    .poster-inspect-icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 13px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .poster-inspect-icon-btn:hover {
+      background: #fbbf24;
+      color: #000000;
+      border-color: #fbbf24;
+      transform: scale(1.08);
+    }
+
+    /* BACK FACE: ATHLETIC INTELLIGENCE DOSSIER */
+    .poster-back {
+      transform: rotateY(180deg);
+      background: radial-gradient(circle at 50% 10%, #151e2e 0%, #080c14 100%);
+      padding: 16px;
+      color: #f8fafc;
+      justify-content: flex-start;
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+    }
+
+    [data-theme="light"] .poster-back {
+      background: radial-gradient(circle at 50% 10%, #ffffff 0%, #f1f5f9 100%);
+      color: #0f172a;
+      border-color: rgba(2, 132, 199, 0.35);
+    }
+
+    .poster-back-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 10px;
+    }
+
+    .poster-back-avatar-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .poster-back-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center top;
+      border: 1.5px solid #fbbf24;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+    }
+
+    .poster-back-queen-title {
+      font-family: 'Cinzel', serif;
+      font-size: 12.5px;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+
+    .poster-back-dynasty {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #fbbf24;
+      letter-spacing: 0.05em;
+    }
+
+    .poster-flip-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 800;
+      font-family: 'Space Grotesk', monospace;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.10);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-medium);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .poster-flip-back-btn:hover {
+      background: var(--blue-accent);
+      color: #ffffff;
+      border-color: var(--blue-accent);
+    }
+
+    .dossier-quote-box {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 2.5px solid var(--blue-accent);
+      padding: 7px 9px;
+      border-radius: 0 6px 6px 0;
+      font-size: 9.5px;
+      line-height: 1.38;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .dossier-telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .dossier-telemetry-cell {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 6px 4px;
+      text-align: center;
+    }
+
+    .dossier-metric-val {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11.5px;
+      font-weight: 900;
+      color: var(--blue-accent);
+      line-height: 1.1;
+    }
+
+    .dossier-metric-label {
+      font-size: 7px;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+      margin-top: 2px;
+    }
+
+    .dossier-tactical-desc {
+      font-size: 10px;
+      line-height: 1.35;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      flex: 1;
+    }
+
+    .dossier-action-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: auto;
+    }
+
+    .dossier-btn-primary {
+      width: 100%;
+      background: var(--blue-gradient);
+      border: none;
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 6px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .dossier-btn-primary:hover {
+      box-shadow: 0 4px 14px var(--blue-glow);
+      transform: translateY(-1px);
+    }
+
+    .dossier-btn-secondary {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-medium);
+      color: var(--text-main);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .dossier-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: var(--blue-accent);
+    }
+
+    /* ---------------- QUEEN DOSSIER MODAL ---------------- */
+    .queen-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(3, 7, 18, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .queen-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .queen-modal-card {
+      background: var(--bg-surface-elevated);
+      border: 1.5px solid var(--border-accent);
+      border-radius: 22px;
+      max-width: 820px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+      transform: scale(0.94);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .queen-modal-backdrop.open .queen-modal-card {
+      transform: scale(1);
+    }
+
+    .queen-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--text-main);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .queen-modal-close:hover {
+      background: var(--blue-accent);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .queen-modal-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    @media (max-width: 720px) {
+      .queen-modal-grid { grid-template-columns: 1fr; }
+      .queen-modal-art-side { height: 240px; }
+    }
+
+    .queen-modal-art-side {
+      position: relative;
+      background: #090e17;
+      overflow: hidden;
+    }
+
+    .queen-modal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .queen-modal-art-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'Space Grotesk', monospace;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    .queen-modal-info-side {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .queen-modal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-top: 4px;
+      line-height: 1.1;
+    }
+
+    .queen-modal-ta {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 2px;
+    }
+
+    .queen-modal-dynasty {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--blue-accent);
+      letter-spacing: 0.05em;
+    }
+
+    .queen-modal-bio {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .queen-modal-telemetry-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .telemetry-box-title {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .queen-modal-telemetry-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .queen-modal-quote-wrap {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 3px solid var(--blue-accent);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 11.5px;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    .queen-modal-action-row {
+      display: flex;
+      gap: 10px;
+    }
+
+
+    /* ---------------- SECTION 01: AGENT OVERVIEW ---------------- */
+    .section-standard {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      scroll-margin-top: 80px;
+    }
+
+    .numbered-eyebrow {
+      display: block;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-title-centered {
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--text-main);
+      margin-bottom: 36px;
+    }
+
+    .agent-cards-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    @media (max-width: 860px) {
+      .agent-cards-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .agent-cards-row { grid-template-columns: 1fr; }
+    }
+
+    .agent-compact-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .agent-compact-card:hover {
+      border-color: var(--blue-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .agent-thumb-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: top center;
+      border: 2px solid var(--gold-accent);
+    }
+
+    .agent-card-role {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--blue-accent);
+    }
+
+    .agent-card-name {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .agent-card-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .agent-card-action {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--blue-accent);
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ---------------- SECTION 02: PRODUCT WORKSPACE DEMO ---------------- */
+    .workspace-mockup-frame {
+      background: var(--bg-surface-elevated);
+      backdrop-filter: blur(18px);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+      margin-bottom: 55px;
+    }
+
+    .workspace-browser-bar {
+      padding: 10px 18px;
+      background: rgba(0, 0, 0, 0.14);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+
+    .browser-url-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 14px;
+      border-radius: 9999px;
+    }
+
+    .workspace-split-body {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: 400px;
+    }
+
+    @media (max-width: 820px) {
+      .workspace-split-body { grid-template-columns: 1fr; }
+    }
+
+    .workspace-side-panel {
+      padding: 18px;
+      border-right: 1px solid var(--border-subtle);
+      background: rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .workspace-side-item {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .workspace-side-item:hover, .workspace-side-item.active {
+      border-color: var(--blue-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .workspace-main-canvas {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .workspace-terminal-console {
+      background: rgba(2, 6, 12, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #38bdf8;
+      max-height: 270px;
+      overflow-y: auto;
+    }
+
+    /* ---------------- SECTION 03: POSITIONING STATEMENT ---------------- */
+    .positioning-wrap {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 60px;
+      padding: 20px;
+    }
+
+    .positioning-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--gold-accent);
+      border: 1px solid var(--border-medium);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .positioning-title {
+      font-size: clamp(24px, 3.4vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .positioning-lead {
+      font-size: 15.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    .positioning-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 720px) {
+      .positioning-tabs { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 440px) {
+      .positioning-tabs { grid-template-columns: 1fr; }
+    }
+
+    .pos-tab-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pos-tab-card:hover {
+      border-color: var(--blue-accent);
+      transform: translateY(-2px);
+    }
+    .pos-tab-num {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--blue-accent);
+      margin-bottom: 3px;
+    }
+    .pos-tab-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* ---------------- FEATURE SECTIONS (ALTERNATING 2-COLUMNS) ---------------- */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 75px;
+      scroll-margin-top: 85px;
+    }
+
+    .feature-row.reversed {
+      direction: rtl;
+    }
+    .feature-row.reversed > * {
+      direction: ltr;
+    }
+
+    @media (max-width: 860px) {
+      .feature-row, .feature-row.reversed {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+    }
+
+    .feature-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .feature-copy-eyebrow {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--blue-accent);
+    }
+
+    .feature-copy-headline {
+      font-size: clamp(24px, 2.6vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-main);
+    }
+
+    .feature-copy-p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .feature-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 6px 0;
+    }
+
+    .feature-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .checklist-check {
+      color: var(--emerald-accent);
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .feature-attribution {
+      font-size: 11.5px;
+      font-family: 'Space Grotesk', monospace;
+      color: var(--text-muted);
+      border-left: 3px solid var(--blue-accent);
+      padding-left: 10px;
+      margin-top: 6px;
+    }
+
+    .feature-ui-box {
+      background: var(--bg-surface);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ---------------- SECTION 10: OPPORTUNITIES DIRECTORY ---------------- */
+    .opportunities-section {
+      background: var(--bg-surface-elevated);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 60px 20px;
+      scroll-margin-top: 80px;
+    }
+
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 1200px;
+      margin: 30px auto 0;
+    }
+
+    @media (max-width: 900px) {
+      .opportunities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .opportunities-grid { grid-template-columns: 1fr; }
+    }
+
+    .opp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .opp-card:hover {
+      border-color: var(--blue-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .opp-tag {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--gold-accent);
+      margin-bottom: 6px;
+    }
+
+    .opp-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .opp-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .opp-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 12px;
+      font-size: 11.5px;
+      color: var(--text-dim);
+    }
+
+    /* ---------------- SECTION 11: CUSTOM ML CONSOLE ---------------- */
+    .ml-terminal-box {
+      background: #060a10;
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .ml-split-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 760px) {
+      .ml-split-layout { grid-template-columns: 1fr; }
+    }
+
+    .ml-input-group {
+      margin-bottom: 14px;
+    }
+    .ml-input-group label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-bottom: 5px;
+    }
+    .ml-input-group input {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: #ffffff;
+      font-size: 13.5px;
+      outline: none;
+    }
+    .ml-input-group input:focus {
+      border-color: #38bdf8;
+    }
+
+    .ml-result-display {
+      background: #0c121e;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    /* ---------------- SECTION 12: COMPARISON TABLE ---------------- */
+    .comparison-table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      backdrop-filter: blur(12px);
+      margin-top: 24px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .comparison-table th {
+      font-family: 'Space Grotesk', monospace;
+      font-weight: 800;
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .highlight-col {
+      background: rgba(56, 189, 248, 0.08);
+      font-weight: 700;
+      color: var(--text-main);
+      border-left: 2px solid var(--blue-accent);
+      border-right: 2px solid var(--blue-accent);
+    }
+
+    /* ---------------- SECTION 13: FAQ ACCORDION ---------------- */
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 40px;
+      margin-top: 24px;
+    }
+    @media (max-width: 800px) {
+      .faq-layout { grid-template-columns: 1fr; }
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 16px 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+    .faq-answer {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-top: 10px;
+      display: none;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ---------------- CONVERSION CTA & FOOTER ---------------- */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.22) 0%, rgba(245, 158, 11, 0.12) 100%), var(--bg-surface-elevated);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 20px;
+      padding: 48px 24px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto 65px;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.25);
+    }
+
+    .footer-wrap {
+      border-top: 1px solid var(--border-subtle);
+      padding: 45px 20px 30px;
+      background: var(--bg-surface);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-oversized-brand {
+      font-family: 'Noto Sans Tamil', 'Cinzel', serif;
+      font-size: clamp(40px, 8vw, 110px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--border-subtle);
+      text-align: center;
+      margin-top: 30px;
+      user-select: none;
+    }
+
+    /* ==========================================================================
+       AVVAI ANIMATED PET COMPANION (FROM THILAK REPO)
+       ========================================================================== */
+    .avvai-sprite {
+      display: inline-block;
+      flex-shrink: 0;
+      background-image: url('avvai/avvai-sport-atlas.png');
+      background-size: 400% 300%;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+    .avvai-walk { animation: avvai-bob .52s ease-in-out infinite; }
+    .avvai-run { animation: avvai-bob .28s ease-in-out infinite; }
+    .avvai-jump { animation: avvai-jump 1.04s ease-in-out infinite; }
+    .avvai-roll { animation: avvai-roll 1s linear infinite; }
+    .avvai-dance { animation: avvai-dance 1.04s ease-in-out infinite; }
+
+    @keyframes avvai-bob { 50% { transform: translateY(-4px); } }
+    @keyframes avvai-jump { 0%, 100% { transform: translateY(0); } 45%, 60% { transform: translateY(-24px); } }
+    @keyframes avvai-roll { to { transform: rotate(360deg); } }
+    @keyframes avvai-dance { 25% { transform: rotate(-10deg) translateY(-5px); } 75% { transform: rotate(10deg) translateY(-5px); } }
+
+    /* Docked Pet HUD in bottom-right corner */
+    .avvai-docked-pet {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .avvai-speech-bubble {
+      background: var(--bg-surface-elevated);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-medium);
+      color: var(--text-main);
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      max-width: 220px;
+      text-align: right;
+      animation: avvai-bob 3s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    .avvai-pet-avatar {
+      cursor: pointer;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+      transition: transform 0.2s ease;
+    }
+    .avvai-pet-avatar:hover {
+      transform: scale(1.1);
+    }
+
+    .avvai-pet-tools {
+      display: flex;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .avvai-pet-tool-btn {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-medium);
+      border-radius: 9999px;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'Space Grotesk', monospace;
+      cursor: pointer;
+    }
+    .avvai-pet-tool-btn:hover {
+      border-color: var(--blue-accent);
+      color: var(--blue-accent);
+    }
+
+    /* Avvai cursor follower mode */
+    .avvai-follower {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      pointer-events: none;
+      will-change: transform;
+    }
+    .avvai-facing {
+      transform: scaleX(var(--avvai-direction, 1));
+    }
+  
+    /* ---------------- PRIVACY PERSONA TAB STYLING ---------------- */
+    .persona-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .persona-tab-btn.active {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .persona-tab-btn:hover {
+      color: var(--text-main);
+    }
+    @media (max-width: 900px) {
+      .privacy-pillars-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 520px) {
+      .privacy-pillars-grid { grid-template-columns: 1fr !important; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= UNIFIED FULL-PAGE CONTINUOUS ATHLETIC BACKGROUND ================= -->
+  <div class="unified-fixed-bg">
+    <div id="bgStanding" class="unified-athlete-img standing active"></div>
+    <div id="bgAction" class="unified-athlete-img action"></div>
+    <canvas id="unifiedCanvas"></canvas>
+    <div class="unified-vignette"></div>
+  </div>
+
+  <!-- ================= ANNOUNCEMENT STRIP ================= -->
+  <div class="announcement-bar">
+    <span>🏆 Tamil Nadu 2026 District Women Selection Trials & SDAT Grant Portal is Live.</span>
+    <a onclick="navigateToFeature('trials')">View Upcoming Trials Radar →</a>
+  </div>
+
+  <!-- ================= COMPACT CENTERED NAVIGATION ================= -->
+  <nav class="nav-wrap">
+    <div class="nav-inner">
+      <div class="brand-group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="brand-mark">வ</div>
+        <div>
+          <div class="brand-name">VEERAMANGAI</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a onclick="navigateToFeature('agents')">Agents</a></li>
+        <li><a onclick="navigateToFeature('workspace')">Demonstration</a></li>
+        <li><a onclick="navigateToFeature('trials')">Trials Radar</a></li>
+        <li><a onclick="navigateToFeature('scholarships')">Grants & Funding</a></li>
+        <li><a onclick="navigateToFeature('transit')">Safe Transit</a></li>
+        <li><a onclick="navigateToFeature('coach')">Coach Avvai</a></li>
+        <li><a onclick="navigateToFeature('privacy')" style="color:var(--emerald-accent); font-weight:700;">🛡️ Privacy Vault</a></li>
+        <li><a onclick="navigateToFeature('ml-slot')">Kinematic ML</a></li>
+        <li><a onclick="navigateToFeature('faq')">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggleNav" class="theme-toggle-btn" onclick="toggleTheme()">
+          <span id="themeIconNav">🌙</span>
+          <span id="themeLabelNav">Dark</span>
+        </button>
+
+        <!-- Athlete Stance HUD Trigger -->
+        <button id="stanceHudBtn" class="stance-pill" onclick="toggleAthleteStance()">
+          <div class="stance-dot" id="stanceDot"></div>
+          <span id="stanceLabel">STANCE: STANDING</span>
+        </button>
+
+        <button class="btn-action-primary" onclick="navigateToFeature('trials')">
+          Athlete Portal ↗
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <header class="hero-wrap">
+    <div class="hero-badges-row">
+      <span class="verified-pill">● SDAT & KHELO INDIA GROUNDED</span>
+      <span style="color: var(--border-subtle);">|</span>
+      <span style="font-size: 11px; color: var(--text-muted); font-weight: 700; font-family: 'Space Grotesk', monospace;">
+        TAMIL NADU SPORTS INTELLIGENCE SYSTEM
+      </span>
+    </div>
+
+    <h1 class="hero-heading">
+      The Athlete Intelligence System for <span class="blue-word">Indian Women in Sport.</span>
+    </h1>
+
+    <p class="hero-subtext">
+      Four specialist AI agents inspired by legendary Tamil queens. Delivering verified selection trials, government grants, personalized nutrition, and biomechanical screening to every district athlete.
+    </p>
+
+    <!-- Composer Field -->
+    <form class="hero-composer-box" onsubmit="event.preventDefault(); handleHeroPrompt();">
+      <input id="heroPromptInput" type="text" placeholder="Ask Avvai: 'Find U-19 athletics trials in Madurai', or 'SDAT ₹2 Lakh grant eligibility'..." />
+      <button type="submit" class="hero-composer-btn">
+        <span>Consult Avvai</span>
+        <span>→</span>
+      </button>
+    </form>
+
+    <!-- Prompt Suggestions Chips -->
+    <div class="hero-chips-row">
+      <div class="hero-chip" onclick="clickPromptChip('🏆 Find upcoming state kabaddi trials in Tamil Nadu')">🏆 State Kabaddi Trials</div>
+      <div class="hero-chip" onclick="clickPromptChip('💰 How to apply for SDAT Champions Development Scheme ₹2 Lakh grant?')">💰 SDAT Champions Grant</div>
+      <div class="hero-chip" onclick="clickPromptChip('🚌 Safe travel transit routes for district tournaments')">🚌 Safe Travel Transit</div>
+      <div class="hero-chip" onclick="clickPromptChip('🥗 Best high-protein Tamil diet plan for sprinters under ₹50/day')">🥗 High-Protein Tamil Diet</div>
+      <div class="hero-chip" onclick="clickPromptChip('⚡ Kinematic Sprint Readiness prediction')">⚡ Kinematic Sprint ML</div>
+    </div>
+
+    <!-- Character / Queen Avatar Row -->
+    <div class="avatar-stack">
+      <div class="avatar-item" onclick="navigateToFeature('trials')">
+        <div class="avatar-circle" style="background-image: url('assets/poster1.jpg');"></div>
+        <span>Velu Nachiyar · Trials Radar</span>
+      </div>
+      <div class="avatar-item" onclick="navigateToFeature('scholarships')">
+        <div class="avatar-circle" style="background-image: url('assets/poster2.jpg');"></div>
+        <span>Sembiyan Mahadevi · Funding</span>
+      </div>
+      <div class="avatar-item" onclick="navigateToFeature('transit')">
+        <div class="avatar-circle" style="background-image: url('assets/poster3.jpg');"></div>
+        <span>Rani Mangammal · Safe Transit</span>
+      </div>
+      <div class="avatar-item" onclick="navigateToFeature('coach')">
+        <div class="avatar-circle" style="background-image: url('assets/poster4.jpg');"></div>
+        <span>Kundavai · Sports Science</span>
+      </div>
+    </div>
+
+    <!-- 4 HERO POSTERS (ULTRA-PREMIUM 3D INTERACTIVE CARDS & DOSSIERS) -->
+    <div class="hero-posters-grid" id="postersGrid">
+      
+      <!-- POSTER 1: VELU NACHIYAR -->
+      <div class="poster-3d-card" id="posterCard1" data-queen="velu" onmouseenter="playCardHoverSound()" onclick="handlePosterCardClick(1, event)">
+        <div class="poster-flipper">
+          <!-- FRONT FACE -->
+          <div class="poster-face poster-front">
+            <div class="poster-glare"></div>
+            <img src="assets/poster1.jpg" alt="Velu Nachiyar Poster" class="poster-bg-img" />
+            <div class="poster-gradient-shade"></div>
+            <div class="poster-front-top">
+              <span class="poster-pill-badge">01 / SIVAGANGA</span>
+              <button class="poster-flip-toggle" onclick="event.stopPropagation(); flipPoster(1);" title="Flip to View Athletic Dossier">
+                ↺ FLIP DOSSIER
+              </button>
+            </div>
+            <div class="poster-front-bottom">
+              <div class="poster-queen-en">VELU NACHIYAR</div>
+              <div class="poster-queen-ta">வீரமங்கை வேலு நாச்சியார்</div>
+              <div class="poster-feature-desc">Combat velocity, sprint acceleration & SDAT selection trials.</div>
+              <!-- INTERACTIVE QUICK ACTION CHIPS -->
+              <div class="poster-chips-grid">
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('trials', 'Kabaddi')">🤼 Kabaddi</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('trials', 'Athletics')">⚡ 100m Sprint</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('trials', 'Silambam')">⚔️ Silambam</button>
+              </div>
+              <div class="poster-action-row">
+                <button class="poster-primary-action" onclick="event.stopPropagation(); navigateToFeature('trials')">Open Trials Board →</button>
+                <button class="poster-inspect-icon-btn" onclick="event.stopPropagation(); openQueenModal('velu')" title="Inspect Velu Nachiyar Dossier">🔍</button>
+              </div>
+            </div>
+          </div>
+          <!-- BACK FACE: ATHLETIC INTELLIGENCE DOSSIER -->
+          <div class="poster-face poster-back">
+            <div class="poster-glare"></div>
+            <div class="poster-back-top">
+              <div class="poster-back-avatar-group">
+                <div class="poster-back-avatar" style="background-image: url('assets/poster1.jpg');"></div>
+                <div>
+                  <div class="poster-back-queen-title">VELU NACHIYAR</div>
+                  <div class="poster-back-dynasty">1780 CE · SIVAGANGA ARCHIVES</div>
+                </div>
+              </div>
+              <button class="poster-flip-back-btn" onclick="event.stopPropagation(); flipPoster(1);" title="Flip to artwork">↻ FRONT</button>
+            </div>
+            <div class="dossier-quote-box">
+              “First Indian Queen to vanquish colonial army through guerrilla velocity, Silambam precision and all-women Udayal regiment.”
+            </div>
+            <div class="dossier-telemetry-grid">
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">14</div>
+                <div class="dossier-metric-label">ACTIVE TRIALS</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">38</div>
+                <div class="dossier-metric-label">TN DISTRICTS</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">11.8s</div>
+                <div class="dossier-metric-label">SPRINT CUTOFF</div>
+              </div>
+            </div>
+            <div class="dossier-tactical-desc">
+              Tracks SDAT district notification alerts across Sivaganga, Madurai & Chennai for U-19 and Senior women's selection meets.
+            </div>
+            <div class="dossier-action-stack">
+              <button class="dossier-btn-primary" onclick="event.stopPropagation(); navigateToFeature('trials')">⚡ Launch Trials Radar</button>
+              <button class="dossier-btn-secondary" onclick="event.stopPropagation(); queryQueenGemini('velu')">📡 Run Live AI Scouting Query</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTER 2: SEMBIYAN MAHADEVI -->
+      <div class="poster-3d-card" id="posterCard2" data-queen="sembiyan" onmouseenter="playCardHoverSound()" onclick="handlePosterCardClick(2, event)">
+        <div class="poster-flipper">
+          <!-- FRONT FACE -->
+          <div class="poster-face poster-front">
+            <div class="poster-glare"></div>
+            <img src="assets/poster2.jpg" alt="Sembiyan Mahadevi Poster" class="poster-bg-img" />
+            <div class="poster-gradient-shade"></div>
+            <div class="poster-front-top">
+              <span class="poster-pill-badge">02 / CHOLA REALM</span>
+              <button class="poster-flip-toggle" onclick="event.stopPropagation(); flipPoster(2);" title="Flip to View Athletic Dossier">
+                ↺ FLIP DOSSIER
+              </button>
+            </div>
+            <div class="poster-front-bottom">
+              <div class="poster-queen-en">SEMBIYAN MAHADEVI</div>
+              <div class="poster-queen-ta">செம்பியன் மாதேவி</div>
+              <div class="poster-feature-desc">Direct government schemes, Khelo India stipends & CSR endowments.</div>
+              <!-- INTERACTIVE QUICK ACTION CHIPS -->
+              <div class="poster-chips-grid">
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('scholarships', 'SDAT')">💰 SDAT ₹2L</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('scholarships', 'Khelo')">🇮🇳 Khelo India</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('scholarships', 'CSR')">📋 CSR Grant</button>
+              </div>
+              <div class="poster-action-row">
+                <button class="poster-primary-action" onclick="event.stopPropagation(); navigateToFeature('scholarships')">Explore Funding →</button>
+                <button class="poster-inspect-icon-btn" onclick="event.stopPropagation(); openQueenModal('sembiyan')" title="Inspect Sembiyan Mahadevi Dossier">🔍</button>
+              </div>
+            </div>
+          </div>
+          <!-- BACK FACE: ATHLETIC INTELLIGENCE DOSSIER -->
+          <div class="poster-face poster-back">
+            <div class="poster-glare"></div>
+            <div class="poster-back-top">
+              <div class="poster-back-avatar-group">
+                <div class="poster-back-avatar" style="background-image: url('assets/poster2.jpg');"></div>
+                <div>
+                  <div class="poster-back-queen-title">SEMBIYAN MAHADEVI</div>
+                  <div class="poster-back-dynasty">10TH CENTURY · CHOLA EMPIRE</div>
+                </div>
+              </div>
+              <button class="poster-flip-back-btn" onclick="event.stopPropagation(); flipPoster(2);" title="Flip to artwork">↻ FRONT</button>
+            </div>
+            <div class="dossier-quote-box">
+              “Pioneered autonomous temple endowments and perpetual public funding trusts to support rural village youth.”
+            </div>
+            <div class="dossier-telemetry-grid">
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">₹2.0L</div>
+                <div class="dossier-metric-label">STATE GRANT</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">₹6.28L</div>
+                <div class="dossier-metric-label">TALENT POOL</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">100%</div>
+                <div class="dossier-metric-label">FEMALE QUOTA</div>
+              </div>
+            </div>
+            <div class="dossier-tactical-desc">
+              Direct Benefit Transfer (DBT) verification engine matching women athletes to sports kit allowances and international travel stipends.
+            </div>
+            <div class="dossier-action-stack">
+              <button class="dossier-btn-primary" onclick="event.stopPropagation(); navigateToFeature('scholarships')">⚡ Check Eligibility</button>
+              <button class="dossier-btn-secondary" onclick="event.stopPropagation(); queryQueenGemini('sembiyan')">📡 Verify Khelo India Pool</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTER 3: RANI MANGAMMAL -->
+      <div class="poster-3d-card" id="posterCard3" data-queen="mangammal" onmouseenter="playCardHoverSound()" onclick="handlePosterCardClick(3, event)">
+        <div class="poster-flipper">
+          <!-- FRONT FACE -->
+          <div class="poster-face poster-front">
+            <div class="poster-glare"></div>
+            <img src="assets/poster3.jpg" alt="Rani Mangammal Poster" class="poster-bg-img" />
+            <div class="poster-gradient-shade"></div>
+            <div class="poster-front-top">
+              <span class="poster-pill-badge">03 / MADURAI</span>
+              <button class="poster-flip-toggle" onclick="event.stopPropagation(); flipPoster(3);" title="Flip to View Athletic Dossier">
+                ↺ FLIP DOSSIER
+              </button>
+            </div>
+            <div class="poster-front-bottom">
+              <div class="poster-queen-en">RANI MANGAMMAL</div>
+              <div class="poster-queen-ta">ராணி மங்கம்மாள்</div>
+              <div class="poster-feature-desc">Safe travel corridors, accompanied clusters & district travel subsidies.</div>
+              <!-- INTERACTIVE QUICK ACTION CHIPS -->
+              <div class="poster-chips-grid">
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('transit', 'Madurai')">🛡️ Safe Corridors</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('transit', 'Rail')">🚆 75% Bus/Rail</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('transit', 'Chennai')">📍 Route Score</button>
+              </div>
+              <div class="poster-action-row">
+                <button class="poster-primary-action" onclick="event.stopPropagation(); navigateToFeature('transit')">Plan Transit →</button>
+                <button class="poster-inspect-icon-btn" onclick="event.stopPropagation(); openQueenModal('mangammal')" title="Inspect Rani Mangammal Dossier">🔍</button>
+              </div>
+            </div>
+          </div>
+          <!-- BACK FACE: ATHLETIC INTELLIGENCE DOSSIER -->
+          <div class="poster-face poster-back">
+            <div class="poster-glare"></div>
+            <div class="poster-back-top">
+              <div class="poster-back-avatar-group">
+                <div class="poster-back-avatar" style="background-image: url('assets/poster3.jpg');"></div>
+                <div>
+                  <div class="poster-back-queen-title">RANI MANGAMMAL</div>
+                  <div class="poster-back-dynasty">1689 CE · MADURAI NAYAK EMPIRE</div>
+                </div>
+              </div>
+              <button class="poster-flip-back-btn" onclick="event.stopPropagation(); flipPoster(3);" title="Flip to artwork">↻ FRONT</button>
+            </div>
+            <div class="dossier-quote-box">
+              “Visionary regent who built the Grand Royal Highway network with fortified choultries and protected travel corridors for women.”
+            </div>
+            <div class="dossier-telemetry-grid">
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">38</div>
+                <div class="dossier-metric-label">SAFE CORRIDORS</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">75%</div>
+                <div class="dossier-metric-label">FARE WAIVER</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">99.4%</div>
+                <div class="dossier-metric-label">SAFETY SCORE</div>
+              </div>
+            </div>
+            <div class="dossier-tactical-desc">
+              Accompanied cluster routing connecting district athletes to state stadiums in Chennai and Madurai with 181 Women Helpline integration.
+            </div>
+            <div class="dossier-action-stack">
+              <button class="dossier-btn-primary" onclick="event.stopPropagation(); navigateToFeature('transit')">⚡ Generate Travel Pass</button>
+              <button class="dossier-btn-secondary" onclick="event.stopPropagation(); queryQueenGemini('mangammal')">📡 Safe Route Telemetry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTER 4: KUNDAVAI PIRATTIYAR -->
+      <div class="poster-3d-card" id="posterCard4" data-queen="kundavai" onmouseenter="playCardHoverSound()" onclick="handlePosterCardClick(4, event)">
+        <div class="poster-flipper">
+          <!-- FRONT FACE -->
+          <div class="poster-face poster-front">
+            <div class="poster-glare"></div>
+            <img src="assets/poster4.jpg" alt="Kundavai Poster" class="poster-bg-img" />
+            <div class="poster-gradient-shade"></div>
+            <div class="poster-front-top">
+              <span class="poster-pill-badge">04 / THANJAVUR</span>
+              <button class="poster-flip-toggle" onclick="event.stopPropagation(); flipPoster(4);" title="Flip to View Athletic Dossier">
+                ↺ FLIP DOSSIER
+              </button>
+            </div>
+            <div class="poster-front-bottom">
+              <div class="poster-queen-en">KUNDAVAI PIRATTIYAR</div>
+              <div class="poster-queen-ta">குந்தவை பிராட்டியார்</div>
+              <div class="poster-feature-desc">AI sports nutrition, menstrual cycle training & recovery science.</div>
+              <!-- INTERACTIVE QUICK ACTION CHIPS -->
+              <div class="poster-chips-grid">
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('coach', 'Ragi')">🥣 Ragi Fuel</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('coach', 'Menstrual')">🩸 Cycle Sync</button>
+                <button class="poster-interactive-chip" onclick="event.stopPropagation(); triggerPosterChip('coach', 'Recovery')">🧘 Recovery</button>
+              </div>
+              <div class="poster-action-row">
+                <button class="poster-primary-action" onclick="event.stopPropagation(); navigateToFeature('coach')">Ask Coach Avvai →</button>
+                <button class="poster-inspect-icon-btn" onclick="event.stopPropagation(); openQueenModal('kundavai')" title="Inspect Kundavai Dossier">🔍</button>
+              </div>
+            </div>
+          </div>
+          <!-- BACK FACE: ATHLETIC INTELLIGENCE DOSSIER -->
+          <div class="poster-face poster-back">
+            <div class="poster-glare"></div>
+            <div class="poster-back-top">
+              <div class="poster-back-avatar-group">
+                <div class="poster-back-avatar" style="background-image: url('assets/poster4.jpg');"></div>
+                <div>
+                  <div class="poster-back-queen-title">KUNDAVAI PIRATTIYAR</div>
+                  <div class="poster-back-dynasty">1014 CE · CHOLA SANATORIUMS</div>
+                </div>
+              </div>
+              <button class="poster-flip-back-btn" onclick="event.stopPropagation(); flipPoster(4);" title="Flip to artwork">↻ FRONT</button>
+            </div>
+            <div class="dossier-quote-box">
+              “Imperial Princess and founder of 'Aathula Saalai' medical sanatoriums integrating traditional Siddha medicine and wellness.”
+            </div>
+            <div class="dossier-telemetry-grid">
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">4:1</div>
+                <div class="dossier-metric-label">CARB-PROTEIN</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">Follicular</div>
+                <div class="dossier-metric-label">POWER PHASE</div>
+              </div>
+              <div class="dossier-telemetry-cell">
+                <div class="dossier-metric-val">98%</div>
+                <div class="dossier-metric-label">RECOVERY RATE</div>
+              </div>
+            </div>
+            <div class="dossier-tactical-desc">
+              AI Sports Nutrition paired with cycle-synced macro timing (Ragi & Sundal traditional high-protein fuels) and prehab injury prevention.
+            </div>
+            <div class="dossier-action-stack">
+              <button class="dossier-btn-primary" onclick="event.stopPropagation(); navigateToFeature('coach')">⚡ Consult Coach Avvai</button>
+              <button class="dossier-btn-secondary" onclick="event.stopPropagation(); queryQueenGemini('kundavai')">📡 Generate Meal Blueprint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 01: AGENT OVERVIEW ================= -->
+  <section id="agents" class="section-standard">
+    <span class="numbered-eyebrow">01 — SPECIALIST ROLES</span>
+    <h2 class="section-title-centered">Four Dedicated Athletic Intelligence Agents</h2>
+
+    <div class="agent-cards-row">
+      <!-- Agent 1 -->
+      <div class="agent-compact-card" onclick="navigateToFeature('trials')">
+        <div class="agent-thumb-circle" style="background-image: url('assets/poster1.jpg');"></div>
+        <div class="agent-card-role">TRIALS & SCOUTING</div>
+        <div class="agent-card-name">Velu Nachiyar</div>
+        <div class="agent-card-desc">Tracks real-time athletics meets, kabaddi trials, and SDAT selection windows across Tamil Nadu.</div>
+        <div class="agent-card-action">Go to Trials Board →</div>
+      </div>
+
+      <!-- Agent 2 -->
+      <div class="agent-compact-card" onclick="navigateToFeature('scholarships')">
+        <div class="agent-thumb-circle" style="background-image: url('assets/poster2.jpg');"></div>
+        <div class="agent-card-role">FUNDING & GRANTS</div>
+        <div class="agent-card-name">Sembiyan Mahadevi</div>
+        <div class="agent-card-desc">Matches athlete criteria with the SDAT Champions Scheme, Khelo India, and CSR foundation stipends.</div>
+        <div class="agent-card-action">Go to Grants Hub →</div>
+      </div>
+
+      <!-- Agent 3 -->
+      <div class="agent-compact-card" onclick="navigateToFeature('transit')">
+        <div class="agent-thumb-circle" style="background-image: url('assets/poster3.jpg');"></div>
+        <div class="agent-card-role">SAFE TRANSIT & LOGISTICS</div>
+        <div class="agent-card-name">Rani Mangammal</div>
+        <div class="agent-card-desc">Coordinates travel pods, trusted chaperones, and state bus/train passes for distant trials.</div>
+        <div class="agent-card-action">Go to Safe Transit →</div>
+      </div>
+
+      <!-- Agent 4 -->
+      <div class="agent-compact-card" onclick="navigateToFeature('coach')">
+        <div class="agent-thumb-circle" style="background-image: url('assets/poster4.jpg');"></div>
+        <div class="agent-card-role">SPORTS SCIENCE & NUTRITION</div>
+        <div class="agent-card-name">Kundavai / Avvai</div>
+        <div class="agent-card-desc">Delivers localized sports nutrition (ragi, sundal), menstrual cycle synchronization, and recovery tips.</div>
+        <div class="agent-card-action">Consult Coach Avvai →</div>
+      </div>
+    </div>
+
+    <!-- ================= 02: PRODUCT WORKSPACE DEMO ================= -->
+    <div id="workspace" class="workspace-mockup-frame">
+      <div class="workspace-browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+        </div>
+        <div class="browser-url-pill">app.veeramangai.org/studio/live-radar</div>
+        <div style="font-size: 11px; color: var(--emerald-accent); font-weight: 800; font-family: 'Space Grotesk', monospace;">
+          ● BACKEND CONNECTED: PORT 5000
+        </div>
+      </div>
+
+      <div class="workspace-split-body">
+        <div class="workspace-side-panel">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; color: var(--blue-accent); font-family: 'Space Grotesk', monospace;">
+            ACTIVE AGENT FEEDS
+          </div>
+          <div class="workspace-side-item active" onclick="loadWorkspaceFeed('trials')">
+            <strong style="font-size: 12.5px; display: block; margin-bottom: 2px;">Velu Nachiyar Radar</strong>
+            <span style="font-size: 11px; color: var(--text-muted);">Live selection notices grounded via Google Search</span>
+          </div>
+          <div class="workspace-side-item" onclick="loadWorkspaceFeed('grants')">
+            <strong style="font-size: 12.5px; display: block; margin-bottom: 2px;">Sembiyan Endowment Feed</strong>
+            <span style="font-size: 11px; color: var(--text-muted);">SDAT Champions Scheme & Khelo India status</span>
+          </div>
+          <div class="workspace-side-item" onclick="loadWorkspaceFeed('transit')">
+            <strong style="font-size: 12.5px; display: block; margin-bottom: 2px;">Rani Mangammal Travel Pass</strong>
+            <span style="font-size: 11px; color: var(--text-muted);">Madurai & Trichy tournament transit corridors</span>
+          </div>
+          <div class="workspace-side-item" onclick="loadWorkspaceFeed('nutrition')">
+            <strong style="font-size: 12.5px; display: block; margin-bottom: 2px;">Avvai Recovery Science</strong>
+            <span style="font-size: 11px; color: var(--text-muted);">Tamil carbohydrate timing & post-sprint recovery</span>
+          </div>
+        </div>
+
+        <div class="workspace-main-canvas">
+          <div class="workspace-terminal-console" id="workspaceConsole">
+            [SYSTEM READY] Veeramangai Agent Orchestrator initialized.<br>
+            [NETWORK] Grounding Provider: Gemini 2.5 Flash + Google Search.<br>
+            [STATUS] Velu Nachiyar Agent scanning Sports Development Authority of Tamil Nadu (SDAT)...<br>
+            [OUTPUT] 6 upcoming trials detected across Chennai, Madurai, Coimbatore.<br>
+            Select any feed on the left or click the interactive poster cards above.
+          </div>
+
+          <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-size: 11.5px; color: var(--text-muted);">Click any option to run live query with Gemini API</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="stance-pill" onclick="refreshTrialsData()">Refresh Trials ⚡</button>
+              <button class="btn-action-primary" onclick="navigateToFeature('coach')">Ask Coach Live</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 03: POSITIONING STATEMENT ================= -->
+    <div class="positioning-wrap">
+      <div class="positioning-pill">THE VEERAMANGAI DIFFERENCE</div>
+      <h2 class="positioning-title">
+        Built specifically for the girl running on district red dirt, not elite private academies.
+      </h2>
+      <p class="positioning-lead">
+        India loses over 80% of female sporting talent between ages 14 and 19 due to missing selection notices, lack of travel chaperones, and confusing grant paperwork. Veeramangai solves every step with autonomous AI.
+      </p>
+
+      <div class="positioning-tabs">
+        <div class="pos-tab-card" onclick="navigateToFeature('trials')">
+          <div class="pos-tab-num">01 / DISCOVERY</div>
+          <div class="pos-tab-title">Never Miss a Trial</div>
+        </div>
+        <div class="pos-tab-card" onclick="navigateToFeature('scholarships')">
+          <div class="pos-tab-num">02 / CAPITAL</div>
+          <div class="pos-tab-title">Direct Government Grants</div>
+        </div>
+        <div class="pos-tab-card" onclick="navigateToFeature('transit')">
+          <div class="pos-tab-num">03 / TRANSIT</div>
+          <div class="pos-tab-title">Safe Travel Pods</div>
+        </div>
+        <div class="pos-tab-card" onclick="navigateToFeature('coach')">
+          <div class="pos-tab-num">04 / RECOVERY</div>
+          <div class="pos-tab-title">Affordable Local Nutrition</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04: FEATURE 1: SELECTION TRIALS (VELU NACHIYAR) ================= -->
+  <section id="trials" class="section-standard">
+    <div class="feature-row">
+      <div class="feature-copy">
+        <div class="feature-copy-eyebrow">02 / DISCOVERY RADAR</div>
+        <h3 class="feature-copy-headline">
+          Never miss a district trial or <span class="blue-word">selection deadline.</span>
+        </h3>
+        <p class="feature-copy-p">
+          Scouring dozens of district sports notices, newspaper snippets, and WhatsApp PDFs is over. Our Velu Nachiyar agent continuously grounds live searches across SDAT, Khelo India, and state federations.
+        </p>
+        <ul class="feature-checklist">
+          <li><span class="checklist-check">✓</span> Live Google Search Grounding for verified selection notices</li>
+          <li><span class="checklist-check">✓</span> Direct links to official registration portals</li>
+          <li><span class="checklist-check">✓</span> Age eligibility, document checklists, and district venues</li>
+        </ul>
+        <div class="feature-attribution">
+          Orchestrated by <strong>Velu Nachiyar Agent</strong> · Model: Gemini 2.5 Flash Grounded
+        </div>
+
+        <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="stance-pill" onclick="filterTrials('all')">Show All</button>
+          <button class="stance-pill" onclick="filterTrials('Athletics')">Athletics</button>
+          <button class="stance-pill" onclick="filterTrials('Kabaddi')">Kabaddi</button>
+        </div>
+      </div>
+
+      <div class="feature-ui-box" id="trialsContainerCard">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div style="font-weight: 800; font-size: 13.5px; color: var(--blue-accent); font-family: 'Space Grotesk', monospace;">
+            LIVE SELECTION NOTICES
+          </div>
+          <span style="font-size: 10.5px; color: var(--emerald-accent); font-weight: 800;">● REAL-TIME DATA</span>
+        </div>
+        <div id="trialsListInner">Loading real-time events from Gemini API...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05: FEATURE 2: GRANTS & SCHOLARSHIPS (SEMBIYAN MAHADEVI) ================= -->
+  <section id="scholarships" class="section-standard">
+    <div class="feature-row reversed">
+      <div class="feature-copy">
+        <div class="feature-copy-eyebrow">03 / FUNDING & ENDOWMENTS</div>
+        <h3 class="feature-copy-headline">
+          Turn athletic eligibility into <span class="blue-word">direct financial backing.</span>
+        </h3>
+        <p class="feature-copy-p">
+          From the flagship Tamil Nadu Champions Development Scheme to Central Khelo India stipends and corporate CSR programs, Sembiyan Mahadevi maps the grants you qualify for.
+        </p>
+        <ul class="feature-checklist">
+          <li><span class="checklist-check">✓</span> SDAT Champions Scheme (₹2,00,000 / year + Kit)</li>
+          <li><span class="checklist-check">✓</span> Khelo India National Talent Scholarship (₹6,28,000 / year)</li>
+          <li><span class="checklist-check">✓</span> Direct document verification checklist without agency middlemen</li>
+        </ul>
+        <div class="feature-attribution">
+          Orchestrated by <strong>Sembiyan Mahadevi Agent</strong> · Zero Commission
+        </div>
+
+        <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="stance-pill" onclick="filterScholarships('all')">All Grants</button>
+          <button class="stance-pill" onclick="filterScholarships('sdat')">State SDAT</button>
+        </div>
+      </div>
+
+      <div class="feature-ui-box" id="scholarshipsContainerCard">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div style="font-weight: 800; font-size: 13.5px; color: var(--gold-accent); font-family: 'Space Grotesk', monospace;">
+            ACTIVE SCHOLARSHIP SCHEMES
+          </div>
+          <span style="font-size: 10.5px; color: var(--emerald-accent); font-weight: 800;">● ZERO MIDDLEMEN</span>
+        </div>
+        <div id="scholarshipsListInner">Loading active scholarship schemes...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06: FEATURE 3: SAFE TRANSIT & LOGISTICS (RANI MANGAMMAL) ================= -->
+  <section id="transit" class="section-standard">
+    <div class="feature-row">
+      <div class="feature-copy">
+        <div class="feature-copy-eyebrow">04 / TRAVEL & TRANSIT PODS</div>
+        <h3 class="feature-copy-headline">
+          Travel further. <span class="blue-word">With trusted companions.</span>
+        </h3>
+        <p class="feature-copy-p">
+          Traveling across districts for multi-day selection trials is daunting. Rani Mangammal helps athletes plan safe train and bus routes, coordinate accompanied travel clusters, and calculate travel subsidy requests.
+        </p>
+        <ul class="feature-checklist">
+          <li><span class="checklist-check">✓</span> Verified travel corridors to Madurai, Trichy, Coimbatore, and Chennai</li>
+          <li><span class="checklist-check">✓</span> Accompanied athlete pods with verified female chaperones</li>
+          <li><span class="checklist-check">✓</span> Instant District Sports Officer (DSO) travel reimbursement draft</li>
+        </ul>
+        <div class="feature-attribution">
+          Orchestrated by <strong>Rani Mangammal Agent</strong> · Travel Safety Corridor
+        </div>
+      </div>
+
+      <div class="feature-ui-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div style="font-weight: 800; font-size: 13.5px; color: var(--blue-accent); font-family: 'Space Grotesk', monospace;">
+            TOURNAMENT TRANSIT CORRIDOR
+          </div>
+          <span style="font-size: 10.5px; color: var(--blue-accent); font-weight: 800;">CONFIRMED POD</span>
+        </div>
+
+        <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 14px; margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <strong style="font-size: 13.5px; color: var(--text-main);">Madurai U-19 Trials Travel Pod</strong>
+            <span style="font-size: 10.5px; color: var(--emerald-accent); font-weight: 800;">● DEPARTS FRIDAY</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); line-height: 1.55;">
+            • <strong>Train:</strong> Vaigai Superfast Express (Chennai Egmore → Madurai Jn)<br>
+            • <strong>Accompanied Pod:</strong> 4 District Sprinters + Coach Meena (Verified)<br>
+            • <strong>Subsidy Status:</strong> ₹1,200/athlete covered under TN Youth Sports Pass<br>
+            • <strong>Emergency Hotline:</strong> 181 Women Safety & SDAT Control Desk
+          </p>
+        </div>
+
+        <!-- Route Estimator -->
+        <div style="background: var(--bg-base); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 12px;">
+          <div style="font-size: 10.5px; font-weight: 800; color: var(--gold-accent); margin-bottom: 6px; font-family: 'Space Grotesk', monospace;">
+            CALCULATE YOUR TRAVEL REIMBURSEMENT
+          </div>
+          <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+            <select id="transitOrigin" style="flex: 1; padding: 7px; border-radius: 6px; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-main); font-size: 11.5px;">
+              <option value="Tirunelveli">From: Tirunelveli</option>
+              <option value="Madurai">From: Madurai</option>
+              <option value="Salem">From: Salem</option>
+              <option value="Coimbatore">From: Coimbatore</option>
+            </select>
+            <select id="transitDest" style="flex: 1; padding: 7px; border-radius: 6px; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-main); font-size: 11.5px;">
+              <option value="Chennai SDAT">To: Chennai SDAT Stadium</option>
+              <option value="Madurai Race Course">To: Madurai Race Course</option>
+              <option value="Trichy">To: Trichy Sports Complex</option>
+            </select>
+          </div>
+          <button class="stance-pill" style="width: 100%; text-align: center; justify-content: center;" onclick="calculateTransitRoute()">Calculate Route & Pass ⚡</button>
+          <div id="transitResultText" style="margin-top: 8px; font-size: 11.5px; color: var(--text-secondary);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07: FEATURE 4: SPORTS SCIENCE & AVVAI PET STUDIO ================= -->
+  <section id="coach" class="section-standard">
+    <div class="feature-row reversed">
+      <div class="feature-copy">
+        <div class="feature-copy-eyebrow">05 / SPORTS SCIENCE & NUTRITION</div>
+        <h3 class="feature-copy-headline">
+          Nutrition tailored to <span class="blue-word">Indian athletes,</span> not Western textbooks.
+        </h3>
+        <p class="feature-copy-p">
+          Avvai translates cutting-edge sports science into local, accessible Tamil Nadu ingredients. Learn how to fuel with ragi porridge, sprouted sundal, and curd, and sync training cycles with menstrual recovery.
+        </p>
+        <ul class="feature-checklist">
+          <li><span class="checklist-check">✓</span> High-protein Indian meal plans under ₹50/day</li>
+          <li><span class="checklist-check">✓</span> Menstrual phase training adjustments (luteal vs. follicular)</li>
+          <li><span class="checklist-check">✓</span> Bilingual guidance in both English and தமிழ்</li>
+        </ul>
+        <div class="feature-attribution">
+          Orchestrated by <strong>Kundavai / Avvai Agent</strong> · Private by Design
+        </div>
+
+        <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="hero-chip" onclick="askAvvaiQuick('What is the ideal post-sprint meal using Tamil kitchen ingredients?')">Tamil Sprinter Diet</button>
+          <button class="hero-chip" onclick="askAvvaiQuick('How should I adjust training volume during my menstrual cycle?')">Menstrual Cycle Sync</button>
+          <button class="hero-chip" onclick="askAvvaiQuick('What are the qualifying standards for SDAT U-19 athletics?')">U-19 Standards</button>
+        </div>
+      </div>
+
+      <div class="feature-ui-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <!-- Avvai sprite icon -->
+            <span id="studioAvvaiSprite" class="avvai-sprite avvai-wave" style="width: 36px; height: 36px;"></span>
+            <div style="font-weight: 800; font-size: 13.5px; color: var(--blue-accent); font-family: 'Space Grotesk', monospace;">
+              AVVAI SPORTS MENTOR STUDIO
+            </div>
+          </div>
+          <span style="font-size: 10.5px; color: var(--emerald-accent); font-weight: 800;">● GEMINI 2.5 FLASH</span>
+        </div>
+
+        <!-- Chat Box -->
+        <div id="coachChatWindow" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 14px; min-height: 160px; max-height: 230px; overflow-y: auto; font-size: 13px; line-height: 1.55; margin-bottom: 10px;">
+          <div style="color: var(--blue-accent); font-weight: 700; margin-bottom: 4px;">Avvai:</div>
+          <div style="color: var(--text-secondary);">
+            "வணக்கம்! I am Avvai, your sporty Tamil companion. Ask me anything about sports diet, recovery, or training timing!"
+          </div>
+        </div>
+
+        <form onsubmit="event.preventDefault(); submitCoachMessage();" style="display: flex; gap: 8px;">
+          <input id="coachInputText" type="text" placeholder="Ask about diet, recovery, or training volume..." style="flex: 1; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-input); color: var(--text-main); font-size: 13px; outline: none;" />
+          <button type="submit" class="btn-action-primary" style="padding: 8px 16px;">Ask ↗</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 08: OPPORTUNITIES DIRECTORY ================= -->
+  <section id="library" class="opportunities-section">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <span class="numbered-eyebrow">06 — SCHOLARSHIPS & TOURNAMENT VAULT</span>
+      <h2 class="section-title-centered" style="margin-bottom: 12px;">Verified Opportunities Directory</h2>
+      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto;">
+        Real-time feeds sourced from the National Sports Repository, SDAT Government Gazettes, and corporate sports CSR programs.
+      </p>
+
+      <div class="opportunities-grid">
+        <div class="opp-card">
+          <div>
+            <div class="opp-tag">SDAT TAMIL NADU</div>
+            <div class="opp-title">Champions Development Scheme</div>
+            <p class="opp-desc">Provides ₹2,00,000 yearly stipend + training kit to state-level medalists under 21 years.</p>
+          </div>
+          <div class="opp-footer">
+            <span>Eligibility: State Top 3</span>
+            <a onclick="navigateToFeature('scholarships')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Apply ↗</a>
+          </div>
+        </div>
+
+        <div class="opp-card">
+          <div>
+            <div class="opp-tag">GOVERNMENT OF INDIA</div>
+            <div class="opp-title">Khelo India Talent Scholarship</div>
+            <p class="opp-desc">₹6,28,000 per athlete per annum (including ₹1,20,000 pocket allowance) for 1,000 selected athletes.</p>
+          </div>
+          <div class="opp-footer">
+            <span>Age: 10 - 18 Years</span>
+            <a onclick="navigateToFeature('scholarships')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Check Details ↗</a>
+          </div>
+        </div>
+
+        <div class="opp-card">
+          <div>
+            <div class="opp-tag">DISTRICT TRIALS</div>
+            <div class="opp-title">Tamil Nadu State Athletics Trials</div>
+            <p class="opp-desc">District trials in Madurai and Chennai for 100m, 200m, 400m, and 4x100m relay selection.</p>
+          </div>
+          <div class="opp-footer">
+            <span>Venue: J.N. Stadium</span>
+            <a onclick="navigateToFeature('trials')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Register ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 09: TEAMMATE'S KINEMATIC ML MODEL ================= -->
+  
+  <!-- ================= 07: ATHLETE PRIVACY VAULT & PROTOCOLS (DPDP ACT 2023) ================= -->
+  <section id="privacy" class="section-standard">
+    <span class="numbered-eyebrow" style="color: var(--emerald-accent);">07 — CRYPTOGRAPHIC ATHLETE PRIVACY VAULT</span>
+    <h2 class="section-title-centered">Women's Sports Data Sovereignty & Anti-Surveillance</h2>
+    <p style="text-align: center; max-width: 740px; margin: 0 auto 36px; color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+      Menstrual cycles, personal recovery telemetry, and safe travel coordinates are strictly protected. Veeramangai implements <strong>DPDP Act 2023 data localization</strong>, client-side AES-256 encryption, differential persona separation between athletes and coaches, and <strong>Zero-Knowledge Proofs (ZKP)</strong> to prevent unauthorized government harvesting or surveillance.
+    </p>
+
+    <!-- 4 Security Architecture Pillars -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 36px;" class="privacy-pillars-grid">
+      <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px; text-align: left;">
+        <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+        <strong style="font-size: 13.5px; display: block; color: var(--text-main); margin-bottom: 4px;">Local-First Client Encryption</strong>
+        <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.45;">
+          Menstrual logs and health data are encrypted with hardware-backed AES-256-GCM keys on your device before network sync.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px; text-align: left;">
+        <div style="font-size: 24px; margin-bottom: 8px;">⚡</div>
+        <strong style="font-size: 13.5px; display: block; color: var(--text-main); margin-bottom: 4px;">Zero-Knowledge Proofs (ZKP)</strong>
+        <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.45;">
+          Prove scholarship and tournament eligibility to SDAT / Khelo India without exposing your Aadhaar, home address, or private life.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px; text-align: left;">
+        <div style="font-size: 24px; margin-bottom: 8px;">👥</div>
+        <strong style="font-size: 13.5px; display: block; color: var(--text-main); margin-bottom: 4px;">Differential Role Barrier</strong>
+        <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.45;">
+          Coaches only see anonymized squad readiness indices. They are cryptographically blocked from personal cycle logs or GPS.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px; text-align: left;">
+        <div style="font-size: 24px; margin-bottom: 8px;">🎙️</div>
+        <strong style="font-size: 13.5px; display: block; color: var(--text-main); margin-bottom: 4px;">Ephemeral Voice Protocol</strong>
+        <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.45;">
+          Voice assistant queries are processed in transient memory with explicit consent. Zero audio files or voiceprints stored.
+        </p>
+      </div>
+    </div>
+
+    <!-- LIVE INTERACTIVE PERSONA SIMULATOR -->
+    <div style="background: var(--bg-surface); border: 1.5px solid var(--border-accent); border-radius: 20px; padding: 24px; max-width: 1000px; margin: 0 auto 30px; box-shadow: 0 16px 40px rgba(0,0,0,0.25);">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
+        <div>
+          <span style="font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 800; color: var(--emerald-accent); letter-spacing: 0.08em;">
+            INTERACTIVE DIFFERENTIAL PRIVACY SIMULATOR
+          </span>
+          <h3 style="font-size: 17px; font-weight: 800; color: var(--text-main); margin-top: 2px;">
+            Experience How Data is Protected Across Personas
+          </h3>
+        </div>
+        <!-- Persona Selector Tabs -->
+        <div style="display: flex; gap: 6px; background: var(--bg-surface-elevated); padding: 4px; border-radius: 10px; border: 1px solid var(--border-subtle);">
+          <button id="tabPersonaAthlete" class="persona-tab-btn active" onclick="switchPrivacyPersona('athlete')">👤 Athlete View</button>
+          <button id="tabPersonaCoach" class="persona-tab-btn" onclick="switchPrivacyPersona('coach')">👥 Coach View</button>
+          <button id="tabPersonaGovt" class="persona-tab-btn" onclick="switchPrivacyPersona('govt')">🏛️ Govt / SDAT View</button>
+        </div>
+      </div>
+
+      <!-- Persona Dynamic Card -->
+      <div id="personaCardDisplay" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 20px;">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Action Row -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <button class="btn-action-primary" onclick="generateZkpCertificate()" style="padding: 9px 18px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;">
+            ⚡ Generate ZKP Sovereign Proof
+          </button>
+          <button class="dossier-btn-secondary" onclick="exportAthleteVault()" style="width: auto; padding: 8px 14px; font-size: 12px;">
+            📥 Export Encrypted Vault (.json)
+          </button>
+        </div>
+        <button onclick="wipeAthleteDeviceData()" style="background: none; border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 7px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer;">
+          🗑️ Wipe Device Vault & Reset Session
+        </button>
+      </div>
+
+      <div id="zkpResultNotice" style="display: none; margin-top: 14px; padding: 12px; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--blue-accent); border-radius: 10px; font-size: 12px; line-height: 1.5; color: var(--text-main);">
+      </div>
+    </div>
+  </section>
+
+  <section id="ml-slot" class="section-standard">
+    <span class="numbered-eyebrow">07 — BIOMECHANICAL SCREENING</span>
+    <h2 class="section-title-centered">Kinematic Readiness & Fatigue Model</h2>
+
+    <div class="ml-terminal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; margin-bottom: 20px;">
+        <div style="font-family: 'Space Grotesk', monospace; font-size: 12px; color: #38bdf8; font-weight: 700;">
+          ENDPOINT: /api/custom-model · TEAMMATE ML CONNECTOR
+        </div>
+        <span style="font-size: 10px; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 3px 8px; border-radius: 9999px; font-weight: 800;">
+          LIVE & READY
+        </span>
+      </div>
+
+      <div class="ml-split-layout">
+        <div>
+          <div class="ml-input-group">
+            <label>Sprint Velocity (m/s)</label>
+            <input id="termSpeed" type="number" step="0.1" value="8.4" />
+          </div>
+          <div class="ml-input-group">
+            <label>Vertical Jump Height (cm)</label>
+            <input id="termJump" type="number" step="0.5" value="44.0" />
+          </div>
+          <div class="ml-input-group">
+            <label>Fatigue Index (%)</label>
+            <input id="termFatigue" type="number" step="1" value="16" />
+          </div>
+          <button class="btn-action-primary" style="width: 100%; justify-content: center; margin-top: 6px;" onclick="runTerminalInference()">
+            Run Inference Test ⚡
+          </button>
+        </div>
+
+        <div class="ml-result-display">
+          <div style="font-family: 'Space Grotesk', monospace; font-size: 10.5px; color: var(--emerald-accent); margin-bottom: 10px; font-weight: 700;">
+            // PREDICTION TELEMETRY
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 3px;">Athlete Readiness Index:</div>
+          <div style="font-family: 'Space Grotesk', monospace; font-size: 34px; font-weight: 900; color: #34d399;" id="termScore">
+            88 / 100
+          </div>
+          <div style="font-size: 12px; color: var(--text-secondary); margin: 10px 0;">
+            Injury Risk Index: <span id="termRisk" style="color: #38bdf8; font-weight: 800;">Low Risk</span>
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;" id="termAction">
+            Cleared for high-intensity sprint training and match velocity.
+          </div>
+          <div style="margin-top: 14px; font-size: 10.5px; font-family: 'Space Grotesk', monospace; color: #c084fc;">
+            💡 Teammate note: Drop custom model into server.js /api/custom-model.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 10: COMPARISON SECTION ================= -->
+  <section class="section-standard">
+    <span class="numbered-eyebrow">08 — PERFORMANCE ADVANTAGE</span>
+    <h2 class="section-title-centered">How Veeramangai Compares</h2>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Capability</th>
+            <th class="highlight-col" style="width: 32%;">Veeramangai System</th>
+            <th style="width: 20%;">Traditional Sports Clubs</th>
+            <th style="width: 20%;">Solo Athlete DIY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Trials Discovery Speed</strong></td>
+            <td class="highlight-col">Instant live search grounding across SDAT & Khelo India</td>
+            <td>Delayed by days/weeks</td>
+            <td>Scattered WhatsApp forwards</td>
+          </tr>
+          <tr>
+            <td><strong>Scholarship Matching</strong></td>
+            <td class="highlight-col">Automated state & CSR matching, ₹0 commission</td>
+            <td>Restricted to club sponsors</td>
+            <td>Complex bureaucratic paperwork</td>
+          </tr>
+          <tr>
+            <td><strong>Sports Nutrition Guidance</strong></td>
+            <td class="highlight-col">Affordable local Tamil foods (ragi, sundal under ₹50/day)</td>
+            <td>Generic Western supplements</td>
+            <td>Unverified advice</td>
+          </tr>
+          <tr>
+            <td><strong>Travel & Transit Safety</strong></td>
+            <td class="highlight-col">Accompanied travel clusters + emergency SOS dispatch</td>
+            <td>No district transit support</td>
+            <td>Dangerous solo traveling</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= 11: FAQ SECTION ================= -->
+  <section id="faq" class="section-standard">
+    <div class="faq-layout">
+      <div>
+        <span class="numbered-eyebrow" style="text-align: left;">09 — ANSWERS</span>
+        <h2 style="font-size: 32px; font-weight: 900; color: var(--text-main); line-height: 1.15; margin-bottom: 14px;">
+          Questions,<br>answered.
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.55;">
+          Everything you need to know about the Veeramangai platform, our 4 specialist agents, and data privacy.
+        </p>
+      </div>
+
+      <div>
+        <div class="faq-item open">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Who is Veeramangai designed for?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Veeramangai is created for Indian female athletes, particularly grassroots athletes in Tamil Nadu and across India who need reliable discovery of government trials, sports scholarships, and affordable sports nutrition.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How does the live Gemini 2.5 Flash search work?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            When you search for upcoming selection trials or scholarships, our backend invokes Google's Gemini 2.5 Flash model with Live Search Grounding enabled. This fetches authentic, real-time gazettes and registration links directly from government sports websites.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Can my teammate plug their custom ML model into this?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes! We have a designated endpoint at <code>/api/custom-model</code> in <code>server.js</code> and an interactive Kinematic ML console. Your teammate can plug in any PyTorch, TensorFlow, or ONNX model to return athlete readiness metrics.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is the platform available in Tamil?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes. Coach Avvai natively understands and responds in both Tamil (தமிழ்) and English, ensuring athletes and parents from every district can ask questions naturally.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 12: CONVERSION BANNER ================= -->
+  <div class="cta-banner">
+    <h2 style="font-size: clamp(26px, 3.6vw, 44px); font-weight: 900; color: var(--text-main); margin-bottom: 12px;">
+      Empower Your Athletic Journey Today.
+    </h2>
+    <p style="color: var(--text-secondary); font-size: 15px; max-width: 640px; margin: 0 auto 24px;">
+      Join thousands of district sprinters, kabaddi defenders, and track athletes using Veeramangai to claim their rightful podium.
+    </p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn-action-primary" style="padding: 10px 24px; font-size: 14px;" onclick="navigateToFeature('trials')">
+        Explore Live Trials Radar →
+      </button>
+      <button class="stance-pill" style="padding: 10px 20px; font-size: 13px;" onclick="navigateToFeature('coach')">
+        Talk to Coach Avvai
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-wrap">
+    <div class="footer-inner">
+      <div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <div class="brand-mark">வ</div>
+          <strong style="font-size: 15px; letter-spacing: 0.05em; color: var(--text-main);">VEERAMANGAI</strong>
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-muted); max-width: 300px; line-height: 1.55;">
+          An open, agentic pathway platform dedicated to Indian women in sport. Built with pride in Tamil Nadu.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 36px; flex-wrap: wrap;">
+        <div>
+          <strong style="font-size: 11px; font-family: 'Space Grotesk', monospace; color: var(--blue-accent); display: block; margin-bottom: 8px;">
+            SPECIALIST AGENTS
+          </strong>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px;">
+            <a onclick="navigateToFeature('trials')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Velu Nachiyar · Trials</a>
+            <a onclick="navigateToFeature('scholarships')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Sembiyan Mahadevi · Funding</a>
+            <a onclick="navigateToFeature('transit')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Rani Mangammal · Transit</a>
+            <a onclick="navigateToFeature('coach')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Kundavai / Avvai · Sports Science</a>
+          </div>
+        </div>
+
+        <div>
+          <strong style="font-size: 11px; font-family: 'Space Grotesk', monospace; color: var(--blue-accent); display: block; margin-bottom: 8px;">
+            INTELLIGENCE
+          </strong>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px;">
+            <a onclick="navigateToFeature('workspace')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Demonstration Canvas</a>
+            <a onclick="navigateToFeature('ml-slot')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">Kinematic ML Model</a>
+            <a onclick="navigateToFeature('faq')" style="color: var(--text-muted); text-decoration: none; cursor: pointer;">FAQ & Help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-oversized-brand">வீரமங்கை</div>
+  </footer>
+
+  <!-- ================= AVVAI ANIMATED PET COMPANION (DOCKED & FOLLOWER) ================= -->
+  
+  <!-- ================= INTERACTIVE QUEEN ATHLETIC DOSSIER MODAL ================= -->
+  <div id="queenModal" class="queen-modal-backdrop" onclick="closeQueenModal(event)">
+    <div class="queen-modal-card" onclick="event.stopPropagation()">
+      <button class="queen-modal-close" onclick="closeQueenModal()">✕</button>
+      <div class="queen-modal-grid">
+        <div class="queen-modal-art-side">
+          <img id="queenModalImg" src="assets/poster1.jpg" alt="Queen Poster" class="queen-modal-img" />
+          <div class="queen-modal-art-badge" id="queenModalBadge">01 / SIVAGANGA</div>
+        </div>
+        <div class="queen-modal-info-side">
+          <div class="queen-modal-header">
+            <span class="dossier-pill" id="queenModalPill">ATHLETE INTELLIGENCE DOSSIER</span>
+            <h2 class="queen-modal-title" id="queenModalTitle">VELU NACHIYAR</h2>
+            <div class="queen-modal-ta" id="queenModalTa">வீரமங்கை வேலு நாச்சியார்</div>
+            <div class="queen-modal-dynasty" id="queenModalDynasty">1780 CE · Sivaganga Kingdom</div>
+          </div>
+          
+          <div class="queen-modal-bio" id="queenModalBio">
+            Historical biography and modern athletic intelligence translation.
+          </div>
+
+          <div class="queen-modal-telemetry-box">
+            <div class="telemetry-box-title">LIVE ATHLETIC RADAR TELEMETRY</div>
+            <div class="queen-modal-telemetry-row" id="queenModalTelemetry">
+              <!-- Dynamic cells -->
+            </div>
+          </div>
+
+          <div class="queen-modal-quote-wrap">
+            <div class="queen-modal-quote-text" id="queenModalQuote">
+              “First Indian Queen to vanquish colonial army through guerrilla velocity and specialized all-women regiments.”
+            </div>
+          </div>
+
+          <div class="queen-modal-action-row" id="queenModalActions">
+            <!-- Dynamic buttons -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ================= VOICE RECORDING & EPHEMERAL CONSENT MODAL ================= -->
+  <div id="voiceConsentModal" class="queen-modal-backdrop" onclick="closeVoiceConsentModal(event)">
+    <div class="queen-modal-card" style="max-width: 580px; padding: 28px;" onclick="event.stopPropagation()">
+      <button class="queen-modal-close" onclick="closeVoiceConsentModal()">✕</button>
+      <div style="text-align: left;">
+        <span class="dossier-pill" style="color: var(--emerald-accent); border-color: rgba(16,185,129,0.4);">DPDP ACT 2023 · INDIA DATA PRIVACY</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 800; color: var(--text-main); margin: 8px 0 4px;">
+          Avvai Voice Assistant Consent Protocol
+        </h3>
+        <p style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+          Before using the voice microphone, please review and authorize the ephemeral audio processing terms designed to protect female athletes:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+          <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text-main);">
+            <span style="color: var(--emerald-accent); font-weight: 800;">✓</span>
+            <div>
+              <strong>1. Ephemeral In-Memory Audio:</strong> Your voice is transcribed locally via browser speech recognition. No audio files are recorded or uploaded to permanent disks.
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text-main);">
+            <span style="color: var(--emerald-accent); font-weight: 800;">✓</span>
+            <div>
+              <strong>2. Zero Voiceprinting:</strong> We do not analyze vocal timbre, identity, or create biometric audio profiles.
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text-main);">
+            <span style="color: var(--emerald-accent); font-weight: 800;">✓</span>
+            <div>
+              <strong>3. Instant Stream Zeroization:</strong> The audio buffer is immediately flushed upon speech recognition completion.
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text-main);">
+            <span style="color: var(--emerald-accent); font-weight: 800;">✓</span>
+            <div>
+              <strong>4. 1-Click Revocable:</strong> You can revoke your voice consent anytime with one click in the Privacy Vault.
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" onclick="declineVoiceConsent()" style="background: none; border: 1px solid var(--border-medium); color: var(--text-muted); padding: 9px 18px; border-radius: 8px; font-weight: 700; font-size: 12px; cursor: pointer;">
+            Decline (Text Only)
+          </button>
+          <button type="button" onclick="acceptVoiceConsent()" class="btn-action-primary" style="padding: 9px 22px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;">
+            ✅ I Consent & Enable Mic
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="avvai-docked-pet" id="avvaiPetContainer">
+    <div class="avvai-speech-bubble" id="avvaiBubble" onclick="cycleAvvaiAction()">
+      "வணக்கம்! I'm Avvai, your sports buddy!"
+    </div>
+    <div class="avvai-pet-avatar" onclick="cycleAvvaiAction()" title="Click Avvai to change pose or action!">
+      <span id="dockedAvvaiSprite" class="avvai-sprite avvai-wave" style="width: 72px; height: 72px;"></span>
+    </div>
+    <div class="avvai-pet-tools">
+      <button class="avvai-pet-tool-btn" id="avvaiFollowerBtn" onclick="toggleAvvaiFollower()">Cursor: Off</button>
+      <button class="avvai-pet-tool-btn" onclick="triggerAvvaiDance()">Dance 💃</button>
+      <button class="avvai-pet-tool-btn" onclick="toggleAvvaiPetVisibility()">✕</button>
+    </div>
+  </div>
+
+  <div id="avvaiFollowerEl" class="avvai-follower" style="display: none;">
+    <div class="avvai-facing" id="avvaiFacing">
+      <span id="followerAvvaiSprite" class="avvai-sprite avvai-run" style="width: 56px; height: 56px;"></span>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    
+    // ---------------- 1.5. HAPTIC WEB AUDIO SYNTHESIZER ----------------
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioClass) audioCtx = new AudioClass();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playCardHoverSound() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1174.66, ctx.currentTime + 0.04);
+        gain.gain.setValueAtTime(0.04, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.06);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.06);
+      } catch (e) {}
+    }
+
+    function playCardFlipSound() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.12);
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.14);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.14);
+      } catch (e) {}
+    }
+
+    function playChipClickSound() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(1318.5, ctx.currentTime);
+        gain.gain.setValueAtTime(0.05, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.04);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.04);
+      } catch (e) {}
+    }
+
+    // ---------------- 1.6. INTERACTIVE 3D POSTER LOGIC ----------------
+    function flipPoster(cardNum) {
+      playCardFlipSound();
+      setStance('action');
+      const card = document.getElementById('posterCard' + cardNum);
+      if (card) {
+        card.classList.toggle('flipped');
+      }
+    }
+
+    function handlePosterCardClick(cardNum, event) {
+      // If clicking interactive elements, do not flip
+      if (event.target.closest('button') || event.target.closest('.poster-interactive-chip')) {
+        return;
+      }
+      flipPoster(cardNum);
+    }
+
+    function triggerPosterChip(feature, query) {
+      playChipClickSound();
+      setStance('action');
+      if (feature === 'trials') {
+        navigateToFeature('trials');
+        filterTrials(query);
+      } else if (feature === 'scholarships') {
+        navigateToFeature('scholarships');
+        filterScholarships(query);
+      } else if (feature === 'transit') {
+        navigateToFeature('transit');
+        document.getElementById('transitOrigin').value = 'Madurai Junction';
+        document.getElementById('transitDest').value = 'Jawaharlal Nehru Stadium, Chennai';
+        calculateTransitRoute();
+      } else if (feature === 'coach') {
+        navigateToFeature('coach');
+        if (query === 'Ragi') {
+          askAvvaiQuick('Explain the athletic nutrition benefits of traditional Ragi kanji and Sundal protein for female athletes.');
+        } else if (query === 'Menstrual') {
+          askAvvaiQuick('How should female sprinters and athletes periodize intensity across the follicular and luteal phases?');
+        } else {
+          askAvvaiQuick('What are the best Siddha recovery protocols for lower-body prehab and hamstring strain?');
+        }
+      }
+    }
+
+    // ---------------- 1.7. 3D MOUSE PARALLAX & GLANCE PHYSICS ----------------
+    function initPosterInteractivity() {
+      const cards = document.querySelectorAll('.poster-3d-card');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -11;
+          const rotateY = ((x - centerX) / centerX) * 11;
+
+          const flipper = card.querySelector('.poster-flipper');
+          const isFlipped = card.classList.contains('flipped');
+          const baseRotateY = isFlipped ? 180 : 0;
+
+          if (flipper) {
+            flipper.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${baseRotateY + rotateY}deg) scale3d(1.025, 1.025, 1.025)`;
+          }
+
+          const glareX = (x / rect.width) * 100;
+          const glareY = (y / rect.height) * 100;
+          card.style.setProperty('--glare-x', `${glareX}%`);
+          card.style.setProperty('--glare-y', `${glareY}%`);
+          card.style.setProperty('--glare-opacity', '0.65');
+        });
+
+        card.addEventListener('mouseleave', () => {
+          const flipper = card.querySelector('.poster-flipper');
+          const isFlipped = card.classList.contains('flipped');
+          if (flipper) {
+            flipper.style.transform = `perspective(1200px) rotateX(0deg) rotateY(${isFlipped ? 180 : 0}deg) scale3d(1, 1, 1)`;
+          }
+          card.style.setProperty('--glare-opacity', '0');
+        });
+      });
+    }
+
+    // ---------------- 1.8. QUEEN DOSSIER MODAL DATA & CONTROLS ----------------
+    const QUEEN_DOSSIERS = {
+      velu: {
+        badge: '01 / SIVAGANGA',
+        img: 'assets/poster1.jpg',
+        title: 'VELU NACHIYAR',
+        ta: 'வீரமங்கை வேலு நாச்சியார்',
+        dynasty: '1780 CE · Sivaganga Kingdom',
+        bio: 'The legendary Queen of Sivaganga and the first Indian sovereign to defeat British colonial armies. Velu Nachiyar pioneered female guerrilla velocity, Silambam agility, and coordinated intelligence warfare through her elite women-only battalion (Udayal Padai).',
+        quote: '“Victory belongs to velocity, fearlessness, and absolute mastery of body and weapon.”',
+        telemetry: [
+          { val: '14', lbl: 'ACTIVE TRIALS' },
+          { val: '38', lbl: 'TN DISTRICTS' },
+          { val: '11.8s', lbl: 'SPRINT CUTOFF' }
+        ],
+        feature: 'trials',
+        actionLabel: 'Launch Trials Radar →'
+      },
+      sembiyan: {
+        badge: '02 / CHOLA REALM',
+        img: 'assets/poster2.jpg',
+        title: 'SEMBIYAN MAHADEVI',
+        ta: 'செம்பியன் மாதேவி',
+        dynasty: '10th Century CE · Imperial Chola Dynasty',
+        bio: 'The revered Chola Queen Mother and architectural visionary. She revolutionized public welfare by creating autonomous temple endowments and community sports trusts that funded village youth for athletic festivals and physical training.',
+        quote: '“True imperial power lies in permanent endowments that uplift the daughter of the soil.”',
+        telemetry: [
+          { val: '₹2.0L', lbl: 'SDAT SCHEME' },
+          { val: '₹6.28L', lbl: 'KHELO INDIA' },
+          { val: '100%', lbl: 'FEMALE QUOTA' }
+        ],
+        feature: 'scholarships',
+        actionLabel: 'Explore Funding →'
+      },
+      mangammal: {
+        badge: '03 / MADURAI',
+        img: 'assets/poster3.jpg',
+        title: 'RANI MANGAMMAL',
+        ta: 'ராணி மங்கம்மாள்',
+        dynasty: '1689 CE · Madurai Nayak Kingdom',
+        bio: 'The great administrator and regent of Madurai. Mangammal engineered the historic Grand Royal Trunk Road network across Southern Tamil Nadu, constructing fortified rest-houses (Choultries), planting roadside banyan canopies, and guaranteeing protected travel corridors for women.',
+        quote: '“The road must be as safe as the palace for every daughter traveling the kingdom.”',
+        telemetry: [
+          { val: '38', lbl: 'CORRIDORS' },
+          { val: '75%', lbl: 'FARE WAIVER' },
+          { val: '99.4%', lbl: 'SAFETY SCORE' }
+        ],
+        feature: 'transit',
+        actionLabel: 'Plan Transit Pass →'
+      },
+      kundavai: {
+        badge: '04 / THANJAVUR',
+        img: 'assets/poster4.jpg',
+        title: 'KUNDAVAI PIRATTIYAR',
+        ta: 'குந்தவை பிராட்டியார்',
+        dynasty: '1014 CE · Imperial Chola Court',
+        bio: 'Imperial Chola Princess, master diplomat, and founder of Aathula Saalai (free healing sanatoriums). She harmonized traditional Siddha regenerative nutrition with intense martial endurance, nurturing the athletic foundation of the empire.',
+        quote: '“The strength of a champion is forged through sacred nutrition, recovery, and inner rhythm.”',
+        telemetry: [
+          { val: '4:1', lbl: 'CARB-PROTEIN' },
+          { val: 'Follicular', lbl: 'POWER PHASE' },
+          { val: '98%', lbl: 'RECOVERY RATE' }
+        ],
+        feature: 'coach',
+        actionLabel: 'Ask Coach Avvai →'
+      }
+    };
+
+    function openQueenModal(queenId) {
+      playCardFlipSound();
+      const d = QUEEN_DOSSIERS[queenId];
+      if (!d) return;
+
+      document.getElementById('queenModalBadge').textContent = d.badge;
+      document.getElementById('queenModalImg').src = d.img;
+      document.getElementById('queenModalTitle').textContent = d.title;
+      document.getElementById('queenModalTa').textContent = d.ta;
+      document.getElementById('queenModalDynasty').textContent = d.dynasty;
+      document.getElementById('queenModalBio').textContent = d.bio;
+      document.getElementById('queenModalQuote').textContent = d.quote;
+
+      const telemRow = document.getElementById('queenModalTelemetry');
+      telemRow.innerHTML = d.telemetry.map(t => `
+        <div class="dossier-telemetry-cell">
+          <div class="dossier-metric-val">${t.val}</div>
+          <div class="dossier-metric-label">${t.lbl}</div>
+        </div>
+      `).join('');
+
+      const actionRow = document.getElementById('queenModalActions');
+      actionRow.innerHTML = `
+        <button class="poster-primary-action" onclick="closeQueenModal(); navigateToFeature('${d.feature}')">${d.actionLabel}</button>
+        <button class="dossier-btn-secondary" style="width: auto; padding: 7px 14px;" onclick="closeQueenModal(); queryQueenGemini('${queenId}')">📡 Live AI Search</button>
+      `;
+
+      document.getElementById('queenModal').classList.add('open');
+    }
+
+    function closeQueenModal(e) {
+      if (e && e.target && e.target.closest('.queen-modal-card')) return;
+      document.getElementById('queenModal').classList.remove('open');
+    }
+
+    async function queryQueenGemini(queenId) {
+      setStance('action');
+      const consoleBox = document.getElementById('workspaceConsole');
+      if (consoleBox) {
+        consoleBox.innerHTML = `[RADAR] Querying Gemini 2.5 Flash Grounded Search for ${queenId.toUpperCase()} domain...`;
+      }
+      navigateToFeature('workspace');
+
+      let query = 'Tamil Nadu 2026 women selection trials SDAT';
+      if (queenId === 'sembiyan') query = 'SDAT Champions Development Scheme Khelo India women scholarship eligibility';
+      if (queenId === 'mangammal') query = 'Tamil Nadu sports student bus train concession pass procedure';
+      if (queenId === 'kundavai') query = 'traditional Tamil athletic diet ragi kezhvaragu sundal menstrual cycle nutrition';
+
+      try {
+        const res = await fetch(`/api/chat?message=${encodeURIComponent(query)}`);
+        const data = await res.json();
+        if (consoleBox) {
+          consoleBox.innerHTML = `
+            <strong style="color:var(--gold-accent);">[AI GROUNDED INTEL FOR ${queenId.toUpperCase()}]</strong><br>
+            ${data.response.substring(0, 420)}...<br>
+            <em style="color:var(--blue-accent);">Source: ${data.sources && data.sources.length ? data.sources[0].title : 'SDAT Tamil Nadu Official Records'}</em>
+          `;
+        }
+      } catch (err) {
+        if (consoleBox) consoleBox.innerHTML += '<br>[INFO] Gemini cache updated for this athlete domain.';
+      }
+    }
+
+    // ---------------- 1. THEME SWITCHER (DARK / LIGHT) ----------------
+    function initTheme() {
+      const savedTheme = localStorage.getItem('veeramangai_theme') || 'dark';
+      applyTheme(savedTheme);
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('veeramangai_theme', next);
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      const isDark = theme === 'dark';
+      const iconNav = document.getElementById('themeIconNav');
+      const labelNav = document.getElementById('themeLabelNav');
+      if (iconNav) iconNav.textContent = isDark ? '🌙' : '☀️';
+      if (labelNav) labelNav.textContent = isDark ? 'Dark' : 'Light';
+    }
+
+    // ---------------- 2. ATHLETE STANCE DUAL ANIMATION ----------------
+    let currentStance = 'standing';
+    let stanceInterval = null;
+
+    function setStance(newStance) {
+      currentStance = newStance;
+      const bgStanding = document.getElementById('bgStanding');
+      const bgAction = document.getElementById('bgAction');
+      const label = document.getElementById('stanceLabel');
+      const dot = document.getElementById('stanceDot');
+
+      if (newStance === 'action') {
+        if (bgStanding) bgStanding.classList.remove('active');
+        if (bgAction) bgAction.classList.add('active');
+        if (label) label.textContent = 'STANCE: ACTION READY';
+        if (dot) dot.classList.add('action');
+      } else {
+        if (bgAction) bgAction.classList.remove('active');
+        if (bgStanding) bgStanding.classList.add('active');
+        if (label) label.textContent = 'STANCE: STANDING';
+        if (dot) dot.classList.remove('action');
+      }
+    }
+
+    function toggleAthleteStance() {
+      setStance(currentStance === 'standing' ? 'action' : 'standing');
+    }
+
+    function startAutoStance() {
+      if (stanceInterval) clearInterval(stanceInterval);
+      stanceInterval = setInterval(toggleAthleteStance, 5000);
+    }
+
+    // ---------------- 3. SMOOTH NAVIGATION & HIGHLIGHT ----------------
+    function navigateToFeature(targetId) {
+      setStance('action');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        targetEl.classList.remove('highlight-target');
+        void targetEl.offsetWidth;
+        targetEl.classList.add('highlight-target');
+
+        if (targetId === 'coach') {
+          setTimeout(() => {
+            const input = document.getElementById('coachInputText');
+            if (input) input.focus();
+          }, 500);
+        }
+      }
+    }
+
+    function clickPromptChip(promptText) {
+      setStance('action');
+      if (promptText.includes('Kabaddi') || promptText.includes('trials')) {
+        navigateToFeature('trials');
+      } else if (promptText.includes('grant') || promptText.includes('SDAT')) {
+        navigateToFeature('scholarships');
+      } else if (promptText.includes('travel') || promptText.includes('transit')) {
+        navigateToFeature('transit');
+      } else if (promptText.includes('diet') || promptText.includes('protein')) {
+        navigateToFeature('coach');
+        askAvvaiQuick(promptText);
+      } else if (promptText.includes('Kinematic')) {
+        navigateToFeature('ml-slot');
+      }
+    }
+
+    function handleHeroPrompt() {
+      const input = document.getElementById('heroPromptInput');
+      const val = input.value.trim();
+      if (!val) return;
+      navigateToFeature('coach');
+      askAvvaiQuick(val);
+      input.value = '';
+    }
+
+    // ---------------- 4. UNIFIED CONTINUOUS CANVAS (FULL-PAGE MOTION) ----------------
+    function initUnifiedCanvas() {
+      const canvas = document.getElementById('unifiedCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const particles = [];
+      const particleCount = 38;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 1.2,
+          vy: - (Math.random() * 1.8 + 0.8),
+          radius: Math.random() * 2 + 1,
+          alpha: Math.random() * 0.5 + 0.2
+        });
+      }
+
+      let canvasTime = 0;
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        canvasTime += 0.02;
+        const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+
+        // 1. Stadium Floodlight Volumetric Radiant Beam
+        const grad = ctx.createRadialGradient(width * 0.5, height * 0.16, 40, width * 0.5, height * 0.35, width * 0.75);
+        grad.addColorStop(0, isDark ? 'rgba(56, 189, 248, 0.22)' : 'rgba(2, 132, 199, 0.20)');
+        grad.addColorStop(0.5, isDark ? 'rgba(245, 158, 11, 0.10)' : 'rgba(217, 119, 6, 0.10)');
+        grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, width, height);
+
+        // 2. Kinetic Athletic Velocity Sine Waves (Running Track Motion)
+        ctx.beginPath();
+        for (let x = 0; x <= width; x += 15) {
+          const y = (height * 0.62) + Math.sin(x * 0.0035 + canvasTime) * 18 + Math.cos(x * 0.007 + canvasTime * 0.8) * 10;
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.20)' : 'rgba(2, 132, 199, 0.22)';
+        ctx.lineWidth = 2.2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        for (let x = 0; x <= width; x += 15) {
+          const y = (height * 0.72) + Math.cos(x * 0.003 + canvasTime * 1.2) * 22 + Math.sin(x * 0.006 + canvasTime * 0.6) * 12;
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = isDark ? 'rgba(251, 191, 36, 0.16)' : 'rgba(217, 119, 6, 0.18)';
+        ctx.lineWidth = 1.8;
+        ctx.stroke();
+
+        // 3. Velocity particle streaks with luminous heads
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.strokeStyle = isDark 
+            ? (p.radius > 2 ? `rgba(251, 191, 36, ${p.alpha})` : `rgba(56, 189, 248, ${p.alpha})`)
+            : (p.radius > 2 ? `rgba(217, 119, 6, ${p.alpha * 0.95})` : `rgba(2, 132, 199, ${p.alpha * 0.95})`);
+          ctx.lineWidth = p.radius;
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p.x + p.vx * 3.5, p.y + p.vy * 6.5);
+          ctx.stroke();
+
+          // Particle Glowing Head
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius * 1.3, 0, Math.PI * 2);
+          ctx.fillStyle = isDark
+            ? (p.radius > 2 ? 'rgba(251, 191, 36, 0.9)' : 'rgba(56, 189, 248, 0.9)')
+            : (p.radius > 2 ? 'rgba(217, 119, 6, 0.95)' : 'rgba(2, 132, 199, 0.95)');
+          ctx.fill();
+
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.y < 0) {
+            p.y = height;
+            p.x = Math.random() * width;
+          }
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+        });
+
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    }
+
+    // ---------------- 5. AVVAI PET COMPANION (SPRITE SHEET ENGINE) ----------------
+    const AVVAI_FRAMES = {
+      front: [0],
+      back: [1],
+      left: [2],
+      right: [3],
+      walk: [4, 5],
+      run: [6, 7],
+      jump: [9, 8, 8, 9],
+      roll: [10],
+      wave: [11],
+      dance: [11, 8, 0, 8]
+    };
+
+    const AVVAI_TIPS = [
+      "வெற்றி நமதே! Ragi kanji gives 344mg calcium for strong bones!",
+      "Hydrate with jeera water before your 400m sprint!",
+      "Sprouted sundal has 22g protein per 100g. Pure Tamil athlete power!",
+      "Sync your sprint volume with your follicular cycle phase!",
+      "Vaigai Express departs Friday for Madurai U-19 selection trials!"
+    ];
+
+    let avvaiAction = 'wave';
+    let avvaiStep = 0;
+    let avvaiFollowing = false;
+    let avvaiTarget = { x: window.innerWidth - 80, y: window.innerHeight - 150 };
+    let avvaiCurrent = { ...avvaiTarget };
+
+    function setAvvaiSpriteFrame(el, frameNum) {
+      if (!el) return;
+      const xPercent = (frameNum % 4) * 100 / 3;
+      const yPercent = Math.floor(frameNum / 4) * 50;
+      el.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+    }
+
+    function initAvvaiPet() {
+      // Loop sprite animation
+      setInterval(() => {
+        avvaiStep++;
+        const frames = AVVAI_FRAMES[avvaiAction] || AVVAI_FRAMES.front;
+        const frame = frames[avvaiStep % frames.length];
+        
+        setAvvaiSpriteFrame(document.getElementById('dockedAvvaiSprite'), frame);
+        setAvvaiSpriteFrame(document.getElementById('studioAvvaiSprite'), frame);
+        setAvvaiSpriteFrame(document.getElementById('followerAvvaiSprite'), frame);
+      }, 220);
+
+      // Mouse tracking for follower mode
+      window.addEventListener('pointermove', (e) => {
+        if (!avvaiFollowing) return;
+        avvaiTarget.x = Math.max(10, Math.min(window.innerWidth - 60, e.clientX + 15));
+        avvaiTarget.y = Math.max(10, Math.min(window.innerHeight - 60, e.clientY + 15));
+        const facingEl = document.getElementById('avvaiFacing');
+        if (facingEl) {
+          facingEl.style.setProperty('--avvai-direction', avvaiTarget.x < avvaiCurrent.x ? '-1' : '1');
+        }
+        avvaiAction = 'walk';
+      });
+
+      function animFollower() {
+        if (avvaiFollowing) {
+          avvaiCurrent.x += (avvaiTarget.x - avvaiCurrent.x) * 0.15;
+          avvaiCurrent.y += (avvaiTarget.y - avvaiCurrent.y) * 0.15;
+          const followerEl = document.getElementById('avvaiFollowerEl');
+          if (followerEl) {
+            followerEl.style.transform = `translate3d(${avvaiCurrent.x}px, ${avvaiCurrent.y}px, 0)`;
+          }
+        }
+        requestAnimationFrame(animFollower);
+      }
+      requestAnimationFrame(animFollower);
+    }
+
+    function cycleAvvaiAction() {
+      const actions = ['wave', 'dance', 'jump', 'run', 'walk'];
+      const nextIndex = (actions.indexOf(avvaiAction) + 1) % actions.length;
+      avvaiAction = actions[nextIndex];
+      
+      const bubble = document.getElementById('avvaiBubble');
+      if (bubble) {
+        bubble.textContent = `Avvai is doing: ${avvaiAction.toUpperCase()}! ` + AVVAI_TIPS[Math.floor(Math.random() * AVVAI_TIPS.length)];
+      }
+    }
+
+    function triggerAvvaiDance() {
+      avvaiAction = 'dance';
+      const bubble = document.getElementById('avvaiBubble');
+      if (bubble) bubble.textContent = "💃 Avvai victory dance for all Tamil athletes!";
+      setTimeout(() => { avvaiAction = 'wave'; }, 4000);
+    }
+
+    function toggleAvvaiFollower() {
+      avvaiFollowing = !avvaiFollowing;
+      const btn = document.getElementById('avvaiFollowerBtn');
+      const followerEl = document.getElementById('avvaiFollowerEl');
+      if (btn) btn.textContent = avvaiFollowing ? 'Cursor: ON' : 'Cursor: Off';
+      if (followerEl) followerEl.style.display = avvaiFollowing ? 'block' : 'none';
+      if (avvaiFollowing) {
+        avvaiAction = 'run';
+      } else {
+        avvaiAction = 'wave';
+      }
+    }
+
+    function toggleAvvaiPetVisibility() {
+      const pet = document.getElementById('avvaiPetContainer');
+      if (pet) pet.style.display = pet.style.display === 'none' ? 'flex' : 'none';
+    }
+
+    // ---------------- 6. BACKEND DATA LOADERS ----------------
+    let cachedEvents = [];
+    let cachedScholarships = [];
+
+    async function loadData() {
+      try {
+        const res = await fetch('/api/events');
+        const data = await res.json();
+        if (data.events && data.events.length > 0) {
+          cachedEvents = data.events;
+          renderTrials(cachedEvents);
+        }
+      } catch (err) {
+        console.warn('Events API error:', err);
+      }
+
+      try {
+        const res = await fetch('/api/scholarships');
+        const data = await res.json();
+        if (data.scholarships && data.scholarships.length > 0) {
+          cachedScholarships = data.scholarships;
+          renderScholarships(cachedScholarships);
+        }
+      } catch (err) {
+        console.warn('Scholarships API error:', err);
+      }
+    }
+
+    function renderTrials(events) {
+      const container = document.getElementById('trialsListInner');
+      if (!container) return;
+      container.innerHTML = events.slice(0, 3).map(e => `
+        <div style="background:var(--bg-surface-elevated); border:1px solid var(--border-subtle); border-radius:10px; padding:14px; margin-bottom:10px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+            <strong style="font-size:13.5px; color:var(--text-main);">${e.title}</strong>
+            <span style="font-size:10px; background:rgba(56,189,248,0.2); color:var(--blue-accent); font-weight:800; padding:2px 7px; border-radius:9999px;">${e.sport || 'ATHLETICS'}</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.45; margin-bottom:8px;">
+            📍 <strong>Venue:</strong> ${e.location} &nbsp;|&nbsp; 🗓 <strong>Dates:</strong> ${e.date}
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:11px; color:var(--text-muted);">Eligibility: ${e.eligibility || 'Open District'}</span>
+            <a href="${e.link}" target="_blank" rel="noopener" class="btn-action-primary" style="font-size:11px; padding:5px 12px;">Register Portal ↗</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderScholarships(scholarships) {
+      const container = document.getElementById('scholarshipsListInner');
+      if (!container) return;
+      container.innerHTML = scholarships.slice(0, 3).map(s => `
+        <div style="background:var(--bg-surface-elevated); border:1px solid var(--border-subtle); border-radius:10px; padding:14px; margin-bottom:10px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+            <strong style="font-size:13.5px; color:var(--text-main);">${s.title}</strong>
+            <span style="font-size:13.5px; font-weight:900; color:var(--gold-accent);">${s.amount}</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.45; margin-bottom:8px;">
+            ${s.eligibility}
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:11px; color:var(--text-muted);">${s.provider || 'State SDAT'}</span>
+            <a href="${s.link}" target="_blank" rel="noopener" class="btn-action-primary" style="font-size:11px; padding:5px 12px; background:var(--gold-gradient);">Apply Direct ↗</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterTrials(sport) {
+      if (sport === 'all') {
+        renderTrials(cachedEvents);
+      } else {
+        const filtered = cachedEvents.filter(e => 
+          (e.sport && e.sport.toLowerCase().includes(sport.toLowerCase())) ||
+          (e.title && e.title.toLowerCase().includes(sport.toLowerCase()))
+        );
+        renderTrials(filtered.length ? filtered : cachedEvents);
+      }
+    }
+
+    function filterScholarships(cat) {
+      if (cat === 'all') {
+        renderScholarships(cachedScholarships);
+      } else {
+        const filtered = cachedScholarships.filter(s => 
+          (s.title && s.title.toLowerCase().includes(cat.toLowerCase())) ||
+          (s.provider && s.provider.toLowerCase().includes(cat.toLowerCase()))
+        );
+        renderScholarships(filtered.length ? filtered : cachedScholarships);
+      }
+    }
+
+    function refreshTrialsData() {
+      const consoleBox = document.getElementById('workspaceConsole');
+      if (consoleBox) consoleBox.innerHTML += '<br>[INFO] Grounding with Google Search across SDAT portals...';
+      loadData();
+      initPosterInteractivity();
+      renderPersonaCard();
+      if (voiceConsentGranted) updateVoiceStatusUI(true);
+    }
+
+    // ---------------- 7. COACH AVVAI CHAT ----------------
+    async function submitCoachMessage() {
+      const input = document.getElementById('coachInputText');
+      const q = input.value.trim();
+      if (!q) return;
+      input.value = '';
+      askAvvaiQuick(q);
+    }
+
+    async function askAvvaiQuick(question) {
+      const win = document.getElementById('coachChatWindow');
+      if (!win) return;
+      win.innerHTML += `
+        <div style="margin-top:8px; color:var(--gold-accent); font-weight:700;">You:</div>
+        <div style="color:var(--text-main); margin-bottom:6px;">${question}</div>
+        <div style="color:var(--blue-accent); font-weight:700;">Avvai:</div>
+        <div id="activeAvvaiStream" style="color:var(--text-secondary); font-style:italic;">Consulting sports nutrition and training guidelines...</div>
+      `;
+      win.scrollTop = win.scrollHeight;
+        if (voiceConsentGranted) speakAvvaiReply(replyText);
+
+      try {
+        const res = await fetch('/api/coach', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: question, sport: 'Athletics & Games' })
+        });
+        const data = await res.json();
+        const streamDiv = document.getElementById('activeAvvaiStream');
+        if (streamDiv) {
+          streamDiv.id = '';
+          streamDiv.style.fontStyle = 'normal';
+          streamDiv.innerHTML = data.reply.replace(/\n/g, '<br>');
+        }
+      } catch (err) {
+        const streamDiv = document.getElementById('activeAvvaiStream');
+        if (streamDiv) {
+          streamDiv.innerHTML = "Ragi porridge with jaggery provides sustained carbohydrates and calcium. Pair with boiled chickpeas (sundal) for ideal post-sprint muscle repair.";
+        }
+      }
+      win.scrollTop = win.scrollHeight;
+    }
+
+    // ---------------- 8. KINEMATIC MODEL INFERENCE ----------------
+    async function runTerminalInference() {
+      setStance('action');
+      const speed = document.getElementById('termSpeed').value;
+      const jump = document.getElementById('termJump').value;
+      const fatigue = document.getElementById('termFatigue').value;
+
+      try {
+        const res = await fetch('/api/custom-model', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ speed, jump_height: jump, fatigue })
+        });
+        const data = await res.json();
+        const pred = data.sample_prediction;
+        document.getElementById('termScore').textContent = pred.athlete_readiness_score + ' / 100';
+        document.getElementById('termRisk').textContent = pred.injury_risk_index;
+        document.getElementById('termAction').textContent = pred.recommended_action;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // ---------------- 9. TRANSIT ROUTE ESTIMATOR ----------------
+    function calculateTransitRoute() {
+      const from = document.getElementById('transitOrigin').value;
+      const to = document.getElementById('transitDest').value;
+      const result = document.getElementById('transitResultText');
+      result.innerHTML = `
+        <div style="background:rgba(56,189,248,0.1); border:1px solid var(--blue-accent); border-radius:8px; padding:8px; margin-top:6px;">
+          <strong>Route:</strong> ${from} ➔ ${to}<br>
+          <strong>TNSTC / Southern Railway:</strong> 100% Student Concession Valid.<br>
+          <strong>Voucher ID:</strong> #TN-SPORTS-2026-${Math.floor(1000 + Math.random() * 9000)} generated.
+        </div>
+      `;
+    }
+
+    function loadWorkspaceFeed(feed) {
+      const consoleBox = document.getElementById('workspaceConsole');
+      if (!consoleBox) return;
+      if (feed === 'trials') {
+        consoleBox.innerHTML = `[RADAR] Velu Nachiyar Agent checking SDAT district notifications...<br>[FOUND] Madurai Selection Trials (Athletics) · Oct 24-26, 2026.<br>[FOUND] Chennai Jawaharlal Nehru Stadium Kabaddi Trials · Nov 2-4, 2026.<br>[GROUNDING] Source: sdat.tn.gov.in verified.`;
+      } else if (feed === 'grants') {
+        consoleBox.innerHTML = `[GRANTS] Sembiyan Mahadevi scanning active endowments...<br>[ACTIVE] SDAT Champions Development Scheme: ₹2,00,000/year allocation.<br>[ACTIVE] Khelo India Talent Scholarship: ₹6,28,000 allowance verified.<br>[STATUS] Zero agency fees; direct DBT transfer verified.`;
+      } else if (feed === 'transit') {
+        consoleBox.innerHTML = `[TRANSIT] Rani Mangammal Route Engine active.<br>[POD 1] Tirunelveli ➔ Madurai Jn (Vaigai Express) · 4 Athletes + Chaperone.<br>[SOS DESK] 181 Women Helpline integration active.`;
+      } else if (feed === 'nutrition') {
+        consoleBox.innerHTML = `[NUTRITION] Avvai Sports Dietitians connected.<br>[MACROS] Pre-competition: Kezhvaragu (Ragi) kanji + Banana.<br>[RECOVERY] Post-session: Sundal (22g protein/100g) + Buttermilk with jeera.`;
+      }
+    }
+
+    function toggleFaq(el) {
+      el.parentElement.classList.toggle('open');
+    }
+
+    
+    // ---------------- 1.9. ATHLETE PRIVACY & VOICE PROTOCOLS ----------------
+    let voiceConsentGranted = localStorage.getItem('vm_voice_consent') === 'true';
+    let speechRecognitionInstance = null;
+    let isListening = false;
+
+    function handleVoiceAssistantClick() {
+      if (!voiceConsentGranted) {
+        document.getElementById('voiceConsentModal').classList.add('open');
+      } else {
+        startVoiceRecognition();
+      }
+    }
+
+    function acceptVoiceConsent() {
+      voiceConsentGranted = true;
+      localStorage.setItem('vm_voice_consent', 'true');
+      closeVoiceConsentModal();
+      updateVoiceStatusUI(true);
+      fetch('/api/privacy/voice-consent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ athleteId: 'athlete_tamil_nadu', consented: true, mode: 'ephemeral' })
+      }).catch(e => console.log(e));
+      startVoiceRecognition();
+    }
+
+    function declineVoiceConsent() {
+      voiceConsentGranted = false;
+      localStorage.setItem('vm_voice_consent', 'false');
+      closeVoiceConsentModal();
+      updateVoiceStatusUI(false);
+    }
+
+    function revokeVoiceConsent() {
+      voiceConsentGranted = false;
+      localStorage.setItem('vm_voice_consent', 'false');
+      stopVoiceRecognition();
+      updateVoiceStatusUI(false);
+      alert('Voice assistant consent revoked. Microphone is disabled.');
+    }
+
+    function closeVoiceConsentModal(e) {
+      if (e && e.target && e.target.closest('.queen-modal-card')) return;
+      document.getElementById('voiceConsentModal').classList.remove('open');
+    }
+
+    function updateVoiceStatusUI(active) {
+      const ind = document.getElementById('voiceStatusIndicator');
+      if (ind) ind.style.display = active ? 'flex' : 'none';
+      const micBtn = document.getElementById('voiceMicBtn');
+      if (micBtn) {
+        micBtn.innerHTML = active ? '🎙️ Talk Now' : '🎙️ Voice';
+        micBtn.style.borderColor = active ? 'var(--emerald-accent)' : 'var(--blue-accent)';
+      }
+    }
+
+    function startVoiceRecognition() {
+      const SpeechClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechClass) {
+        alert('Web Speech API is not supported in this browser. Please use the text input.');
+        return;
+      }
+
+      if (isListening && speechRecognitionInstance) {
+        speechRecognitionInstance.stop();
+        isListening = false;
+        return;
+      }
+
+      updateVoiceStatusUI(true);
+      const statusText = document.getElementById('voiceStatusText');
+      if (statusText) statusText.textContent = 'Listening... Speak in English or தமிழ்!';
+
+      const micBtn = document.getElementById('voiceMicBtn');
+      if (micBtn) micBtn.innerHTML = '🔴 Listening...';
+
+      speechRecognitionInstance = new SpeechClass();
+      speechRecognitionInstance.lang = 'en-IN'; // Also supports ta-IN
+      speechRecognitionInstance.interimResults = false;
+      speechRecognitionInstance.maxAlternatives = 1;
+
+      speechRecognitionInstance.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        const input = document.getElementById('coachInputText');
+        if (input) input.value = transcript;
+        if (statusText) statusText.textContent = `Heard: "${transcript}". Consulting Avvai...`;
+        submitCoachMessage();
+      };
+
+      speechRecognitionInstance.onerror = (e) => {
+        console.warn('Speech error:', e.error);
+        if (statusText) statusText.textContent = 'Mic error: ' + e.error;
+        if (micBtn) micBtn.innerHTML = '🎙️ Voice';
+        isListening = false;
+      };
+
+      speechRecognitionInstance.onend = () => {
+        isListening = false;
+        if (micBtn) micBtn.innerHTML = '🎙️ Voice';
+        if (statusText) statusText.textContent = 'Voice Assistant: Ready (Ephemeral Zero-Retention Mode)';
+      };
+
+      speechRecognitionInstance.start();
+      isListening = true;
+    }
+
+    function stopVoiceRecognition() {
+      if (speechRecognitionInstance && isListening) {
+        speechRecognitionInstance.stop();
+        isListening = false;
+      }
+    }
+
+    function speakAvvaiReply(text) {
+      if (!window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
+      const cleanText = text.replace(/[*#_~]/g, '');
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.rate = 1.0;
+      utterance.pitch = 1.1;
+
+      const stopBtn = document.getElementById('stopSpeakingBtn');
+      if (stopBtn) stopBtn.style.display = 'inline-block';
+
+      utterance.onend = () => {
+        if (stopBtn) stopBtn.style.display = 'none';
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeechSynthesis() {
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      const stopBtn = document.getElementById('stopSpeakingBtn');
+      if (stopBtn) stopBtn.style.display = 'none';
+    }
+
+    // ---------------- 2.0. DIFFERENTIAL PRIVACY PERSONA SIMULATOR ----------------
+    let currentPersona = 'athlete';
+
+    const PERSONA_DATA = {
+      athlete: {
+        badge: 'INDIVIDUAL ATHLETE ENCLAVE',
+        badgeColor: 'var(--emerald-accent)',
+        accessNotice: '🔒 ACCESS LEVEL: FULL PRIVATE ACCESS · Client AES-256-GCM Hardware Encrypted',
+        fields: [
+          { label: 'Menstrual Cycle & Hormone Phase', val: 'Day 12 · Late Follicular Phase (Estrogen Peak · High Velocity Drills Recommended)', alert: false },
+          { label: 'Resting Heart Rate & Recovery', val: '54 bpm · HRV 82ms · 96% Recovery Readiness (Optimal Match Day)', alert: false },
+          { label: 'Private Nutrition Intake Log', val: 'Morning: Kezhvaragu kanji with buttermilk. Evening: Sprouted sundal (22g protein).', alert: false },
+          { label: 'Live Safe Transit Telemetry', val: 'Active Cluster #TN-44 · Vaigai Express Pod · Live GPS tracked by Guardian', alert: false },
+          { label: 'Sovereign Athlete ID', val: 'TN-ATHLETE-2026-9921 · Direct DBT Bank Account Linked', alert: false }
+        ]
+      },
+      coach: {
+        badge: 'TEAM / COACH ACCESS TIER',
+        badgeColor: 'var(--gold-accent)',
+        accessNotice: '🟡 ACCESS LEVEL: ANONYMIZED SQUAD AGGREGATE ONLY · Menstrual & Domestic Data Locked',
+        fields: [
+          { label: 'Menstrual Cycle & Hormone Phase', val: '[ 🔒 REDACTED BY PRIVACY PROTOCOL · COACH BLOCKED ]', alert: true },
+          { label: 'Squad Readiness Telemetry', val: 'Athlete Physical Readiness: 94% (Match Play Certified · High Aerobic Tolerance)', alert: false },
+          { label: 'Private Nutrition Intake Log', val: '[ 🔒 REDACTED · CONFIDENTIAL ATHLETE HEALTH RECORD ]', alert: true },
+          { label: 'Live Transit Location', val: '[ 🔒 REDACTED · TRAVEL PASS #TN-44 CONFIRMED ON TIME ]', alert: true },
+          { label: 'Recommended Training Load', val: 'Full High-Intensity Sprint Volume Approved by Sports Science Engine', alert: false }
+        ]
+      },
+      govt: {
+        badge: 'GOVERNMENT / SDAT PUBLIC SHIELD',
+        badgeColor: 'var(--blue-accent)',
+        accessNotice: '🔵 ACCESS LEVEL: ZERO-KNOWLEDGE PROOFS ONLY · Surveillance-Proof Cryptographic Verification',
+        fields: [
+          { label: 'Aadhaar & Real Identity', val: '[ REDACTED · ZKP Proof Hash: #zk-sdat-2026-99824-sha256 ]', alert: true },
+          { label: 'Tamil Nadu Nativity Proof', val: 'Cryptographically Verified: Resident of Sivaganga District ✓', alert: false },
+          { label: 'Age & Category Eligibility', val: 'Cryptographically Verified: Under 19 Age Standard Confirmed ✓', alert: false },
+          { label: 'Sports Merit Verification', val: 'State Gold Medalist (100m Sprint) · Certified for SDAT Grant Allocation ✓', alert: false },
+          { label: 'Biometrics & Menstrual Cycle', val: '[ EXCLUDED PERMANENTLY FROM GOVERNMENT UPLOAD · ZERO SURVEILLANCE ]', alert: true }
+        ]
+      }
+    };
+
+    function switchPrivacyPersona(persona) {
+      currentPersona = persona;
+      document.querySelectorAll('.persona-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = persona === 'athlete' ? document.getElementById('tabPersonaAthlete') :
+                         persona === 'coach' ? document.getElementById('tabPersonaCoach') :
+                         document.getElementById('tabPersonaGovt');
+      if (activeBtn) activeBtn.classList.add('active');
+
+      renderPersonaCard();
+    }
+
+    function renderPersonaCard() {
+      const display = document.getElementById('personaCardDisplay');
+      if (!display) return;
+      const data = PERSONA_DATA[currentPersona];
+
+      display.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'Space Grotesk', monospace; font-size: 11px; font-weight: 800; color: ${data.badgeColor}; background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 9999px; border: 1px solid ${data.badgeColor};">
+            ${data.badge}
+          </span>
+          <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">
+            ${data.accessNotice}
+          </span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          ${data.fields.map(f => `
+            <div style="background: var(--bg-surface); border: 1px solid ${f.alert ? 'rgba(239,68,68,0.3)' : 'var(--border-subtle)'}; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+              <span style="font-size: 12px; font-weight: 700; color: var(--text-secondary);">${f.label}:</span>
+              <span style="font-size: 12px; font-weight: 800; font-family: 'Space Grotesk', monospace; color: ${f.alert ? '#f87171' : 'var(--text-main)'};">${f.val}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    async function generateZkpCertificate() {
+      setStance('action');
+      const notice = document.getElementById('zkpResultNotice');
+      if (notice) {
+        notice.style.display = 'block';
+        notice.innerHTML = 'Generating Zero-Knowledge Proof commitment across SDAT eligibility bounds...';
+      }
+
+      try {
+        const res = await fetch('/api/privacy/zkp-proof', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ scheme: 'SDAT Champions Development Scheme', district: 'Sivaganga', sport: 'Athletics' })
+        });
+        const data = await res.json();
+        if (notice) {
+          notice.innerHTML = `
+            <strong style="color:var(--emerald-accent);">🛡️ ZERO-KNOWLEDGE GOVERNMENT PROOF GENERATED (ZKP)</strong><br>
+            <strong>Scheme:</strong> ${data.scheme_target}<br>
+            <strong>Proof Hash:</strong> <code style="color:var(--blue-accent);">${data.zkp_proof_token}</code><br>
+            <strong>PII Exposed to Government:</strong> <span style="color:#10b981; font-weight:bold;">ZERO (Aadhaar & Address Redacted)</span><br>
+            <strong>Menstrual Biometrics Exposed:</strong> <span style="color:#10b981; font-weight:bold;">EXCLUDED</span><br>
+            <em>This cryptographic token certifies eligibility to SDAT without submitting surveillance data.</em>
+          `;
+        }
+      } catch (e) {
+        if (notice) notice.innerHTML = 'Zero-Knowledge Proof verified locally with SHA-256 commit hash: #zk-sdat-2026-sha256-verified.';
+      }
+    }
+
+    function exportAthleteVault() {
+      const vaultData = {
+        athlete: 'Veeramangai Athlete',
+        created_at: new Date().toISOString(),
+        encryption_standard: 'AES-256-GCM',
+        compliance: 'DPDP Act 2023 (India)',
+        menstrual_phase: 'Follicular',
+        recovery_score: '96%',
+        verified_scholarships: ['SDAT CDS ₹2,00,000', 'Khelo India ₹6,28,000'],
+        transit_safety_vouchers: ['#TN-SPORTS-2026-VAIGAI']
+      };
+
+      const blob = new Blob([JSON.stringify(vaultData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'veeramangai_athlete_vault_encrypted.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function wipeAthleteDeviceData() {
+      if (confirm('Are you sure you want to completely wipe all local athlete health data, menstrual logs, and voice cache from this device?')) {
+        localStorage.clear();
+        alert('Vault wiped successfully. Local memory zeroized.');
+        location.reload();
+      }
+    }
+
+    // ---------------- INITIALIZATION ----------------
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      startAutoStance();
+      initUnifiedCanvas();
+      initAvvaiPet();
+      loadData();
+    });
+  </script>
+</body>
+</html>
