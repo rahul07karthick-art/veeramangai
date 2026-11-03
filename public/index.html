@@ -8,7 +8,9 @@
   <!-- Premium Modern Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Noto+Sans+Tamil:wght@500;700;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Tamil:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -1880,6 +1882,220 @@
     }
     @media (max-width: 520px) {
       .privacy-pillars-grid { grid-template-columns: 1fr !important; }
+    }
+
+  
+    /* ==========================================================================
+       NEXT-GEN TYPOGRAPHY & KINETIC TEXT ANIMATION ENGINE
+       Complete font family transformation + fluid kinetic typography
+       ========================================================================== */
+    :root {
+      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Syne', 'Outfit', sans-serif;
+      --font-telemetry: 'Chakra Petch', 'JetBrains Mono', monospace;
+      --font-sovereign: 'Cinzel Decorative', 'Cinzel', serif;
+      --font-tamil: 'Noto Sans Tamil', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body) !important;
+      letter-spacing: -0.012em;
+    }
+
+    /* All Headings Transformed to Architectural 'Syne' */
+    h1, h2, h3, h4, h5, h6,
+    .hero-heading,
+    .section-title-centered,
+    .positioning-title,
+    .feature-copy-headline,
+    .poster-meta-title,
+    .agent-card-name,
+    .queen-modal-title,
+    .stat-hero-number {
+      font-family: var(--font-display) !important;
+      letter-spacing: -0.025em;
+    }
+
+    /* Telemetry, Cutoffs, Badges, & Metrics Transformed to 'Chakra Petch' */
+    .section-eyebrow,
+    .pill-badge,
+    .status-badge,
+    .badge,
+    .dossier-stat-num,
+    .telemetry-tag,
+    .countdown-val,
+    .chip,
+    .filter-tag,
+    .dossier-label {
+      font-family: var(--font-telemetry) !important;
+      letter-spacing: 0.06em;
+    }
+
+    /* Sovereign Queens & Royal Epithets */
+    .queen-sovereign-title,
+    .royal-quote,
+    .queen-card-crown {
+      font-family: var(--font-sovereign) !important;
+      letter-spacing: 0.05em;
+    }
+
+    /* --------------------------------------------------------------------------
+       TEXT ANIMATIONS
+       -------------------------------------------------------------------------- */
+
+    /* 1. Kinetic Liquid Gradient Text Shimmer */
+    @keyframes kineticTextShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .blue-word,
+    .highlight-word,
+    .shimmer-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 25%, #fbbf24 50%, #38bdf8 75%, #0284c7 100%) !important;
+      background-size: 260% auto !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: kineticTextShimmer 5s ease-in-out infinite !important;
+      display: inline-block;
+      text-shadow: 0 0 24px rgba(56, 189, 248, 0.28);
+    }
+
+    [data-theme="light"] .blue-word,
+    [data-theme="light"] .highlight-word {
+      background: linear-gradient(135deg, #0284c7 0%, #4f46e5 30%, #d97706 60%, #0369a1 100%) !important;
+      background-size: 260% auto !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: kineticTextShimmer 5s ease-in-out infinite !important;
+      text-shadow: none !important;
+    }
+
+    /* 2. Hero Headline Entrance & Breathing Glow */
+    @keyframes heroTextReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(32px) scale(0.96);
+        filter: blur(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes heroAuraPulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.22));
+      }
+      50% {
+        filter: drop-shadow(0 0 34px rgba(56, 189, 248, 0.5)) drop-shadow(0 0 50px rgba(245, 158, 11, 0.2));
+      }
+    }
+
+    .hero-heading {
+      animation: heroTextReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards, heroAuraPulse 7s ease-in-out infinite 1.2s !important;
+      will-change: transform, filter, opacity;
+    }
+
+    /* 3. Section Eyebrow Radar Scan Pulse */
+    @keyframes eyebrowScan {
+      0%, 100% {
+        letter-spacing: 0.18em;
+        border-color: rgba(56, 189, 248, 0.35);
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+      }
+      50% {
+        letter-spacing: 0.24em;
+        border-color: rgba(56, 189, 248, 0.75);
+        box-shadow: 0 0 16px 2px rgba(56, 189, 248, 0.35);
+      }
+    }
+
+    .section-eyebrow {
+      animation: eyebrowScan 4.5s ease-in-out infinite !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 4. Interactive Magnetic Text Hover */
+    .nav-link {
+      transition: color 0.25s ease, letter-spacing 0.25s ease, text-shadow 0.25s ease !important;
+    }
+    .nav-link:hover {
+      letter-spacing: 0.04em !important;
+      color: var(--blue-accent) !important;
+      text-shadow: 0 0 12px var(--blue-glow);
+    }
+
+    .feature-copy-headline {
+      transition: letter-spacing 0.3s ease, color 0.3s ease;
+    }
+    .feature-row:hover .feature-copy-headline {
+      letter-spacing: -0.01em;
+      color: var(--blue-accent);
+    }
+
+    /* 5. Scroll-Driven Text Reveal */
+    .reveal-text-block {
+      opacity: 0;
+      transform: translateY(26px);
+      filter: blur(5px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+
+    .reveal-text-block.is-visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      filter: blur(0) !important;
+    }
+
+    /* 6. Dynamic Hero Rotator Badge */
+    .hero-rotator-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      backdrop-filter: blur(8px);
+      font-family: var(--font-telemetry);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .rotator-live-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: indicatorBlink 1.4s ease-in-out infinite;
+    }
+
+    @keyframes indicatorBlink {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero-rotator-word {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      color: var(--blue-accent);
+    }
+    .hero-rotator-word.flip-out {
+      transform: translateY(-16px) rotateX(60deg);
+      opacity: 0;
+    }
+    .hero-rotator-word.flip-in {
+      transform: translateY(16px) rotateX(-60deg);
+      opacity: 0;
     }
 
   </style>
@@ -4161,5 +4377,62 @@
       loadData();
     });
   </script>
+<script>
+  // ==========================================================================
+  // KINETIC TEXT ANIMATION ENGINE (Scroll Reveal + Dynamic Hero Rotator)
+  // ==========================================================================
+  (function initTextAnimations() {
+    // 1. Dynamic Hero Word Rotator
+    const words = [
+      "⚡ Ground-Truth Biomechanics",
+      "🛡️ DPDP 2023 Sovereignty",
+      "🏃‍♀️ 11.8s Sprint Telemetry",
+      "🔒 Zero-Knowledge Proofs",
+      "🥣 Indigenous Siddha Fuel",
+      "🏹 Rani Velu Nachiyar Focus",
+      "🤼 38-District Scout Radar",
+      "💰 ₹2L SDAT Direct Grants"
+    ];
+    let wordIdx = 0;
+    const wordEl = document.getElementById('heroRotatorText');
+    if (wordEl) {
+      setInterval(() => {
+        wordEl.classList.add('flip-out');
+        setTimeout(() => {
+          wordIdx = (wordIdx + 1) % words.length;
+          wordEl.textContent = words[wordIdx];
+          wordEl.classList.remove('flip-out');
+          wordEl.classList.add('flip-in');
+          setTimeout(() => {
+            wordEl.classList.remove('flip-in');
+          }, 30);
+        }, 380);
+      }, 2600);
+    }
+
+    // 2. IntersectionObserver for Fluid Scroll Text Reveal
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      // Target section titles, eyebrows, positioning headlines, feature headlines
+      const textTargets = document.querySelectorAll(
+        '.section-title-centered, .positioning-title, .feature-copy-headline, .section-eyebrow, .pill-badge, .dossier-stat-num'
+      );
+      textTargets.forEach(el => {
+        el.classList.add('reveal-text-block');
+        observer.observe(el);
+      });
+    }
+  })();
+</script>
 </body>
 </html>
