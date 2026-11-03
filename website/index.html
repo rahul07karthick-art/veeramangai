@@ -3922,7 +3922,7 @@
   <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
     
-    // ---------------- 1.5. HAPTIC WEB AUDIO SYNTHESIZER (ENHANCED & AUDIBLE) ----------------
+    // ---------------- 1.5. HAPTIC WEB AUDIO SYNTHESIZER (ORIGINAL NORMAL SOUND) ----------------
     let audioCtx = null;
     let audioUnlocked = false;
 
@@ -3953,132 +3953,37 @@
       }
     }
 
-    // Auto-unlock on ANY natural user gesture across the window
     ['pointerdown', 'mousedown', 'mousemove', 'mouseenter', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
       window.addEventListener(evt, unlockAudio, { passive: true, once: true });
     });
 
-    // 1. Crisp Silky Glass Hover Chime (Clearly Audible & Pleasing)
+    // NORMAL ORIGINAL HOVER SOUND OVER POSTERS
     function playCardHoverSound() {
       try {
         unlockAudio();
         const ctx = getAudioContext();
         if (!ctx) return;
-        const now = ctx.currentTime;
-
-        const osc1 = ctx.createOscillator();
-        const osc2 = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc1.type = 'sine';
-        osc1.frequency.setValueAtTime(880, now); // A5
-        osc1.frequency.exponentialRampToValueAtTime(1318.5, now + 0.08); // E6
-
-        osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(1760, now); // A6 overtone
-        osc2.frequency.exponentialRampToValueAtTime(2093, now + 0.08); // C7
-
-        gain.gain.setValueAtTime(0.18, now);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.14);
-
-        osc1.connect(gain);
-        osc2.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc1.start(now);
-        osc2.start(now);
-        osc1.stop(now + 0.14);
-        osc2.stop(now + 0.14);
-      } catch (e) {}
-    }
-
-    // 2. Tactical 3D Card Flip Swoosh (Low Whoosh + Crystal Latch)
-    function playCardFlipSound() {
-      try {
-        unlockAudio();
-        const ctx = getAudioContext();
-        if (!ctx) return;
-        const now = ctx.currentTime;
-
-        const osc = ctx.createOscillator();
-        const filter = ctx.createBiquadFilter();
-        const gain = ctx.createGain();
-
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(280, now);
-        osc.frequency.exponentialRampToValueAtTime(740, now + 0.14);
-
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(500, now);
-        filter.frequency.exponentialRampToValueAtTime(2200, now + 0.12);
-
-        gain.gain.setValueAtTime(0.22, now);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.16);
-      } catch (e) {}
-    }
-
-    // 3. Tactile Micro-Tick for Dossier Rows & Metric Cards
-    function playDossierRowHoverSound() {
-      try {
-        unlockAudio();
-        const ctx = getAudioContext();
-        if (!ctx) return;
-        const now = ctx.currentTime;
-
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(1480, now);
-        osc.frequency.exponentialRampToValueAtTime(2200, now + 0.03);
-
-        gain.gain.setValueAtTime(0.12, now);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.04);
-
+        osc.frequency.setValueAtTime(880, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1174.66, ctx.currentTime + 0.04);
+        gain.gain.setValueAtTime(0.06, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.06);
         osc.connect(gain);
         gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.04);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.06);
       } catch (e) {}
     }
 
-    // 4. Action Chip / Button Click Ping
-    function playChipClickSound() {
-      try {
-        unlockAudio();
-        const ctx = getAudioContext();
-        if (!ctx) return;
-        const now = ctx.currentTime;
-
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(1567.98, now); // G6
-        osc.frequency.exponentialRampToValueAtTime(1174.66, now + 0.06);
-
-        gain.gain.setValueAtTime(0.16, now);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.07);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.07);
-      } catch (e) {}
-    }
+    // No button pressing sounds (silent as requested)
+    function playCardFlipSound() {}
+    function playChipClickSound() {}
+    function playDossierRowHoverSound() {}
 
     // ---------------- 1.6. INTERACTIVE 3D POSTER LOGIC ----------------
     function flipPoster(cardNum) {
-      playCardFlipSound();
       setStance('action');
       const card = document.getElementById('posterCard' + cardNum);
       if (card) {
@@ -4087,14 +3992,13 @@
     }
 
     function handlePosterCardClick(cardNum, event) {
-      if (event.target.closest('button') || event.target.closest('.poster-interactive-chip') || event.target.closest('.dossier-stat-box')) {
+      if (event.target.closest('button') || event.target.closest('.poster-interactive-chip') || event.target.closest('.dossier-telemetry-cell')) {
         return;
       }
       flipPoster(cardNum);
     }
 
     function triggerPosterChip(feature, query) {
-      playChipClickSound();
       setStance('action');
       if (feature === 'trials') {
         navigateToFeature('trials');
@@ -4119,16 +4023,15 @@
       }
     }
 
-    // ---------------- 1.7. 3D MOUSE PARALLAX, SPECULAR GLARE & HAPTIC HOVER PHYSICS ----------------
+    // ---------------- 1.7. 3D MOUSE PARALLAX, SPECULAR GLARE & POSTER HOVER ----------------
     function initPosterInteractivity() {
       const cards = document.querySelectorAll('.poster-3d-card');
       cards.forEach(card => {
-        // 🔔 CARD ENTER: Play crisp haptic glass chime
+        // Normal hover sound ONLY when hovering over the poster card
         card.addEventListener('mouseenter', () => {
           playCardHoverSound();
         });
 
-        // 🎯 3D Parallax Tilt & Specular Glare
         card.addEventListener('mousemove', (e) => {
           const rect = card.getBoundingClientRect();
           const x = e.clientX - rect.left;
@@ -4162,13 +4065,10 @@
           card.style.setProperty('--glare-opacity', '0');
         });
 
-        // 🔊 Hover sound on all interactive chips, dossier rows, and buttons
-        
         // Click to navigate directly from dossier telemetry stats
         card.querySelectorAll('.dossier-telemetry-cell').forEach(cell => {
           cell.addEventListener('click', (e) => {
             e.stopPropagation();
-            playChipClickSound();
             const text = cell.innerText.toUpperCase();
             if (text.includes('TRIALS') || text.includes('CUTOFF') || text.includes('SPEED') || text.includes('SPRINT')) {
               navigateToFeature('trials');
@@ -4181,22 +4081,10 @@
             }
           });
         });
-    
-        card.querySelectorAll('.poster-interactive-chip, .dossier-telemetry-cell, .dossier-stat-box, .dossier-quote-box, .dossier-btn-primary, .dossier-btn-secondary, .poster-flip-back-btn, .queen-inspect-btn, .poster-flip-toggle').forEach(elem => {
-          elem.addEventListener('mouseenter', (e) => {
-            e.stopPropagation();
-            playDossierRowHoverSound();
-          });
-        });
-      });
-
-      // Also attach hover haptics to Agent Cards & Opportunities Cards!
-      document.querySelectorAll('.agent-card, .opp-card, .faq-accordion-header, .btn-action-primary').forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          playDossierRowHoverSound();
-        });
       });
     }
+
+    
 
     
 
