@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Tamil:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root, [data-theme="dark"] {
@@ -616,6 +619,411 @@
       opacity: 0;
     }
 
+  
+    /* ==========================================================================
+       AUTHENTIC APPLE DESIGN SYSTEM & HIGH-CONTRAST LIGHT/DARK THEMES
+       SF Pro Display + SF Pro Text + Crisp Apple Glass Surfaces
+       ========================================================================== */
+    :root, [data-theme="dark"] {
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", sans-serif;
+      --font-mono: "SF Mono", Monaco, "JetBrains Mono", Menlo, Consolas, monospace;
+      --font-tamil: 'Noto Sans Tamil', -apple-system, sans-serif;
+
+      --bg-base: #06090e;
+      --bg-surface: rgba(14, 20, 31, 0.72);
+      --bg-surface-elevated: rgba(20, 28, 44, 0.88);
+      --bg-card: rgba(15, 23, 38, 0.75);
+      --bg-card-hover: rgba(26, 38, 62, 0.92);
+      --bg-input: rgba(10, 16, 26, 0.85);
+
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --border-subtle: rgba(255, 255, 255, 0.10);
+      --border-medium: rgba(255, 255, 255, 0.18);
+      --border-accent: rgba(56, 189, 248, 0.45);
+
+      --blue-accent: #38bdf8;
+      --blue-glow: rgba(56, 189, 248, 0.25);
+      --blue-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      --gold-accent: #f59e0b;
+      --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+      --emerald-accent: #10b981;
+
+      --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(6, 9, 14, 0.40) 0%, 
+        rgba(6, 9, 14, 0.22) 25%, 
+        rgba(6, 9, 14, 0.28) 60%, 
+        rgba(6, 9, 14, 0.70) 90%, 
+        #06090e 100%);
+      --athlete-opacity: 0.88;
+    }
+
+    /* ☀️ PRISTINE, HIGH-CONTRAST APPLE LIGHT MODE */
+    [data-theme="light"] {
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", sans-serif;
+      --font-mono: "SF Mono", Monaco, "JetBrains Mono", Menlo, Consolas, monospace;
+      --font-tamil: 'Noto Sans Tamil', -apple-system, sans-serif;
+
+      --bg-base: #ffffff;
+      --bg-surface: rgba(255, 255, 255, 0.92);
+      --bg-surface-elevated: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-input: #f1f5f9;
+
+      --text-main: #000000;
+      --text-secondary: #1e293b;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-medium: rgba(0, 0, 0, 0.14);
+      --border-accent: rgba(0, 113, 227, 0.60);
+
+      --blue-accent: #0071e3;
+      --blue-glow: rgba(0, 113, 227, 0.20);
+      --blue-gradient: linear-gradient(135deg, #0071e3 0%, #0056b3 100%);
+      --gold-accent: #b45309;
+      --gold-gradient: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      --emerald-accent: #059669;
+
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 12px 36px -4px rgba(0, 113, 227, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06);
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.88) 0%, 
+        rgba(255, 255, 255, 0.76) 30%, 
+        rgba(255, 255, 255, 0.85) 70%, 
+        #ffffff 100%);
+      --athlete-opacity: 0.16;
+    }
+
+    body {
+      font-family: var(--font-body) !important;
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      letter-spacing: -0.012em !important;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .hero-heading,
+    .section-title-centered,
+    .positioning-title,
+    .feature-copy-headline,
+    .poster-meta-title,
+    .agent-card-name,
+    .queen-modal-title,
+    .stat-hero-number {
+      font-family: var(--font-display) !important;
+      letter-spacing: -0.028em !important;
+      font-weight: 700 !important;
+    }
+
+    /* Light mode card elevations & contrast */
+    [data-theme="light"] .agent-card,
+    [data-theme="light"] .opp-card,
+    [data-theme="light"] .poster-card-wrapper,
+    [data-theme="light"] .workspace-window,
+    [data-theme="light"] .faq-accordion-item,
+    [data-theme="light"] .comparison-table-wrapper,
+    [data-theme="light"] .feature-illustration-card,
+    [data-theme="light"] .privacy-pillar-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: var(--card-shadow) !important;
+    }
+
+    [data-theme="light"] .agent-card:hover,
+    [data-theme="light"] .opp-card:hover,
+    [data-theme="light"] .faq-accordion-item:hover {
+      box-shadow: var(--card-shadow-hover) !important;
+      border-color: rgba(0, 113, 227, 0.4) !important;
+    }
+
+    [data-theme="light"] .navbar-centered {
+      background: rgba(255, 255, 255, 0.88) !important;
+      backdrop-filter: blur(24px) !important;
+      -webkit-backdrop-filter: blur(24px) !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    [data-theme="light"] .nav-link {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+    }
+    [data-theme="light"] .nav-link:hover {
+      color: #0071e3 !important;
+    }
+
+    [data-theme="light"] .section-title-centered,
+    [data-theme="light"] .hero-heading,
+    [data-theme="light"] .positioning-title,
+    [data-theme="light"] .feature-copy-headline {
+      color: #000000 !important;
+    }
+
+    [data-theme="light"] .hero-subtext,
+    [data-theme="light"] p {
+      color: #334155 !important;
+    }
+
+    /* Apple-style Blue Gradient Word */
+    [data-theme="light"] .blue-word,
+    [data-theme="light"] .highlight-word {
+      background: linear-gradient(135deg, #0071e3 0%, #0056b3 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       REFINED KINETIC TEXT ANIMATIONS (APPLE STYLE)
+       -------------------------------------------------------------------------- */
+    @keyframes appleShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .blue-word,
+    .highlight-word {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 40%, #38bdf8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: appleShimmer 6s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes appleHeroReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-heading {
+      animation: appleHeroReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    .section-eyebrow,
+    .numbered-eyebrow {
+      font-family: var(--font-body) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: var(--blue-accent) !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       OPPORTUNITIES DIRECTORY STYLES (RICH, INTERACTIVE, FILTERABLE)
+       -------------------------------------------------------------------------- */
+    .opportunities-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 70px 20px;
+      scroll-margin-top: 80px;
+      position: relative;
+    }
+
+    .opp-controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1200px;
+      margin: 24px auto 30px;
+    }
+
+    .opp-filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .opp-tab-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .opp-tab-pill:hover,
+    .opp-tab-pill.active {
+      background: var(--blue-accent);
+      color: #ffffff !important;
+      border-color: var(--blue-accent);
+      box-shadow: 0 4px 14px var(--blue-glow);
+    }
+
+    .opp-search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      gap: 8px;
+      min-width: 280px;
+    }
+    .opp-search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-size: 13px;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      .opportunities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .opportunities-grid { grid-template-columns: 1fr; }
+    }
+
+    .opp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 22px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      position: relative;
+    }
+    .opp-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--blue-accent);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .opp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .opp-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: rgba(0, 113, 227, 0.12);
+      color: var(--blue-accent);
+    }
+    [data-theme="dark"] .opp-badge {
+      background: rgba(56, 189, 248, 0.14);
+      color: #38bdf8;
+    }
+
+    .opp-badge-gold {
+      background: rgba(245, 158, 11, 0.14);
+      color: var(--gold-accent);
+    }
+
+    .opp-amount {
+      font-size: 13px;
+      font-weight: 800;
+      color: #10b981;
+    }
+    [data-theme="light"] .opp-amount {
+      color: #059669;
+    }
+
+    .opp-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .opp-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .opp-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 16px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .opp-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .opp-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      font-size: 12px;
+    }
+
+    .opp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--blue-accent);
+      color: #ffffff !important;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .opp-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
   </style>
 </head>
 <body>
@@ -884,6 +1292,44 @@
       });
     }
   })();
+</script>
+<script>
+  // ==========================================================================
+  // REAL-TIME OPPORTUNITIES FILTER & SEARCH ENGINE
+  // ==========================================================================
+  function filterOpportunities(category, btn) {
+    // Update active tab button
+    document.querySelectorAll('.opp-tab-pill').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const searchInput = document.getElementById('oppSearchInput');
+    const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    const cards = document.querySelectorAll('.opp-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category') || '';
+      const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
+      const cardDistrict = (card.getAttribute('data-district') || '').toLowerCase();
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesCat = (category === 'all') || cardCat.includes(category);
+      const matchesSearch = !term || cardTitle.includes(term) || cardDistrict.includes(term) || cardText.includes(term);
+
+      if (matchesCat && matchesSearch) {
+        card.style.display = 'flex';
+        card.style.opacity = '1';
+        card.style.transform = 'scale(1)';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function searchOpportunities(term) {
+    const activeTab = document.querySelector('.opp-tab-pill.active');
+    const category = activeTab ? activeTab.getAttribute('onclick').match(/'([^']+)'/)[1] : 'all';
+    filterOpportunities(category, activeTab);
+  }
 </script>
 </body>
 </html>

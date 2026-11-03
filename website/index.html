@@ -10,7 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Tamil:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -79,7 +82,8 @@
         rgba(248, 250, 252, 0.18) 60%, 
         rgba(248, 250, 252, 0.55) 90%, 
         #f8fafc 100%);
-      --athlete-opacity: 0.85;
+      --athlete-opacity: 0.16;
+      --bg-base: #ffffff;
     }
 
     * {
@@ -2098,6 +2102,411 @@
       opacity: 0;
     }
 
+  
+    /* ==========================================================================
+       AUTHENTIC APPLE DESIGN SYSTEM & HIGH-CONTRAST LIGHT/DARK THEMES
+       SF Pro Display + SF Pro Text + Crisp Apple Glass Surfaces
+       ========================================================================== */
+    :root, [data-theme="dark"] {
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", sans-serif;
+      --font-mono: "SF Mono", Monaco, "JetBrains Mono", Menlo, Consolas, monospace;
+      --font-tamil: 'Noto Sans Tamil', -apple-system, sans-serif;
+
+      --bg-base: #06090e;
+      --bg-surface: rgba(14, 20, 31, 0.72);
+      --bg-surface-elevated: rgba(20, 28, 44, 0.88);
+      --bg-card: rgba(15, 23, 38, 0.75);
+      --bg-card-hover: rgba(26, 38, 62, 0.92);
+      --bg-input: rgba(10, 16, 26, 0.85);
+
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --border-subtle: rgba(255, 255, 255, 0.10);
+      --border-medium: rgba(255, 255, 255, 0.18);
+      --border-accent: rgba(56, 189, 248, 0.45);
+
+      --blue-accent: #38bdf8;
+      --blue-glow: rgba(56, 189, 248, 0.25);
+      --blue-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      --gold-accent: #f59e0b;
+      --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+      --emerald-accent: #10b981;
+
+      --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(6, 9, 14, 0.40) 0%, 
+        rgba(6, 9, 14, 0.22) 25%, 
+        rgba(6, 9, 14, 0.28) 60%, 
+        rgba(6, 9, 14, 0.70) 90%, 
+        #06090e 100%);
+      --athlete-opacity: 0.88;
+    }
+
+    /* ☀️ PRISTINE, HIGH-CONTRAST APPLE LIGHT MODE */
+    [data-theme="light"] {
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", sans-serif;
+      --font-mono: "SF Mono", Monaco, "JetBrains Mono", Menlo, Consolas, monospace;
+      --font-tamil: 'Noto Sans Tamil', -apple-system, sans-serif;
+
+      --bg-base: #ffffff;
+      --bg-surface: rgba(255, 255, 255, 0.92);
+      --bg-surface-elevated: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-input: #f1f5f9;
+
+      --text-main: #000000;
+      --text-secondary: #1e293b;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-medium: rgba(0, 0, 0, 0.14);
+      --border-accent: rgba(0, 113, 227, 0.60);
+
+      --blue-accent: #0071e3;
+      --blue-glow: rgba(0, 113, 227, 0.20);
+      --blue-gradient: linear-gradient(135deg, #0071e3 0%, #0056b3 100%);
+      --gold-accent: #b45309;
+      --gold-gradient: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      --emerald-accent: #059669;
+
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 12px 36px -4px rgba(0, 113, 227, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06);
+
+      --fixed-vignette: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.88) 0%, 
+        rgba(255, 255, 255, 0.76) 30%, 
+        rgba(255, 255, 255, 0.85) 70%, 
+        #ffffff 100%);
+      --athlete-opacity: 0.16;
+    }
+
+    body {
+      font-family: var(--font-body) !important;
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      letter-spacing: -0.012em !important;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .hero-heading,
+    .section-title-centered,
+    .positioning-title,
+    .feature-copy-headline,
+    .poster-meta-title,
+    .agent-card-name,
+    .queen-modal-title,
+    .stat-hero-number {
+      font-family: var(--font-display) !important;
+      letter-spacing: -0.028em !important;
+      font-weight: 700 !important;
+    }
+
+    /* Light mode card elevations & contrast */
+    [data-theme="light"] .agent-card,
+    [data-theme="light"] .opp-card,
+    [data-theme="light"] .poster-card-wrapper,
+    [data-theme="light"] .workspace-window,
+    [data-theme="light"] .faq-accordion-item,
+    [data-theme="light"] .comparison-table-wrapper,
+    [data-theme="light"] .feature-illustration-card,
+    [data-theme="light"] .privacy-pillar-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: var(--card-shadow) !important;
+    }
+
+    [data-theme="light"] .agent-card:hover,
+    [data-theme="light"] .opp-card:hover,
+    [data-theme="light"] .faq-accordion-item:hover {
+      box-shadow: var(--card-shadow-hover) !important;
+      border-color: rgba(0, 113, 227, 0.4) !important;
+    }
+
+    [data-theme="light"] .navbar-centered {
+      background: rgba(255, 255, 255, 0.88) !important;
+      backdrop-filter: blur(24px) !important;
+      -webkit-backdrop-filter: blur(24px) !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    [data-theme="light"] .nav-link {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+    }
+    [data-theme="light"] .nav-link:hover {
+      color: #0071e3 !important;
+    }
+
+    [data-theme="light"] .section-title-centered,
+    [data-theme="light"] .hero-heading,
+    [data-theme="light"] .positioning-title,
+    [data-theme="light"] .feature-copy-headline {
+      color: #000000 !important;
+    }
+
+    [data-theme="light"] .hero-subtext,
+    [data-theme="light"] p {
+      color: #334155 !important;
+    }
+
+    /* Apple-style Blue Gradient Word */
+    [data-theme="light"] .blue-word,
+    [data-theme="light"] .highlight-word {
+      background: linear-gradient(135deg, #0071e3 0%, #0056b3 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       REFINED KINETIC TEXT ANIMATIONS (APPLE STYLE)
+       -------------------------------------------------------------------------- */
+    @keyframes appleShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .blue-word,
+    .highlight-word {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 40%, #38bdf8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: appleShimmer 6s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes appleHeroReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-heading {
+      animation: appleHeroReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    .section-eyebrow,
+    .numbered-eyebrow {
+      font-family: var(--font-body) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: var(--blue-accent) !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       OPPORTUNITIES DIRECTORY STYLES (RICH, INTERACTIVE, FILTERABLE)
+       -------------------------------------------------------------------------- */
+    .opportunities-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 70px 20px;
+      scroll-margin-top: 80px;
+      position: relative;
+    }
+
+    .opp-controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1200px;
+      margin: 24px auto 30px;
+    }
+
+    .opp-filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .opp-tab-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .opp-tab-pill:hover,
+    .opp-tab-pill.active {
+      background: var(--blue-accent);
+      color: #ffffff !important;
+      border-color: var(--blue-accent);
+      box-shadow: 0 4px 14px var(--blue-glow);
+    }
+
+    .opp-search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      gap: 8px;
+      min-width: 280px;
+    }
+    .opp-search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-size: 13px;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      .opportunities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .opportunities-grid { grid-template-columns: 1fr; }
+    }
+
+    .opp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 22px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      position: relative;
+    }
+    .opp-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--blue-accent);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .opp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .opp-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: rgba(0, 113, 227, 0.12);
+      color: var(--blue-accent);
+    }
+    [data-theme="dark"] .opp-badge {
+      background: rgba(56, 189, 248, 0.14);
+      color: #38bdf8;
+    }
+
+    .opp-badge-gold {
+      background: rgba(245, 158, 11, 0.14);
+      color: var(--gold-accent);
+    }
+
+    .opp-amount {
+      font-size: 13px;
+      font-weight: 800;
+      color: #10b981;
+    }
+    [data-theme="light"] .opp-amount {
+      color: #059669;
+    }
+
+    .opp-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .opp-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .opp-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 16px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .opp-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .opp-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      font-size: 12px;
+    }
+
+    .opp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--blue-accent);
+      color: #ffffff !important;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .opp-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
   </style>
 </head>
 <body>
@@ -2839,46 +3248,217 @@
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       <span class="numbered-eyebrow">06 — SCHOLARSHIPS & TOURNAMENT VAULT</span>
       <h2 class="section-title-centered" style="margin-bottom: 12px;">Verified Opportunities Directory</h2>
-      <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto;">
-        Real-time feeds sourced from the National Sports Repository, SDAT Government Gazettes, and corporate sports CSR programs.
+      <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto; font-size: 14px; line-height: 1.6;">
+        Real-time verified feeds sourced from the National Sports Repository, SDAT Government Gazettes, and corporate sports CSR programs across all 38 districts of Tamil Nadu.
       </p>
 
-      <div class="opportunities-grid">
-        <div class="opp-card">
+      <!-- Filter Controls & Search -->
+      <div class="opp-controls-row">
+        <div class="opp-filter-tabs">
+          <button class="opp-tab-pill active" onclick="filterOpportunities('all', this)">⚡ All Opportunities (9)</button>
+          <button class="opp-tab-pill" onclick="filterOpportunities('track', this)">🏃 Track & Sprint</button>
+          <button class="opp-tab-pill" onclick="filterOpportunities('kabaddi', this)">🤼 Kabaddi & Combat</button>
+          <button class="opp-tab-pill" onclick="filterOpportunities('grants', this)">💰 SDAT & Govt Schemes</button>
+          <button class="opp-tab-pill" onclick="filterOpportunities('archery', this)">🏹 Archery & Precision</button>
+        </div>
+        <div class="opp-search-box">
+          <span>🔍</span>
+          <input type="text" id="oppSearchInput" placeholder="Filter by district, sport, or grant..." onkeyup="searchOpportunities(this.value)">
+        </div>
+      </div>
+
+      <!-- 9 Verified Opportunities Cards -->
+      <div class="opportunities-grid" id="opportunitiesGrid">
+        
+        <!-- Card 1 -->
+        <div class="opp-card" data-category="track grants" data-title="SDAT Champions Development Scheme" data-district="Chennai Madurai Coimbatore 38 Districts">
           <div>
-            <div class="opp-tag">SDAT TAMIL NADU</div>
+            <div class="opp-header">
+              <span class="opp-badge opp-badge-gold">SDAT TAMIL NADU</span>
+              <span class="opp-amount">₹2,00,000 / Year</span>
+            </div>
             <div class="opp-title">Champions Development Scheme</div>
-            <p class="opp-desc">Provides ₹2,00,000 yearly stipend + training kit to state-level medalists under 21 years.</p>
+            <p class="opp-desc">Provides ₹2 Lakh yearly stipend + specialized training kit to state-level medalists under 21 years across Tamil Nadu.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Districts:</strong> All 38 Districts (Chennai, Madurai, Trichy, etc.)</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> State Top 3 or District Gold Under 21</div>
+              <div class="opp-meta-item">⏱️ <strong>Status:</strong> Gazetted Scheme • Applications Open</div>
+            </div>
           </div>
           <div class="opp-footer">
-            <span>Eligibility: State Top 3</span>
-            <a onclick="navigateToFeature('scholarships')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Apply ↗</a>
+            <span style="color: var(--text-dim); font-size: 11px;">Direct Govt Portal</span>
+            <button class="opp-btn" onclick="navigateToFeature('scholarships')">Apply Now ↗</button>
           </div>
         </div>
 
-        <div class="opp-card">
+        <!-- Card 2 -->
+        <div class="opp-card" data-category="grants track" data-title="Khelo India National Talent Scholarship" data-district="South Zone All India">
           <div>
-            <div class="opp-tag">GOVERNMENT OF INDIA</div>
+            <div class="opp-header">
+              <span class="opp-badge">GOVERNMENT OF INDIA</span>
+              <span class="opp-amount">₹6,28,000 / Year</span>
+            </div>
             <div class="opp-title">Khelo India Talent Scholarship</div>
-            <p class="opp-desc">₹6,28,000 per athlete per annum (including ₹1,20,000 pocket allowance) for 1,000 selected athletes.</p>
+            <p class="opp-desc">Flagship national scholarship covering ₹1,20,000 direct pocket allowance + world-class coaching & sports science support.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Coverage:</strong> Pan-India & South Zone Academy Centers</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Girls 10 to 18 Years with National/Zonal Merit</div>
+              <div class="opp-meta-item">⏱️ <strong>Status:</strong> 2026-27 Intake Open</div>
+            </div>
           </div>
           <div class="opp-footer">
-            <span>Age: 10 - 18 Years</span>
-            <a onclick="navigateToFeature('scholarships')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Check Details ↗</a>
+            <span style="color: var(--text-dim); font-size: 11px;">SAI Verified</span>
+            <button class="opp-btn" onclick="navigateToFeature('scholarships')">Check Criteria ↗</button>
           </div>
         </div>
 
-        <div class="opp-card">
+        <!-- Card 3 -->
+        <div class="opp-card" data-category="track" data-title="TN State Junior Athletics Selection Trials" data-district="Chennai Madurai">
           <div>
-            <div class="opp-tag">DISTRICT TRIALS</div>
-            <div class="opp-title">Tamil Nadu State Athletics Trials</div>
-            <p class="opp-desc">District trials in Madurai and Chennai for 100m, 200m, 400m, and 4x100m relay selection.</p>
+            <div class="opp-header">
+              <span class="opp-badge">DISTRICT TRIALS</span>
+              <span class="opp-amount">14 Selection Slots</span>
+            </div>
+            <div class="opp-title">TN State Junior Athletics Trials</div>
+            <p class="opp-desc">Official state selection trials for 100m, 200m, 400m, hurdles and 4x100m relay to represent Tamil Nadu at National Juniors.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Venue:</strong> J.N. Stadium, Chennai & Race Course, Madurai</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Girls U-16, U-19 with district cutoff timings</div>
+              <div class="opp-meta-item">⏱️ <strong>Dates:</strong> March 28 - 30, 2026</div>
+            </div>
           </div>
           <div class="opp-footer">
-            <span>Venue: J.N. Stadium</span>
-            <a onclick="navigateToFeature('trials')" style="color: var(--blue-accent); font-weight: 700; cursor: pointer;">Register ↗</a>
+            <span style="color: var(--text-dim); font-size: 11px;">Track & Field</span>
+            <button class="opp-btn" onclick="navigateToFeature('trials')">Register Trial ↗</button>
           </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="opp-card" data-category="kabaddi" data-title="Khelo India South Zone Women's Kabaddi League" data-district="Tiruchirappalli Trichy">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge opp-badge-gold">KHELO INDIA & AKFI</span>
+              <span class="opp-amount">₹50,000 Purse</span>
+            </div>
+            <div class="opp-title">South Zone Women's Kabaddi League</div>
+            <p class="opp-desc">Premier zonal championship with direct talent scouting by Sports Authority of India coaches and national team selectors.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Venue:</strong> Anna Stadium, Tiruchirappalli (Trichy)</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Registered district clubs & academy teams</div>
+              <div class="opp-meta-item">⏱️ <strong>Dates:</strong> April 10 - 14, 2026</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">SAI Scout Presence</span>
+            <button class="opp-btn" onclick="navigateToFeature('trials')">Register Squad ↗</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="opp-card" data-category="grants" data-title="SDAT Specialized Sports Academy Hostels" data-district="Tirunelveli Erode Madurai">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge">100% GOVT SPONSORED</span>
+              <span class="opp-amount">Free Boarding & Kit</span>
+            </div>
+            <div class="opp-title">SDAT Elite Sports Academy Hostels</div>
+            <p class="opp-desc">Residential intensive athletic hostels providing free English/Tamil medium schooling, sports nutrition, and foreign coach exposure.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Centers:</strong> Tirunelveli, Erode, Ramanathapuram, Chennai</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Female athletes in Grade 6 to 11 with state medal</div>
+              <div class="opp-meta-item">⏱️ <strong>Status:</strong> Annual Academic Intake</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">Residential Academy</span>
+            <button class="opp-btn" onclick="navigateToFeature('scholarships')">Apply Seat ↗</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="opp-card" data-category="archery" data-title="Tamil Nadu Women's Archery Talent Search" data-district="Coimbatore Erode">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge">PRECISION RADAR</span>
+              <span class="opp-amount">₹1,50,000 Bow Kit</span>
+            </div>
+            <div class="opp-title">State Women Archery Talent Search</div>
+            <p class="opp-desc">Inspired by Rani Velu Nachiyar tactical aim. Full talent scouting for Olympic Recurve and Compound bow categories.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Venue:</strong> Nehru Stadium Sports Complex, Coimbatore</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Girls aged 12 to 20 years</div>
+              <div class="opp-meta-item">⏱️ <strong>Dates:</strong> May 4 - 6, 2026</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">Olympic Recurve</span>
+            <button class="opp-btn" onclick="navigateToFeature('trials')">Book Slot ↗</button>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="opp-card" data-category="grants track" data-title="National Sports Development Fund Gear Grant" data-district="All India Tamil Nadu">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge opp-badge-gold">CENTRAL GOVT</span>
+              <span class="opp-amount">₹5,00,000 Gear</span>
+            </div>
+            <div class="opp-title">NSDF Customized Gear & Rehab Grant</div>
+            <p class="opp-desc">Direct financial assistance for customized competition footwear, biomechanical sensors, and sports injury rehabilitation.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Transfer:</strong> Direct DBT into verified athlete bank account</div>
+              <div class="opp-meta-item">🔒 <strong>Privacy:</strong> Cryptographic Zero-Knowledge Eligibility Check</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> District/State medalists from rural background</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">Zero PII Leakage</span>
+            <button class="opp-btn" onclick="navigateToFeature('privacy')">Verify via ZKP ↗</button>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="opp-card" data-category="kabaddi" data-title="Rani Mangammal Rural Kabaddi Championship" data-district="Thanjavur Pudukkottai Trichy">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge">GRASSROOTS RADAR</span>
+              <span class="opp-amount">Trophy + Scout</span>
+            </div>
+            <div class="opp-title">Rural Inter-District Kabaddi Cup</div>
+            <p class="opp-desc">Open championship for rural village panchayat teams across all 38 districts of Tamil Nadu. Zero entry fee.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Venue:</strong> Thanjavur District Sports Complex</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Rural non-collegiate female athletes</div>
+              <div class="opp-meta-item">⏱️ <strong>Dates:</strong> April 22 - 25, 2026</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">Rural Grassroots</span>
+            <button class="opp-btn" onclick="navigateToFeature('trials')">View Draw ↗</button>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="opp-card" data-category="grants track kabaddi" data-title="Indian Oil Female Sports CSR Fellowship" data-district="Chennai Tiruchi Madurai">
+          <div>
+            <div class="opp-header">
+              <span class="opp-badge opp-badge-gold">CORPORATE CSR</span>
+              <span class="opp-amount">₹15,000 / Month</span>
+            </div>
+            <div class="opp-title">Indian Oil Female Sports Fellowship</div>
+            <p class="opp-desc">Monthly stipend support program for budding female track and combat athletes from low-income agricultural families.</p>
+            <div class="opp-meta-list">
+              <div class="opp-meta-item">📍 <strong>Interviews:</strong> Chennai Zonal Sports Headquarters</div>
+              <div class="opp-meta-item">🎯 <strong>Eligibility:</strong> Family income < ₹3 LPA, State medalist</div>
+              <div class="opp-meta-item">⏱️ <strong>Deadline:</strong> April 15, 2026</div>
+            </div>
+          </div>
+          <div class="opp-footer">
+            <span style="color: var(--text-dim); font-size: 11px;">100% Sponsored</span>
+            <button class="opp-btn" onclick="navigateToFeature('scholarships')">Submit Profile ↗</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -4433,6 +5013,43 @@
       });
     }
   })();
+</script>
+<script>
+  // ==========================================================================
+  // REAL-TIME OPPORTUNITIES FILTER & SEARCH ENGINE
+  // ==========================================================================
+  function filterOpportunities(category, btn) {
+    document.querySelectorAll('.opp-tab-pill').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const searchInput = document.getElementById('oppSearchInput');
+    const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    const cards = document.querySelectorAll('.opp-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category') || '';
+      const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
+      const cardDistrict = (card.getAttribute('data-district') || '').toLowerCase();
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesCat = (category === 'all') || cardCat.includes(category);
+      const matchesSearch = !term || cardTitle.includes(term) || cardDistrict.includes(term) || cardText.includes(term);
+
+      if (matchesCat && matchesSearch) {
+        card.style.display = 'flex';
+        card.style.opacity = '1';
+        card.style.transform = 'scale(1)';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function searchOpportunities(term) {
+    const activeTab = document.querySelector('.opp-tab-pill.active');
+    const category = activeTab ? (activeTab.getAttribute('onclick').match(/'([^']+)'/) ? activeTab.getAttribute('onclick').match(/'([^']+)'/)[1] : 'all') : 'all';
+    filterOpportunities(category, activeTab);
+  }
 </script>
 </body>
 </html>
